@@ -41,7 +41,7 @@
   font: 600 16px/1 var(--font-body); color: #fff; text-decoration: none;
   background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border: 1.5px solid rgba(255, 255, 255, 0.45);
-  transition: all 0.3s var(--ease-out);
+  transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 .btn-outline-hero:hover {
   background: rgba(255, 255, 255, 0.2); border-color: #fff; color: #fff; transform: translateY(-2px);
@@ -139,7 +139,7 @@
 .wo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 16px; }
 .wo-card {
   border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px;
-  background: #f8fafc; transition: all 0.25s var(--ease-out); text-align: right;
+  background: #f8fafc; transition: border-color 0.25s var(--ease-out), background-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out); text-align: right;
 }
 .wo-card:hover {
   border-color: #cbd5e1; background: #fff;
@@ -451,7 +451,7 @@
 .papers-grid { display: grid; gap: 16px; }
 .paper-card {
   background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px 24px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); transition: all 0.25s var(--ease-out); text-align: right;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); transition: border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out); text-align: right;
 }
 .paper-card:hover { border-color: #cbd5e1; box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08); }
 .paper-card__num { font-size: 12px; font-weight: 800; color: #7c3aed; margin-bottom: 6px; }
@@ -559,7 +559,7 @@
   background: #f8fafc;
   color: #475569;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .wo-tab-btn:hover {
   background: #f1f5f9;
@@ -677,7 +677,7 @@
   place-items: center;
   cursor: pointer;
   font-size: 16px;
-  transition: all 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 .modal-close-btn:hover {
   background: #fee2e2;
@@ -717,7 +717,7 @@
   background: #fff;
   color: #475569;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -755,7 +755,7 @@
 /* Regional Node Card Active / Focused State */
 .node-card {
   cursor: pointer;
-  transition: all 0.25s var(--ease-out);
+  transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
 }
 .node-card:focus-visible {
   outline: 2px solid #2563eb;
