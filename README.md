@@ -59,11 +59,9 @@ node tests/serve.cjs
 
 ## 🌐 هاستینگ روی گیت‌هاب (GitHub Pages)
 
-این مخزن به صورت خودکار با GitHub Actions بر روی **GitHub Pages** مستقر و منتشر می‌شود (`.github/workflows/deploy.yml`).
+سایت روی **GitHub Pages** با حالت «Deploy from a branch» (شاخه `main`، ریشه مخزن) منتشر می‌شود: هر commit روی `main` چند ثانیه بعد به‌صورت خودکار روی لینک زنده اعمال می‌شود. فایل `.nojekyll` باعث می‌شود محتوا بدون پردازش Jekyll و عیناً همان‌طور که در مخزن هست سرو شود.
 
-> **نکته (فقط بار اول):** برای فعال‌سازی Pages باید یک‌بار از مسیر
-> `Settings → Pages → Build and deployment → Source → GitHub Actions`
-> منبع استقرار را روی «GitHub Actions» قرار دهید. پس از آن هر push روی شاخه `main` به‌صورت خودکار منتشر می‌شود.
+> **مهاجرت به حالت GitHub Actions (اختیاری):** اگر ترجیح می‌دهید استقرار از طریق Actions انجام شود، از مسیر `Settings → Pages → Build and deployment → Source` گزینه «GitHub Actions» را انتخاب کنید و یک workflow استقرار اضافه کنید — نمونه‌ی آماده و تست‌شده در تاریخچه‌ی مخزن (فایل `.github/workflows/deploy.yml`) موجود است. تا زمانی که Source روی همان «Deploy from a branch» باشد، نیازی به workflow نیست.
 
 ---
 
