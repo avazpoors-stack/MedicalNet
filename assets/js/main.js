@@ -485,6 +485,7 @@
     printBtn.type = 'button';
     printBtn.className = 'btn btn--dark btn--sm';
     printBtn.textContent = 'صدور گواهی پذیرش بالینی';
+    printBtn.addEventListener('click', () => window.print());
 
     modalFooter.append(printBtn, closeFooterBtn);
     modalDialog.append(closeBtn, modalHeader, modalBody, modalFooter);
@@ -703,7 +704,7 @@
 
       tip.append(
         title,
-        line(`دوره جاری (مدیکال‌نت) / Current: ${formatPersianNumber(curVal, 1)} ${unit}`),
+        line(`دوره جاری (مدیکال‌نت): ${formatPersianNumber(curVal, 1)} ${unit}`),
         line(`دوره گذشته (سنتی): ${formatPersianNumber(prevVal, 1)} ${unit}`)
       );
       tip.hidden = false;

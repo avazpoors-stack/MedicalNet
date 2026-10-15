@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>صفحه یافت نشد | مدیکال‌نت</title>
+  <meta name="theme-color" content="#1d4ed8">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f5f7fb;
+      color: #101828;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e4e9f2;
+      border-radius: 20px;
+      padding: 48px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 12px 40px rgba(16, 24, 40, .08);
+    }
+    .code {
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, #1d4ed8, #5b8def);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 22px; margin-bottom: 10px; }
+    p { color: #475467; font-size: 15px; line-height: 1.9; margin-bottom: 24px; }
+    a {
+      display: inline-block;
+      background: #1d4ed8;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 12px;
+      transition: background .2s;
+    }
+    a:hover { background: #1e40af; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="code">۴۰۴</div>
+    <h1>صفحه مورد نظر یافت نشد</h1>
+    <p>آدرس واردشده در سامانه مدیکال‌نت وجود ندارد.<br>تا لحظاتی دیگر به صفحه اصلی منتقل می‌شوید.</p>
+    <a href="/" id="home-link">بازگشت به صفحه اصلی</a>
+  </main>
+  <script>
+    // Resolve the site root under any host/subpath, then redirect.
+    (function () {
+      var seg = location.pathname.split('/');
+      var root = seg.length > 2 ? '/' + seg[1] + '/' : '/';
+      var link = document.getElementById('home-link');
+      if (link) link.href = root;
+      setTimeout(function () { location.replace(root); }, 2500);
+    })();
+  </script>
+</body>
+</html>

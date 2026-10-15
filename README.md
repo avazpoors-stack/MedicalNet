@@ -1,6 +1,8 @@
 # مدیکال‌نت | پلتفرم ملی مهندسی بالینی و بازارگاه B2B تجهیزات و ملزومات پزشکی
 > **MedicalNet | National Clinical Engineering Platform & B2B Medical Marketplace**
 
+🔗 **لینک زنده سایت:** <https://avazpoors-stack.github.io/MedicalNet/>
+
 سامانه جامع مدیریت نگهداشت مکانیزه تجهیزات بالینی (CMMS)، شبکه توزیع‌یافته دیسپچینگ در ۱۴ گره منطقه‌ای دانشگاه‌های علوم پزشکی، بازارگاه تخصصی B2B قطعات سازگار و ملزومات مصرفی بر پایه موتور حراج معکوس منصفانه با تسویه تضمین‌شده امانی.
 
 ---
@@ -16,6 +18,28 @@
 
 ---
 
+## 📁 ساختار مخزن (Repository Structure)
+
+```text
+MedicalNet/
+├── index.html                     # صفحه اصلی (تک‌صفحه‌ای، فارسی RTL)
+├── 404.html                       # صفحه خطای ۴۰۴ اختصاصی (بازگشت خودکار به خانه)
+├── robots.txt / sitemap.xml       # فایل‌های سئو و ایندکس موتورهای جست‌وجو
+├── _headers                       # هدرهای امنیتی و کش (فرمت Netlify/Cloudflare)
+├── .nojekyll                      # جلوگیری از پردازش Jekyll در GitHub Pages
+├── assets/
+│   ├── css/                       # استایل‌ها (اصلی + کامپوننت‌ها + اورراید RTL)
+│   ├── js/main.js                 # موتور تعاملی و مصورسازی داده (Vanilla JS)
+│   ├── img/                       # تصاویر، آیکون‌ها و og-image
+│   └── fonts/                     # فونت‌های محلی (Inter, DM Sans, Outfit)
+├── .github/workflows/deploy.yml   # استقرار خودکار روی GitHub Pages
+├── proof/                         # گزارش‌های Lighthouse، صحت‌سنجی و اسکرین‌شات‌ها
+├── tests/                         # اسکریپت‌های QA و آudit خودکار
+└── tools/                         # ابزارهای build تصاویر و آیکون‌ها
+```
+
+---
+
 ## 🚀 اجرای محلی (Local Run)
 
 این پروژه با معماری مدرن **Zero Runtime Dependencies** (بدون نیاز به پکیج‌های خارجی یا فرآیند بیلد پیچیده) با HTML5، CSS3 و Vanilla JavaScript پیاده‌سازی شده است:
@@ -23,6 +47,9 @@
 ```bash
 # اجرای سرور سریع با پایتون:
 python -m http.server 8080
+
+# یا با Node.js:
+node tests/serve.cjs
 
 # سپس باز کردن آدرس زیر در مرورگر:
 # http://localhost:8080
@@ -32,7 +59,19 @@ python -m http.server 8080
 
 ## 🌐 هاستینگ روی گیت‌هاب (GitHub Pages)
 
-این مخزن به صورت خودکار با GitHub Actions بر روی **GitHub Pages** در شاخه `main` مستقر و منتشر می‌شود (`.github/workflows/deploy.yml`).
+این مخزن به صورت خودکار با GitHub Actions بر روی **GitHub Pages** مستقر و منتشر می‌شود (`.github/workflows/deploy.yml`).
+
+> **نکته (فقط بار اول):** برای فعال‌سازی Pages باید یک‌بار از مسیر
+> `Settings → Pages → Build and deployment → Source → GitHub Actions`
+> منبع استقرار را روی «GitHub Actions» قرار دهید. پس از آن هر push روی شاخه `main` به‌صورت خودکار منتشر می‌شود.
+
+---
+
+## 🔍 کیفیت و صحت‌سنجی (QA & Proof)
+
+- گزارش کامل Lighthouse (موبایل و دسکتاپ) و اسکرین‌شات‌های مقایسه‌ای در پوشه [`proof/`](proof/) موجود است.
+- برای بازتولید صحت‌سنجی: `python3 tests/audit_check.py` و `node tests/run-checks.cjs`
+- جمع‌بندی SHA256 فایل‌های اصلی در [`proof/SHA256SUMS.txt`](proof/SHA256SUMS.txt) ثبت شده است (`sha256sum -c proof/SHA256SUMS.txt`).
 
 ---
 
