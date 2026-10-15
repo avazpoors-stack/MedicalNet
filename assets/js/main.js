@@ -129,7 +129,8 @@
     document.addEventListener('click', (e) => {
       if (!menu.hidden && !e.target.closest('.site-header')) setOpen(false);
     });
-    const desktop = window.matchMedia('(min-width: 901px)');
+    // Keep in sync with the CSS header breakpoint (@media max-width: 1340px)
+    const desktop = window.matchMedia('(min-width: 1341px)');
     const onChange = (e) => { if (e.matches) setOpen(false); };
     if (desktop.addEventListener) desktop.addEventListener('change', onChange);
   }
@@ -138,14 +139,14 @@
   function initSparkles() {
     if (reduceMotion) return;
     $$('[data-sparkle]').forEach((btn) => {
-      const count = btn.classList.contains('btn--lg') ? 12 : 8;
+      const count = btn.classList.contains('btn--lg') ? 7 : 5;
       for (let i = 0; i < count; i += 1) {
         const s = document.createElement('span');
         s.className = 'spark';
         s.setAttribute('aria-hidden', 'true');
         s.style.left = (6 + Math.random() * 88).toFixed(1) + '%';
         s.style.top = (22 + Math.random() * 68).toFixed(1) + '%';
-        s.style.setProperty('--d', (2.2 + Math.random() * 2.6).toFixed(2) + 's');
+        s.style.setProperty('--d', (2.8 + Math.random() * 2.8).toFixed(2) + 's');
         s.style.setProperty('--delay', (-Math.random() * 4).toFixed(2) + 's');
         s.style.setProperty('--dx', ((Math.random() - 0.5) * 16).toFixed(1) + 'px');
         btn.appendChild(s);

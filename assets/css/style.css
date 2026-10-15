@@ -74,8 +74,10 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 }
 .btn .ic { font-size: 16px; transition: transform .3s var(--ease-out); }
 .btn:hover .ic { transform: translateX(3px); }
-.btn:hover { transform: translateY(-1px) scale(1.025); }
-.btn:active { transform: scale(.98); }
+/* No scale on hover: scaling text buttons causes subpixel blur and an
+   hover/un-hover feedback loop at the button edge (perceived as wobble). */
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0) scale(.985); }
 .btn--dark {
   color: #fff;
   background: linear-gradient(180deg, #2b2b30 0%, #131315 100%);
@@ -90,17 +92,22 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .btn--sm { font-size: 14.5px; padding: 12px 21px; border-radius: 10px; }
 .btn--lg { font-size: 17px; padding: 18px 42px; border-radius: 12px; }
 
-/* sparkle particles injected by JS */
+/* sparkle particles injected by JS — dormant (invisible) by default;
+   they only animate while the button is hovered or keyboard-focused,
+   so buttons no longer flicker permanently. */
 .spark {
   position: absolute; z-index: -1; pointer-events: none;
   width: 2px; height: 2px; border-radius: 50%; background: #fff; opacity: 0;
+}
+.btn:hover .spark,
+.btn:focus-visible .spark {
   animation: spark var(--d, 3s) var(--delay, 0s) infinite ease-in-out;
 }
 .btn--light .spark { background: rgba(20, 20, 24, .5); }
 @keyframes spark {
   0% { opacity: 0; transform: translate3d(0, 6px, 0) scale(.5); }
-  35% { opacity: .95; }
-  75% { opacity: .6; }
+  35% { opacity: .55; }
+  75% { opacity: .35; }
   100% { opacity: 0; transform: translate3d(var(--dx, 0px), -12px, 0) scale(1); }
 }
 
@@ -118,7 +125,7 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .site-header { position: fixed; inset: 0 0 auto 0; z-index: 50; padding: 0 var(--gutter); pointer-events: none; }
 .site-header__inner {
   pointer-events: auto; position: relative;
-  height: var(--header-h); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  height: var(--header-h); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center;
   padding: 0 41px; border-radius: 0 0 20px 20px; background: rgba(251, 251, 253, 0);
   transition: height .45s var(--ease), margin .45s var(--ease), padding .45s var(--ease), background-color .45s, box-shadow .45s, backdrop-filter .45s;
 }
@@ -132,11 +139,12 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .brand__mark { width: 56px; height: 24px; fill: #111; transition: transform .4s var(--ease-out); }
 .brand:hover .brand__mark { transform: scale(1.06); }
 
-.nav { position: relative; display: flex; gap: 6px; }
+.nav { position: relative; display: flex; gap: 6px; min-width: 0; justify-content: center; }
 .nav__link {
   position: relative; z-index: 1;
-  font: 500 13px/1 var(--font-body); letter-spacing: .2em; text-transform: uppercase; text-decoration: none;
-  color: #66666d; padding: 12px 14px; border-radius: 9px; transition: color .25s;
+  font: 500 clamp(11.5px, calc(0.32vw + 7.2px), 13px)/1 var(--font-body); letter-spacing: .2em; text-transform: uppercase; text-decoration: none;
+  color: #66666d; padding: 12px clamp(6px, calc(1.7vw - 16.5px), 14px); border-radius: 9px; transition: color .25s;
+  white-space: nowrap;
 }
 .nav__link:hover, .nav__link.is-active { color: #1d1d1f; }
 .no-js .nav__link:hover { background: #ececef; }
@@ -518,6 +526,19 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .reveal-init.is-visible { opacity: 1; transform: none; transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); transition-delay: var(--reveal-delay, 0s); }
 
 /* ---------- Responsive ---------- */
+/* Header progressive disclosure — never let the header items overlap:
+   the long brand subtitle and the version badge only render on wide
+   screens, and below 1340px the nav collapses into the mobile menu. */
+@media (max-width: 1560px) {
+  .brand__sub { display: none; }
+  .badge-version { display: none; }
+}
+@media (max-width: 1340px) {
+  .site-header__inner { grid-template-columns: auto auto; padding: 0 12px; }
+  .nav { display: none; }
+  .nav-toggle { display: inline-flex; }
+  .site-header__actions .btn { display: none; }
+}
 @media (max-width: 1100px) {
   .logos__row { padding: 0 20px; justify-content: center; }
   .feature, .feature--reverse { grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -525,10 +546,6 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 }
 @media (max-width: 900px) {
   :root { --gutter: 16px; --header-h: 64px; }
-  .site-header__inner { grid-template-columns: 1fr auto; padding: 0 12px; }
-  .nav { display: none; }
-  .nav-toggle { display: inline-flex; }
-  .site-header__actions .btn { display: none; }
   .hero { padding-top: 84px; border-radius: 24px; }
   .hero__lead { font-size: 16.5px; }
   .hero__dash-wrap { margin-top: 48px; }
@@ -627,7 +644,7 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
   font: 600 16px/1 var(--font-body); color: #fff; text-decoration: none;
   background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border: 1.5px solid rgba(255, 255, 255, 0.45);
-  transition: all 0.3s var(--ease-out);
+  transition: background-color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 }
 .btn-outline-hero:hover {
   background: rgba(255, 255, 255, 0.2); border-color: #fff; color: #fff; transform: translateY(-2px);
@@ -725,7 +742,7 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .wo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 16px; }
 .wo-card {
   border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px;
-  background: #f8fafc; transition: all 0.25s var(--ease-out); text-align: right;
+  background: #f8fafc; transition: border-color 0.25s var(--ease-out), background-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out); text-align: right;
 }
 .wo-card:hover {
   border-color: #cbd5e1; background: #fff;
@@ -1037,7 +1054,7 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 .papers-grid { display: grid; gap: 16px; }
 .paper-card {
   background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px 24px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); transition: all 0.25s var(--ease-out); text-align: right;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02); transition: border-color 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out); text-align: right;
 }
 .paper-card:hover { border-color: #cbd5e1; box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08); }
 .paper-card__num { font-size: 12px; font-weight: 800; color: #7c3aed; margin-bottom: 6px; }
