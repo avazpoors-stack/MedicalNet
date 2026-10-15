@@ -1,0 +1,1605 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>مدیکال‌نت | سامانه جامع مهندسی بالینی و بازارگاه B2B تجهیزات و ملزومات پزشکی کشور</title>
+  <meta name="description" content="پیوند هوشمند درخواست فنی، تدارکات بیمارستانی، گره‌های منطقه‌ای و زنجیره تأمین سلامت">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="مدیکال‌نت | سامانه جامع مهندسی بالینی و بازارگاه B2B تجهیزات و ملزومات پزشکی کشور">
+  <meta property="og:description" content="پیوند هوشمند درخواست فنی، تدارکات بیمارستانی، گره‌های منطقه‌ای و زنجیره تأمین سلامت">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap">
+  <link rel="preload" href="assets/fonts/outfit-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/hero-bg.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/medicalnet-components.css">
+  <link rel="stylesheet" href="assets/css/rtl-override.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">پرش به محتوای اصلی</a>
+
+  <!-- ============ SVG Sprite (Icons & Brand Mark) ============ -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="logo-mark" viewBox="0 0 112 48"><path d="M21 3A21 21 0 0 0 19 44.9V16H29V45H42V24A21 21 0 0 0 21 3Z"/><path d="M42 45 64 17 75 30 94 3 112 45Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="3" rx="1.5"/><rect width="7" height="7" x="14" y="14" rx="1.5"/><rect width="7" height="7" x="3" y="14" rx="1.5"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-trending-down" viewBox="0 0 24 24"><path d="m23 18-9.5-9.5-5 5L1 6"/><path d="M17 18h6v-6"/></symbol>
+    <symbol id="i-trending-up" viewBox="0 0 24 24"><path d="m23 6-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 7h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 4h4v3h-4V4z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-file-chart" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 18v-2"/><path d="M12 18v-4"/><path d="M16 18v-6"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-alert-triangle" viewBox="0 0 24 24"><path d="m10.29 3.86-8.6 14.89A2 2 0 0 0 3.42 22h17.16a2 2 0 0 0 1.73-3.25L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14"/><path d="M15 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m7 4 13 8-13 8Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 2v10"/><path d="M18.4 6.6a9 9 0 1 1-12.77.04"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <!-- Brand Symbols -->
+    <symbol id="b-dropbox" viewBox="0 0 24 24"><path d="M6 1.807L0 5.629l6 3.822 6.001-3.822L6 1.807zM18 1.807l-6 3.822 6 3.822 6-3.822-6-3.822zM0 13.274l6 3.822 6.001-3.822L6 9.452l-6 3.822zM18 9.452l-6 3.822 6 3.822 6-3.822-6-3.822zM6 18.371l6.001 3.822 6-3.822-6-3.822L6 18.371z"/></symbol>
+    <symbol id="b-notion" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+    <symbol id="b-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="b-linear" viewBox="0 0 24 24"><path d="M2.886 4.18A11.982 11.982 0 0 1 11.99 0C18.624 0 24 5.376 24 12.009c0 3.64-1.62 6.903-4.18 9.105L2.887 4.18ZM1.817 5.626l16.556 16.556c-.524.33-1.075.62-1.65.866L.951 7.277c.247-.575.537-1.126.866-1.65ZM.322 9.163l14.515 14.515c-.71.172-1.443.282-2.195.322L0 11.358a12 12 0 0 1 .322-2.195Zm-.17 4.862 9.823 9.824a12.02 12.02 0 0 1-9.824-9.824Z"/></symbol>
+    <symbol id="b-microsoft" viewBox="0 0 24 24"><rect x="1" y="1" width="10.5" height="10.5" fill="#f25022"/><rect x="12.5" y="1" width="10.5" height="10.5" fill="#7fba00"/><rect x="1" y="12.5" width="10.5" height="10.5" fill="#00a4ef"/><rect x="12.5" y="12.5" width="10.5" height="10.5" fill="#ffb900"/></symbol>
+    <symbol id="b-slack" viewBox="0 0 24 24"><rect x="7.2" y="2" width="3.4" height="20" rx="1.7" fill="#36c5f0"/><rect x="13.4" y="2" width="3.4" height="20" rx="1.7" fill="#2eb67d"/><rect x="2" y="7.2" width="20" height="3.4" rx="1.7" fill="#e01e5a"/><rect x="2" y="13.4" width="20" height="3.4" rx="1.7" fill="#ecb22e"/></symbol>
+  </svg>
+
+  <!-- ============ Header & Navigation ============ -->
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="مدیکال‌نت — صفحه اصلی پلتفرم ملی مهندسی بالینی">
+        <svg class="brand__mark" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <div class="brand__text-group">
+          <span class="brand__name">مدیکال‌نت</span>
+          <span class="brand__sub">سامانه جامع مهندسی بالینی و بازارگاه B2B تجهیزات پزشکی</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="ناوبری اصلی پلتفرم">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a class="nav__link" href="#hero">خانه</a>
+        <a class="nav__link" href="#dashboard">پیشخوان CMMS</a>
+        <a class="nav__link" href="#capabilities">ارکان سه‌گانه</a>
+        <a class="nav__link" href="#regional-nodes">شبکه ۱۴ گره</a>
+        <a class="nav__link" href="#monitoring">مانیتورینگ و عیب‌یابی</a>
+        <a class="nav__link" href="#ecosystem">بازیگران</a>
+        <a class="nav__link" href="#business-model">مدل اقتصادی ۲٪</a>
+        <a class="nav__link" href="#case-studies">تجارب بالینی</a>
+        <a class="nav__link" href="#academic-foundation">مبانی نظری</a>
+      </nav>
+      <div class="site-header__actions">
+        <span class="badge-version" title="نسخه عملیاتی منطبق بر مقاله پژوهشی">نسخه عملیاتی ۳.۴.۰</span>
+        <a href="#dashboard" class="btn btn--dark btn--sm" data-sparkle>
+          <span>ورود به پورتال</span>
+          <svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="باز کردن منو">
+          <svg class="ic" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#hero">خانه</a>
+      <a href="#dashboard">پیشخوان CMMS</a>
+      <a href="#capabilities">ارکان سه‌گانه</a>
+      <a href="#regional-nodes">شبکه ۱۴ گره</a>
+      <a href="#monitoring">مانیتورینگ و عیب‌یابی</a>
+      <a href="#ecosystem">بازیگران</a>
+      <a href="#business-model">مدل اقتصادی ۲٪</a>
+      <a href="#case-studies">تجارب بالینی</a>
+      <a href="#academic-foundation">مبانی نظری</a>
+      <div class="mobile-menu__actions">
+        <a href="#dashboard" class="btn btn--dark btn--sm mobile-menu-btn">ورود به پورتال مهندسی بالینی</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <!-- ============ ۱. بخش هیرو (Hero Section) ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title" role="region">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__content">
+        <!-- Hero Trust & Compliance Badges -->
+        <div class="hero__badges intro intro--1">
+          <span class="hero__badge">
+            <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+            <span>منطبق با ضوابط اداره کل تجهیزات پزشکی (IMED)</span>
+          </span>
+          <span class="hero__badge">
+            <svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>
+            <span>شبکه توزیع‌یافته ۱۴ گره منطقه‌ای دانشگاه‌های علوم پزشکی</span>
+          </span>
+          <span class="hero__badge">
+            <svg class="ic" aria-hidden="true"><use href="#i-target"/></svg>
+            <span>انطباق با استانداردهای مدیریت کیفیت تجهیزات پزشکی ISO 13485:2016</span>
+          </span>
+          <span class="hero__badge">
+            <svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg>
+            <span>پلتفرم ملی ارتقای تاب‌آوری زیرساخت‌های درمانی</span>
+          </span>
+          <span class="hero__badge">
+            <svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>
+            <span>مدل حراج معکوس با کارمزد منصفانه ۲٪ فروشنده در کالای پذیرفته‌شده</span>
+          </span>
+        </div>
+
+        <h1 class="hero__title intro intro--2" id="hero-title">پلتفرم ملی مهندسی بالینی و شبکه تخصصی B2B تجهیزات و ملزومات پزشکی</h1>
+        <p class="hero__lead intro intro--3">پایان توقف‌های فرسایشی تجهیزات حیاتی بیمارستان‌ها؛ از اعزام فوری مهندسان بالینی در گره‌های منطقه‌ای تا حراج معکوس شفاف قطعات سازگار و ملزومات مصرفی با تسویه تضمین‌شده.</p>
+        <p class="hero__sublead intro intro--4">مدیکال‌نت با یکپارچه‌سازی اعلام خرابی بالینی، توجیه فنی مهندسی، گردش کار بودجه بیمارستانی و بازارگاه تخصصی قطعات، زمان خواب تجهیزات حیاتی مراکز درمانی را از ماه‌ها به چند ساعت تقلیل داده و تاب‌آوری مراکز درمانی کشور را متحول می‌کند.</p>
+
+        <!-- 3 CTA Buttons with Sparkles -->
+        <div class="hero__actions intro intro--4">
+          <a href="#dashboard" class="btn btn--light btn--lg" data-sparkle>
+            <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+            <span>ورود به پورتال مهندسی بالینی بیمارستان</span>
+          </a>
+          <a href="#ecosystem" class="btn btn--dark btn--lg" data-sparkle>
+            <svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>
+            <span>ثبت‌نام تأمین‌کنندگان، کالیبراسیون و مهندسان بالینی</span>
+          </a>
+          <a href="#capabilities" class="btn btn-outline-hero btn--lg" data-sparkle>
+            <svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>
+            <span>مشاهده مستندات معماری پلتفرم</span>
+          </a>
+        </div>
+
+        <!-- 4 Live Stats Counters -->
+        <div class="hero__stats-grid intro intro--5">
+          <div class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg></span>
+              <span class="stat-card__change">+۳ قطب جدید در سال جاری</span>
+            </div>
+            <div class="stat-card__val">
+              <span data-count="14" data-decimals="0">14</span>
+            </div>
+            <div class="stat-card__lbl">گره‌های منطقه‌ای فعال</div>
+            <div class="stat-card__desc">پوشش سراسری بیمارستان‌های دانشگاهی، تأمین اجتماعی و خصوصی کشور بدون نیاز به مرکزگرایی پایتخت</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <span class="stat-card__change">۱۰۰٪ احراز صلاحیت فنی و مدارک</span>
+            </div>
+            <div class="stat-card__val">
+              <span data-count="850" data-decimals="0">850</span>
+              <span class="stat-card__suffix">+</span>
+            </div>
+            <div class="stat-card__lbl">مهندسان و تکنسین‌های ارزیابی‌شده</div>
+            <div class="stat-card__desc">پوشش تخصصی بیوالکتریک، بیومکانیک، گازهای طبی، تصویربرداری و تجهیزات اتاق عمل</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg></span>
+              <span class="stat-card__change">دارای شناسنامه فنی و اصالت IRC</span>
+            </div>
+            <div class="stat-card__val">
+              <span data-count="32000" data-decimals="0">32000</span>
+            </div>
+            <div class="stat-card__lbl">قطعات یدکی و ملزومات کاتالوگ‌شده</div>
+            <div class="stat-card__desc">دسته‌بندی در سه گروه اصلی: قطعات یدکی سازگار، ملزومات مصرفی و تجهیزات پزشکی سرمایه‌ای</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__top">
+              <span class="stat-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
+              <span class="stat-card__change">-۷۸٪ کاهش زمان توقف</span>
+            </div>
+            <div class="stat-card__val">
+              <span data-count="96.4" data-decimals="1">96.4</span>
+            </div>
+            <div class="stat-card__lbl">شاخص آماده‌به‌کاری و تاب‌آوری تجهیزات</div>
+            <div class="stat-card__desc">کاهش میانگین زمان توقف دستگاه‌های حیاتی از ۵۴ روز (اعزام سنتی) به زیر ۴۸ ساعت</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ۲. پیشخوان عملیات بیمارستان (CMMS & Procurement Operations Mock) ============ -->
+    <section class="section dashboard-section" id="dashboard" aria-labelledby="dash-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">میز کار مهندسی بالینی بیمارستان</p>
+        <h2 class="h2" id="dash-title">میز کار و داشبورد یکپارچه عملیات مهندسی بالینی و تدارکات (CMMS &amp; Procurement Portal)</h2>
+        <p class="lead">پایش برخط وضعیت ۱,۵۳۰ دستگاه پزشکی، ردیابی تخصیص بودجه و دیسپچینگ منطقه‌ای</p>
+      </header>
+
+      <div class="hero__dash-wrap" data-scroll-scale="0.9">
+        <div class="dash-frame">
+          <div class="dash-fit" id="dash-fit">
+            <div class="dash" id="dash">
+              <!-- Top Bar -->
+              <div class="dash__top">
+                <div class="dash__top-brand">
+                  <svg class="dash__logo" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
+                  <span class="dash__top-title">مدیکال‌نت CMMS</span>
+                </div>
+                <div class="dash__search">
+                  <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+                  <input type="text" id="dash-search" placeholder="جست‌وجوی شناسه تجهیز (Asset ID)، شماره پرونده، نام قطعه یدکی، کد IRC یا شرح عیب بالینی..." aria-label="جست‌وجو در پیشخوان مهندسی بالینی">
+                </div>
+                <div class="dash__top-actions">
+                  <span class="dash__status-badge"><span class="pulse-dot"></span> پورتال فعال بیمارستان امام خمینی (ره)</span>
+                  <button class="icon-btn" type="button" aria-label="پیام‌ها و هشدارهای سیستم">
+                    <svg class="ic" aria-hidden="true"><use href="#i-alert-triangle"/></svg>
+                  </button>
+                  <div class="dash__avatar" title="مهندس ناظر بالینی">م.ش</div>
+                </div>
+              </div>
+
+              <!-- Dashboard Body (Sidebar + Main) -->
+              <div class="dash__body">
+                <!-- Sidebar with 6 Modules -->
+                <aside class="dash__side" aria-label="منوی ماژول‌های CMMS">
+                  <div class="side-label">سامانه یکپارچه مهندسی بالینی</div>
+                  <ul class="side-list">
+                    <li>
+                      <a class="side-item is-current" href="#dashboard" aria-current="page" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-tool"/></svg>
+                        <span class="side-item__text">کارتابل درخواست‌های فنی و عیب‌یابی</span>
+                        <span class="side-badge">۱۲ درخواست نیازمند اقدام</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="side-item" href="#dashboard" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg>
+                        <span class="side-item__text">پیگیری وضعیت بودجه و تأییدیه‌های مالی</span>
+                        <span class="side-badge">۴ تاییدیه معلق</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="side-item" href="#dashboard" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg>
+                        <span class="side-item__text">بازارگاه تخصصی قطعات سازگار و ملزومات</span>
+                        <span class="side-badge">۵۴ استعلام فعال</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="side-item" href="#dashboard" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-trending-down"/></svg>
+                        <span class="side-item__text">حراج معکوس و مناقصات تجمیعی</span>
+                        <span class="side-badge">۳ حراج در جریان</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="side-item" href="#dashboard" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-activity"/></svg>
+                        <span class="side-item__text">آزمایشگاه‌های کالیبراسیون و ایمنی الکتریکی</span>
+                        <span class="side-badge">تایید صلاحیت</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="side-item" href="#dashboard" data-side-item>
+                        <svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                        <span class="side-item__text">دیسپچینگ هوشمند مهندسان منطقه‌ای</span>
+                        <span class="side-badge">۱۴ گره برخط</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="side-label side-label--nodes">وضعیت گره‌های متصل</div>
+                  <div class="side-node-status">
+                    <div class="side-node-row"><span>گره تهران (مرکزی):</span> <b>۱.۸ ساعت</b></div>
+                    <div class="side-node-row"><span>گره اصفهان:</span> <b>۲.۴ ساعت</b></div>
+                    <div class="side-node-row"><span>گره فارس:</span> <b>۳.۱ ساعت</b></div>
+                    <div class="side-node-row"><span>گره خراسان:</span> <b>۳.۵ ساعت</b></div>
+                  </div>
+                </aside>
+
+                <!-- Main Operations Content -->
+                <div class="dash__main">
+                  <!-- 4 KPI Cards -->
+                  <div class="dash-kpis">
+                    <div class="kpi-card">
+                      <div class="kpi-card__top">
+                        <span class="kpi-card__title">وضعیت فعال تجهیزات بیمارستان</span>
+                        <span class="kpi-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-activity"/></svg></span>
+                      </div>
+                      <div class="kpi-card__val">۹۲.۸٪</div>
+                      <div class="kpi-card__trend positive">+۴.۲٪ نسبت به ماه گذشته</div>
+                      <div class="kpi-card__sub">۱,۴۲۰ دستگاه از ۱,۵۳۰ دستگاه در حال بهره‌برداری کامل</div>
+                      <div class="kpi-card__detail">خروج ۳۸ دستگاه بحرانی از صف انتظار قطعه و اورهال کامل تخت‌های جراحی</div>
+                    </div>
+                    <div class="kpi-card">
+                      <div class="kpi-card__top">
+                        <span class="kpi-card__title">درخواست‌های تعمیر در جریان</span>
+                        <span class="kpi-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-tool"/></svg></span>
+                      </div>
+                      <div class="kpi-card__val">۱۸</div>
+                      <div class="kpi-card__trend positive">-۳۵٪ زمان خواب دستگاه</div>
+                      <div class="kpi-card__sub">۷ مورد اورژانسی، ۶ مورد نیمه‌فوری، ۵ مورد روتین</div>
+                      <div class="kpi-card__detail">تفکیک شفاف زمان توقف اداری (تأیید بودجه) از زمان خالص تعمیر مکانیکی/الکترونیکی</div>
+                    </div>
+                    <div class="kpi-card">
+                      <div class="kpi-card__top">
+                        <span class="kpi-card__title">میانگین زمان بازگشت به خدمت (MTTR)</span>
+                        <span class="kpi-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>
+                      </div>
+                      <div class="kpi-card__val">۳.۲ روز</div>
+                      <div class="kpi-card__trend positive">-۹۴٪ زمان انتظار اعزام</div>
+                      <div class="kpi-card__sub">در مقایسه با میانگین تاریخی ۵۸ روز در اعزام سنتی بین‌شهری</div>
+                      <div class="kpi-card__detail">حذف هزینه رفت‌وآمد، اقامت و تاخیر ۲ ماهه اعزام تعمیرکار از پایتخت</div>
+                    </div>
+                    <div class="kpi-card">
+                      <div class="kpi-card__top">
+                        <span class="kpi-card__title">صرفه‌جویی بودجه‌ای از طریق حراج معکوس</span>
+                        <span class="kpi-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-trending-up"/></svg></span>
+                      </div>
+                      <div class="kpi-card__val">۲۸.۵٪</div>
+                      <div class="kpi-card__trend positive">+۴۱۰ میلیون تومان صرفه‌جویی فصلی</div>
+                      <div class="kpi-card__sub">کاهش هزینه تأمین قطعات یدکی و ملزومات مصرفی پرمصرف</div>
+                      <div class="kpi-card__detail">حذف واسطه‌های چندلایه و خرید مستقیم از تولیدکنندگان و واردکنندگان رسمی</div>
+                    </div>
+                  </div>
+
+                  <!-- Dynamic SVG Chart Card -->
+                  <div class="card dash-chart-card">
+                    <div class="card__head">
+                      <div>
+                        <div class="card__title">نمودار مقایسه‌ای شاخص آماده‌به‌کاری تجهیزات (Uptime) و کارایی زنجیره تأمین</div>
+                        <small class="card__subhead">پایش اثربخشی پلتفرم نسبت به چرخه اداری و سنتی اعزام</small>
+                      </div>
+                      <div class="chart-controls">
+                        <div class="metric-select">
+                          <button class="card__title--btn" id="metric-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                            <span id="metric-label">شاخص تاب‌آوری و Uptime (%)</span>
+                            <svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+                          </button>
+                          <ul class="metric-menu" id="metric-menu" hidden>
+                            <li><button type="button" data-metric="traffic" aria-current="true">شاخص تاب‌آوری و Uptime (%)</button></li>
+                            <li><button type="button" data-metric="pageviews">سفارشات قطعات B2B</button></li>
+                            <li><button type="button" data-metric="sessions">زمان پاسخ‌دهی گره‌ها (ساعت)</button></li>
+                          </ul>
+                        </div>
+                        <div class="chart-legend">
+                          <button class="legend-item" type="button" data-series="cur" aria-pressed="true">
+                            <span class="legend-swatch"></span> دوره جاری (مدیکال‌نت)
+                          </button>
+                          <button class="legend-item legend-item--prev" type="button" data-series="prev" aria-pressed="true">
+                            <span class="legend-swatch"></span> دوره گذشته (سنتی)
+                          </button>
+                          <span class="legend-sep" aria-hidden="true"></span>
+                          <button class="icon-btn" id="chart-refresh" type="button" aria-label="بازآوری داده‌های نمودار" title="شبیه‌سازی داده جدید">
+                            <svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg>
+                          </button>
+                          <button class="icon-btn" id="chart-live" type="button" aria-pressed="false" aria-label="پایش زنده بلادرنگ" title="پایش برخط">
+                            <svg class="ic" aria-hidden="true"><use href="#i-activity"/></svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chart" id="traffic-chart">
+                      <div class="chart__tip" id="chart-tip" hidden></div>
+                    </div>
+                  </div>
+
+                  <!-- Interactive Work Order Feed (6 Clinical Cases) -->
+                  <div class="card dash-workorders">
+                    <div class="card__head">
+                      <div>
+                        <div class="card__title">کارتابل دستورکارهای فعال و اعلام خرابی‌های بالینی (۶ مورد بالینی مستند)</div>
+                        <small class="card__subhead">گردش کار فنی، تأیید بودجه، تخصیص قطعات یدکی و دیسپچینگ مهندسان بالینی</small>
+                      </div>
+                      <span class="badge-count">۶ مورد نیازمند نظارت</span>
+                    </div>
+                    <div class="wo-grid">
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0841 <span class="wo-card__asset">[MED-OX-04]</span></div>
+                          <span class="wo-badge wo-badge--warning">بحرانی - خطر وقفه تنفسی بیماران</span>
+                        </div>
+                        <h4 class="wo-card__title">دستگاه اکسیژن‌ساز سانترال بیمارستانی (PSA 500L/min)</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> بخش مراقبت‌های ویژه ریوی / ICU</span>
+                          <span><strong>مهندس مسئول:</strong> مهندس کاوه رادمنش (گره منطقه‌ای فارس)</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> افت خلوص اکسیژن به ۸۱٪، صدای غیرعادی در شیرهای تخلیه و انسداد احتمالی برج زئولیت</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> ست زئولیت گرید مدیکال Li-X + کیت آب‌بندی سلنوئید ولو</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--warning"></span>
+                            <span>در حال تعمیر در محل</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> امروز - ساعت ۱۶:۰۰</div>
+                        </div>
+                        <div class="wo-card__notes">در اعزام سنتی ۲ ماه انتظار برای اعزام تکنسین از تهران ثبت می‌شد؛ در پلتفرم ظرف ۳ ساعت تکنسین در محل حاضر شد.</div>
+                      </article>
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0839 <span class="wo-card__asset">[SURG-TBL-09]</span></div>
+                          <span class="wo-badge wo-badge--info">فوری - خروج تخت از سرویس جراحی</span>
+                        </div>
+                        <h4 class="wo-card__title">پدال کنترل الکتروهیدرولیک تخت جراحی اتاق عمل جنرال</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> اتاق عمل شماره ۳ (جراحی عمومی)</span>
+                          <span><strong>مهندس مسئول:</strong> مهندس سپهر دادور (گره اصفهان)</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> قطعی کابل چندرشته‌ای کنترل زاویه ترندلنبرگ و نفوذ مایعات شستشو به داخل پدال</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> میکروسوئیچ‌های هرمتیک ضدآب IPX8 و کابل انعطاف‌پذیر شیلددار</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--info"></span>
+                            <span>قطعه ارسال شد</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> فردا - ساعت ۱۰:۰۰</div>
+                        </div>
+                        <div class="wo-card__notes">به جای بسته‌بندی و ارسال طولانی‌مدت پدال به پایتخت، قطعه سازگار ظرف ۱۲ ساعت با پیک تخصصی تحویل شد.</div>
+                      </article>
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0835 <span class="wo-card__asset">[BED-NEUR-17]</span></div>
+                          <span class="wo-badge wo-badge--success">ایمنی بیمار - ریسک بالای سقوط بیمار تشنجی</span>
+                        </div>
+                        <h4 class="wo-card__title">قفل مکانیکی و ضامن ایمنی بدساید تخت بستری</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> بخش مغز و اعصاب و بیماران تشنجی</span>
+                          <span><strong>مهندس مسئول:</strong> مهندس هادی شمس (گره تهران)</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> شکستگی زبانه قفل نگهدارنده هندریل؛ گیرکردن هنگام بالا بردن و تحمیل فشار شدید به دست پرسنل</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> زبانه فولادی ریخته‌گری تقویت‌شده ضد زنگ</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--success"></span>
+                            <span>ترخیص به بخش</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> تکمیل و آزمایش بالینی شد</div>
+                        </div>
+                        <div class="wo-card__notes">رفع خطر آسیب شغلی پرستاران و تثبیت ایمنی حفاظ تخت با تعویض ضامن ارتقایافته ضد شکست.</div>
+                      </article>
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0832 <span class="wo-card__asset">[SPHYG-EMG-SET]</span></div>
+                          <span class="wo-badge wo-badge--pending">متوسط - تأثیر مستقیم بر خطای اندازه‌گیری فشارخون</span>
+                        </div>
+                        <h4 class="wo-card__title">کاف، پوآر و گیج فشارسنج بالینی (۱۰ ست)</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> بخش اورژانس و تریاژ عمومی</span>
+                          <span><strong>مهندس مسئول:</strong> واحد کالیبراسیون شهید بهشتی</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> نشتی شدید هوا در سوپاپ پوآر، فرسودگی چسب ولکرو کاف و خطای بیش از ۸ میلی‌متر جیوه در گیج</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> ۱۰ عدد پوآر سیلیکونی ضد آلرژی + کاف دولایه لاتکس فری</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--pending"></span>
+                            <span>در انتظار تایید بودجه کارپردازی</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> ۲۴ ساعت پس از تایید بودجه</div>
+                        </div>
+                        <div class="wo-card__notes">درخواست خرید به صورت یکپارچه با سامانه مالی بیمارستان متصل شده و منتظر امضای دیجیتال مترون است.</div>
+                      </article>
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0828 <span class="wo-card__asset">[FLW-MED-22]</span></div>
+                          <span class="wo-badge wo-badge--info">متوسط - نشتی اکسیژن در محیط بستری</span>
+                        </div>
+                        <h4 class="wo-card__title">فلومتر و روتامتر دیواری اکسیژن به همراه بطری مرطوب‌کننده (۶ واحد)</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> بخش داخلی ۲ و جراحی مردان</span>
+                          <span><strong>مهندس مسئول:</strong> مهندس نیما انصاری (گره خراسان رضوی)</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> فرسودگی واشر O-ring، ترک‌خوردگی بدنه پلی‌کربنات لیوان مرطوب‌کننده و افت دقت شناور</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> ۶ عدد لیوان مرطوب‌کننده قابل اتوکلاو + ست واشر سیلیکونی گرید پزشکی</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--info"></span>
+                            <span>قطعه ارسال شد</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> امروز - ساعت ۱۸:۰۰</div>
+                        </div>
+                        <div class="wo-card__notes">کاهش مصرف غیرضروری اکسیژن بیمارستان با رفع نشت میکرو در روتامترها.</div>
+                      </article>
+                      <article class="wo-card">
+                        <div class="wo-card__header">
+                          <div class="wo-card__id">WO-2026-0820 <span class="wo-card__asset">[BHU-ICU-03]</span></div>
+                          <span class="wo-badge wo-badge--success">فوری - مخاطره ترشحات تنفسی پس از عمل</span>
+                        </div>
+                        <h4 class="wo-card__title">کنسول بالای سر بیمار (Bed Head Unit - Gas Outlets)</h4>
+                        <div class="wo-card__meta">
+                          <span><strong>بخش:</strong> مراقبت‌های ویژه جراحی قلب باز (ICU-OH)</span>
+                          <span><strong>مهندس مسئول:</strong> تیم تخصصی خطوط گازهای طبی گره مرکزی تهران</span>
+                        </div>
+                        <div class="wo-card__defect"><strong>شرح نقص:</strong> اختلال در قفل سریع آتچمنت سوکت ساکشن وکیوم و افت فشار مکش بالینی</div>
+                        <div class="wo-card__part"><strong>قطعه یا خدمت موردنیاز:</strong> مغزی سوکت آداپتور ساکشن استاندارد DIN/BS</div>
+                        <div class="wo-card__footer">
+                          <div class="wo-card__status">
+                            <span class="status-indicator status-indicator--success"></span>
+                            <span>ترخیص به بخش</span>
+                          </div>
+                          <div class="wo-card__eta"><strong>تحویل / پایان:</strong> پایان آزمون تست نشتی گاز و تحویل سرپرستار</div>
+                        </div>
+                        <div class="wo-card__notes">ثبت دیجیتال چک‌لیست تست فشار گاز و صدور شناسنامه پذیرش بالینی تجهیز.</div>
+                      </article>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ۳. ارکان سه‌گانه و قابلیت‌های بنیادین ============ -->
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="cap-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--green">معماری سیستم و ارکان سه‌گانه</p>
+        <h2 class="h2" id="cap-title">ارکان سه‌گانه و قابلیت‌های بنیادین پلتفرم مدیکال‌نت</h2>
+        <p class="lead">تحول دیجیتال مدیریت فناوری سلامت و زنجیره ارزش تجهیزات پزشکی</p>
+      </header>
+
+      <div class="cap-grid cap-grid--3col">
+        <article class="pillar-card" data-reveal>
+          <div class="pillar-card__top">
+            <span class="pillar-card__badge">ستون اول</span>
+            <div class="pillar-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg></div>
+          </div>
+          <h3 class="pillar-card__title">سامانه مدیریت مکانیزه نگهداشت تجهیزات بالینی (Clinical CMMS)</h3>
+          <p class="pillar-card__desc">یکپارچه‌سازی اعلام خرابی، عیب‌یابی فنی، برآورد هزینه، گردش کار تصویب بودجه بیمارستانی و تأیید بازگشت تجهیز به چرخه درمان در یک بستر بدون کاغذ.</p>
+          <div class="pillar-card__section-label">قابلیت‌های کلیدی:</div>
+          <ul class="pillar-card__list">
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>شناسنامه دیجیتال و سوابق جامع تعمیرات و نگهداری پیشگیرانه (PM) هر دستگاه بر مبنای UDI و کدهای استاندارد IMED</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>تفکیک سیستمی و شفاف زمان خالص تعمیر فنی از زمان انتظار بوروکراتیک اداری، مالی و تدارکاتی</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>کارتابل تخصصی چندسطحی برای سرپرستار، مسئول تجهیزات پزشکی، مدیر مالی، مترون و ریاست بیمارستان</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>ثبت دیجیتال پروتکل پذیرش بالینی و گواهی آزمون عملکرد پیش از پرداخت وجه به تعمیرکار یا فروشنده</span></li>
+          </ul>
+          <div class="pillar-card__section-label pillar-card__section-label--mt">جریان ۵ مرحله‌ای گردش کار:</div>
+          <div class="workflow-steps">
+            <span class="wf-step-pill">۱. اعلام خرابی توسط پرسنل بخش با ذکر علائم بالینی و شدت فوریت</span>
+            <span class="wf-step-pill">۲. بررسی کارشناسی مهندس بالینی و تعیین نیاز به قطعه یا خدمات تخصصی</span>
+            <span class="wf-step-pill">۳. ارزیابی توجیه فنی تعمیر در برابر خرید تجهیز جدید (Repair vs. Replace)</span>
+            <span class="wf-step-pill">۴. گردش الکترونیک تایید بودجه با حذف مراجعات فیزیکی و امضاهای دستی</span>
+            <span class="wf-step-pill">۵. ثبت فرآیند تعمیر و تأیید نهایی بازگشت ایمن به چرخه خدمت</span>
+          </div>
+        </article>
+        <article class="pillar-card" data-reveal>
+          <div class="pillar-card__top">
+            <span class="pillar-card__badge">ستون دوم</span>
+            <div class="pillar-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg></div>
+          </div>
+          <h3 class="pillar-card__title">بازارگاه تخصصی B2B و موتور حراج معکوس سلامت (Health Marketplace)</h3>
+          <p class="pillar-card__desc">بستر معاملات سازمانی و بدون واسطه میان مراکز درمانی، شرکت‌های دانش‌بنیان، واردکنندگان رسمی و تولیدکنندگان ملزومات و تجهیزات پزشکی.</p>
+          <div class="pillar-card__section-label">قابلیت‌های کلیدی:</div>
+          <ul class="pillar-card__list">
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>پوشش جامع ۳ دسته محصولی: قطعات یدکی سازگار با تجهیزات موجود، ملزومات مصرفی بیمارستانی، و دستگاه‌های سرمایه‌ای</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>موتور حراج معکوس آنلاین (Reverse Auction) برای خریدهای تجمیعی و استعلام‌های با مشخصات فنی استاندارد</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>سامانه انطباق فنی قطعات جهت اطمینان از سازگاری کامل الکتریکی، مکانیکی و ابعادی با برند و مدل دستگاه</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>تسویه مالی تضمین‌شده از طریق حساب امانی و مشروط به تأییدیه فنی کیفی سرپرست تجهیزات بیمارستان</span></li>
+          </ul>
+        </article>
+        <article class="pillar-card" data-reveal>
+          <div class="pillar-card__top">
+            <span class="pillar-card__badge">ستون سوم</span>
+            <div class="pillar-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg></div>
+          </div>
+          <h3 class="pillar-card__title">شبکه توزیع‌یافته دیسپچینگ در گره‌های منطقه‌ای (Regional Nodes)</h3>
+          <p class="pillar-card__desc">ساماندهی شبکه مهندسان و تکنسین‌های بومی احراز صلاحیت‌شده در قطب‌های دانشگاهی کشور جهت برچیدن کامل انتظار چندماهه برای اعزام کارشناس از پایتخت.</p>
+          <div class="pillar-card__section-label">قابلیت‌های کلیدی:</div>
+          <ul class="pillar-card__list">
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>ماتریس احراز صلاحیت تخصصی بر اساس رشته، مدارک بازآموزی اداره کل، رتبه‌بندی کارایی و حوزه جغرافیایی خدمت</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>سیستم ارجاع هوشمند سفارش‌های تعمیر به نزدیک‌ترین مهندس دارای رتبه ممتاز با کمترین زمان رسیدن به مرکز</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>کاهش ۹۵ درصدی هزینه‌های سرسام‌آور مأموریت، بلیت رفت‌وآمد و اقامت تکنسین‌های اعزامی از شهرهای دور</span></li>
+            <li><svg class="ic bullet-ic" aria-hidden="true"><use href="#i-check"/></svg><span>ایجاد ذخیره استراتژیک قطعات یدکی پرمصرف در هاب‌های منطقه‌ای جهت امدادرسانی در حوادث غیرمترقبه و بحران‌ها</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ۴. شبکه توزیع‌یافته ۱۴ گره منطقه‌ای ============ -->
+    <section class="section regional-nodes-section" id="regional-nodes" aria-labelledby="nodes-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--orange">توزیع کشوری و تاب‌آوری منطقه‌ای</p>
+        <h2 class="h2" id="nodes-title">شبکه ملی ۱۴ گره منطقه‌ای دانشگاه‌های علوم پزشکی</h2>
+        <p class="lead">پوشش سراسری مراکز درمانی کشور بدون تمرکزگرایی در پایتخت؛ دیسپچینگ محلی کمتر از ۴ ساعت و انبارش استراتژیک ملزومات و قطعات حیاتی</p>
+      </header>
+
+      <!-- Summary Metrics Bar -->
+      <div class="nodes-summary-bar" data-reveal>
+        <div class="nodes-summary-item"><strong>۱۴</strong> <span>گره دانشگاهی فعال</span></div>
+        <div class="nodes-summary-item"><strong>۹۸۰+</strong> <span>بیمارستان تحت پوشش</span></div>
+        <div class="nodes-summary-item"><strong>۸۵۰+</strong> <span>مهندس ارزیابی‌شده</span></div>
+        <div class="nodes-summary-item"><strong>۲.۹ ساعت</strong> <span>میانگین زمان واکنش کشور</span></div>
+        <div class="nodes-summary-item"><strong>۱۰۰٪</strong> <span>انطباق با استانداردهای وزارت بهداشت</span></div>
+      </div>
+
+      <!-- Complete 14 Nodes Grid -->
+      <div class="nodes-grid" data-reveal>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-THR</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۱.۸ ساعت</span>
+          </div>
+          <h3 class="node-card__title">تهران، البرز و سمنان غربی (گره مرکزی)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی تهران، شهید بهشتی و ایران</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">142</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">210</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">24</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-ISF</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۲.۴ ساعت</span>
+          </div>
+          <h3 class="node-card__title">اصفهان، کاشان و یزد (قطب مرکزی)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی اصفهان و یزد</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">88</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">115</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">14</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-FRS</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۱ ساعت</span>
+          </div>
+          <h3 class="node-card__title">فارس، بوشهر و کهگیلویه (قطب جنوب)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی شیراز (بیمارستان نمازی)</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">94</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">128</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">17</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-KHR</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۵ ساعت</span>
+          </div>
+          <h3 class="node-card__title">خراسان رضوی، شمالی و جنوبی (قطب شرق)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی مشهد (بیمارستان امام رضا)</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">106</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">112</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">19</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-AZR</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۲ ساعت</span>
+          </div>
+          <h3 class="node-card__title">آذربایجان شرقی، غربی و اردبیل (شمال‌غرب)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی تبریز</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">78</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">86</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">11</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-KHZ</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۴.۰ ساعت</span>
+          </div>
+          <h3 class="node-card__title">خوزستان و ایلام (قطب جنوب‌غرب)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی جندی‌شاپور اهواز</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">62</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">64</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">9</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-CAS</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۲.۶ ساعت</span>
+          </div>
+          <h3 class="node-card__title">مازندران و گلستان (قطب طبرستان)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی مازندران (ساری)</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">48</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">52</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">8</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-GIL</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۲.۹ ساعت</span>
+          </div>
+          <h3 class="node-card__title">گیلان و قزوین (قطب کاسپین غربی)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی گیلان و قزوین</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">44</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">46</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">6</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-WST</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۶ ساعت</span>
+          </div>
+          <h3 class="node-card__title">کرمانشاه، همدان و کردستان (قطب غرب)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی کرمانشاه و همدان</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">68</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">57</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">8</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-KRM</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۸ ساعت</span>
+          </div>
+          <h3 class="node-card__title">کرمان، بم و جیرفت (قطب کویر)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی کرمان (بیمارستان افضلی‌پور)</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">42</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">38</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">7</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-HRM</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۴.۲ ساعت</span>
+          </div>
+          <h3 class="node-card__title">هرمزگان، قشم، کیش و جزایر خلیج فارس</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی هرمزگان (بندرعباس)</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">32</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">30</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">5</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-CNT</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۲.۵ ساعت</span>
+          </div>
+          <h3 class="node-card__title">مرکزی، قم و زنجان (قطب صنعت و سلامت)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی قم و اراک</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">46</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">42</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">6</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-ZAG</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۳.۹ ساعت</span>
+          </div>
+          <h3 class="node-card__title">لرستان و چهارمحال و بختیاری (قطب زاگرس)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه‌های علوم پزشکی شهرکرد و خرم‌آباد</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">36</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">34</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">5</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+        <article class="node-card">
+          <div class="node-card__top">
+            <span class="node-card__code">NODE-SEB</span>
+            <span class="node-card__sla" title="میانگین زمان پاسخ‌دهی قطب">۴.۴ ساعت</span>
+          </div>
+          <h3 class="node-card__title">سیستان و بلوچستان (قطب زاهدان و چابهار)</h3>
+          <div class="node-card__hubs"><strong>دانشگاه‌های قطب:</strong> دانشگاه علوم پزشکی زاهدان</div>
+          <div class="node-card__stats">
+            <div class="node-stat-col"><span class="node-stat-num">38</span><span class="node-stat-label">بیمارستان</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">31</span><span class="node-stat-label">مهندس بالینی</span></div>
+            <div class="node-stat-col"><span class="node-stat-num">6</span><span class="node-stat-label">دستورکار فعال</span></div>
+          </div>
+          <div class="node-card__footer">
+            <span class="node-status-dot"></span>
+            <span class="node-status-text">عملیاتی کامل</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ۵. مانیتورینگ هوشمند، عیب‌یابی بالینی و پایش خطاهای پرریسک ============ -->
+    <section class="section monitoring-section" id="monitoring" aria-labelledby="mon-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--purple">هوش مصنوعی، پیش‌بینی و ایمنی بالینی</p>
+        <h2 class="h2" id="mon-title">موتور تحلیل هوشمند عیوب و توصیه‌های نگهداشت بالینی (Predictive Clinical Maintenance Engine)</h2>
+        <p class="lead">تحلیل خودکار سوابق پرونده فنی، ریشه‌یابی خرابی‌های مکرر بالینی و پیش‌بینی فرسودگی قطعات بر پایه هوش مصنوعی</p>
+      </header>
+
+      <!-- Deep Dive AI Recommendations -->
+      <div class="ai-section-title" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>
+        <span>توصیه‌های پیشگیرانه موتور عیب‌یابی بر اساس سوابق بالینی و تجارب واقعی کارآموزی</span>
+      </div>
+      <div class="ai-grid" data-reveal>
+        <article class="ai-rec-card">
+          <div class="ai-rec-card__top">
+            <span class="ai-rec-card__cat">تجهیزات تنفسی و هوای فشرده بیمارستانی</span>
+            <span class="ai-rec-card__id">تحلیل هوشمند</span>
+          </div>
+          <h3 class="ai-rec-card__title">دستگاه‌های اکسیژن‌ساز سانترال جذبی تناوبی (PSA Oxygen Concentrators)</h3>
+          <div class="ai-rec-card__pain"><strong>نقطه درد مشاهده‌شده در بیمارستان:</strong> توقف دو دستگاه از سه اکسیژن‌ساز بیمارستان و انتظار دوماهه برای اعزام تعمیرکار از شهر دیگر</div>
+          <div class="ai-rec-card__cause"><strong>ریشه‌یابی علت خرابی (Root Cause):</strong> تحلیل داده‌های میدانی نشان می‌دهد ۸۲٪ موارد افت خلوص اکسیژن به زیر استاندارد ۹۳±۳٪ ناشی از اشباع رطوبتی غربال مولکولی زئولیت به علت تعویض دیرهنگام درایر تبریدی ورودی و خرابی شیرهای خودکار تخلیه میعانات است.</div>
+          <div class="ai-rec-card__action"><strong>دستور اقدام سامانه:</strong> پیاده‌سازی برنامه نگهداری پیشگیرانه سه‌سطحی شامل: ۱) تعویض منظم پیش‌فیلترهای کواالسنتر هر ۲۰۰۰ ساعت، ۲) تست فصلی نشت داخلی شیرهای سلنوئیدی زاویه‌دار، ۳) استفاده از زئولیت گرید صنعتی Li-X با نرخ تبادل کاتیونی بالا جهت افزایش ۴ برابری طول عمر غربال در برابر رطوبت محیطی.</div>
+          <div class="ai-rec-card__impact"><strong>شاخص بهینه‌سازی:</strong> جلوگیری از توقف دوماهه دستگاه و کاهش ۸۵ درصدی هزینه اعزام تکنسین بین‌شهری</div>
+        </article>
+        <article class="ai-rec-card">
+          <div class="ai-rec-card__top">
+            <span class="ai-rec-card__cat">تجهیزات جراحی و اتاق‌های عمل</span>
+            <span class="ai-rec-card__id">تحلیل هوشمند</span>
+          </div>
+          <h3 class="ai-rec-card__title">پدال‌های الکتروهیدرولیک و پایی تخت‌های جراحی (OR Bed Foot Controls)</h3>
+          <div class="ai-rec-card__pain"><strong>نقطه درد مشاهده‌شده در بیمارستان:</strong> ارسال پدال تخت‌های برقی جراحی به شهری دیگر و خروج چندهفته‌ای تخت‌ها از چرخه جراحی</div>
+          <div class="ai-rec-card__cause"><strong>ریشه‌یابی علت خرابی (Root Cause):</strong> بررسی پرونده‌های فنی نشان داد عامل اصلی خرابی پدال‌ها، شستشوی مستقیم با مواد ضدعفونی‌کننده کلردار و قلیایی کف اتاق عمل است که منجر به نفوذ رطوبت به داخل جعبه میکروسوئیچ‌ها و سولفاته شدن کابل فرمان می‌شود.</div>
+          <div class="ai-rec-card__action"><strong>دستور اقدام سامانه:</strong> طراحی و جایگزینی پدال‌های ماژولار با درجه حفاظت محفظه IPX8 دارای سیلینگ دوبل سیلیکونی، به همراه استفاده از کابل‌های ضد سایش PUR قابل انفصال. همچنین راه‌اندازی کیت سرویس سریع در گره منطقه‌ای که امکان عیب‌یابی و تعویض میکروسوئیچ را طی کمتر از ۴ ساعت در داخل بیمارستان فراهم می‌کند.</div>
+          <div class="ai-rec-card__impact"><strong>شاخص بهینه‌سازی:</strong> کاهش زمان خواب تخت اتاق عمل از چند هفته به ۴ ساعت و حذف نیاز به بسته‌بندی و ارسال بین‌شهری پدال</div>
+        </article>
+        <article class="ai-rec-card">
+          <div class="ai-rec-card__top">
+            <span class="ai-rec-card__cat">ملزومات و تجهیزات مصرفی عمومی و بستری</span>
+            <span class="ai-rec-card__id">تحلیل هوشمند</span>
+          </div>
+          <h3 class="ai-rec-card__title">مجموعه فلومترهای دیواری مرطوب‌کننده، ست‌های فشارسنج بالینی و چرخ‌های ویلچر</h3>
+          <div class="ai-rec-card__pain"><strong>نقطه درد مشاهده‌شده در بیمارستان:</strong> ویلچرهای زمین‌گیر شده با چرخ معیوب، نشتی پوآر و کاف فشارسنج‌ها و فلومترهای دور انداخته‌شده</div>
+          <div class="ai-rec-card__cause"><strong>ریشه‌یابی علت خرابی (Root Cause):</strong> تحلیل طول عمر نشان داد علت دور انداختن فشارسنج‌ها و فلومترها، نبود قطعات خرد مصرفی (پوآر، سوپاپ یکطرفه، واشر آب‌بندی و زبانه قفل) در تدارکات بیمارستان است. بوروکراسی اداری مانع از خرید سریع این قطعات ارزان شده و منجر به اتلاف سرمایه تجهیزات اصلی می‌شود.</div>
+          <div class="ai-rec-card__action"><strong>دستور اقدام سامانه:</strong> ایجاد سبد خرید شارژ سریع (Fast-Track Replenishment) در پلتفرم با اتصال مستقیم به بودجه تنخواه‌گردان مهندسی پزشکی؛ تجمیع نیازهای دوره‌ای کاف و پوآر فشارسنج، لیوان مرطوب‌کننده نشکن و چرخ‌های بلبرینگی ویلچر با سفارش‌گذاری خودکار بر مبنای حراج معکوس.</div>
+          <div class="ai-rec-card__impact"><strong>شاخص بهینه‌سازی:</strong> صرفه‌جویی ۳۴ درصدی در بودجه سالانه تدارکات و احیای ۱۲۰ دستگاه فشارسنج و ویلچر متوقف در انبار</div>
+        </article>
+      </div>
+
+      <!-- Live Clinical Hazard & Anomaly Monitor (6 Cards) -->
+      <div class="alerts-section-wrapper" data-reveal>
+        <div class="ai-section-title">
+          <svg class="ic" aria-hidden="true"><use href="#i-alert-triangle"/></svg>
+          <span>مرکز مانیتورینگ آنلاین و پایش خطاهای پرتکرار (Clinical Anomaly &amp; Safety Monitor) — پایش بلادرنگ ۶ مخاطره با اولویت بالا</span>
+        </div>
+        <div class="alerts-grid">
+          <article class="alert-card alert-card--critical">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">critical</span>
+              <span class="alert-card__time">۱۰ دقیقه پیش</span>
+            </div>
+            <h4 class="alert-card__eq">اکسیژن‌ساز سانترال OxyPure 500L <span class="alert-card__code">[MED-OX-04]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> بخش مراقبت‌های ویژه ریوی / ICU</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> افت خلوص اکسیژن به زیر ۸۲٪ و ناتوانی در تأمین غلظت مجاز دارویی گاز طبی</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> خطر هیپوکسی بیماران متصل به ونتیلاتور و الزام سوئیچ فوری به مانیفولد کپسول‌های رزرو</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> اعزام فوری مهندس بالینی گره منطقه‌ای فارس + ارسال اضطراری ست شیرهای برقی سلنوئید</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای شیراز | <strong>وضعیت:</strong> تیم مهندسی در حال عزیمت به مرکز</div>
+          </article>
+          <article class="alert-card alert-card--safety">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">urgent</span>
+              <span class="alert-card__time">۲۵ دقیقه پیش</span>
+            </div>
+            <h4 class="alert-card__eq">ضامن مکانیکی هندریل تخت بستری بیمار <span class="alert-card__code">[BED-NEUR-17]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> بخش نورولوژی و بیماران تشنجی</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> شکستگی پین فولادی ضامن بدساید و رها شدن ناگهانی حفاظ تخت تحت فشار وزن بیمار</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> خطر سقوط بیمار در حین تشنج و ایجاد آسیب بدنی و جراحت دست پرسنل در اثر تلاش برای مهار مکانیکی</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> جایگزینی موقت تخت با تخت پشتیبان بخش + صدور حواله نصب زبانه تقویتی از انبار تجهیزات</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای تهران | <strong>وضعیت:</strong> تخت پشتیبان جایگزین شد؛ در حال تعمیر قطعه</div>
+          </article>
+          <article class="alert-card alert-card--surgical">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">urgent</span>
+              <span class="alert-card__time">۴۲ دقیقه پیش</span>
+            </div>
+            <h4 class="alert-card__eq">کابل کنترل هیدرولیک پدال تخت اتاق عمل <span class="alert-card__code">[SURG-TBL-09]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> اتاق عمل عمومی شماره ۳</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> قطع اتصال رشته فرمان شیب جانبی (Lateral Tilt) به علت لهیدگی کابل زیر چرخ ترالی</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> ناتوانی جراح در تنظیم زاویه میدان عمل در حین لاپاراتومی و ریسک افزایش زمان بیهوشی</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> ارسال اکسپرس پدال ماژولار رزرو گره اصفهان + جایگزینی کانکتور شیلددار ضدآب</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای اصفهان | <strong>وضعیت:</strong> پدال رزرو تحویل سرپرستار اتاق عمل شد</div>
+          </article>
+          <article class="alert-card alert-card--drift">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">warning</span>
+              <span class="alert-card__time">۱ ساعت پیش</span>
+            </div>
+            <h4 class="alert-card__eq">ست‌های فشارسنج جیوه‌ای و عقربه‌ای <span class="alert-card__code">[SPHYG-EMG-10x]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> اورژانس حاد و تریاژ ترومای مرکز</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> نشتی هوا در سوپاپ پوآر لاستیکی و تخلیه زودرس فشار، منجر به خطای کم‌برآورد فشارخون حاد</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> تشخیص نادرست در بیماران شوک هموراژیک و بحران فشارخون به علت نشت کاف و فرسودگی چسب</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> توزیع ۱۰ ست کاف و پوآر سیلیکونی از انبار ملزومات مصرفی پلتفرم و خارج کردن ست‌های فرسوده</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای تبریز | <strong>وضعیت:</strong> ست‌های جدید وارد مدار تریاژ شد</div>
+          </article>
+          <article class="alert-card alert-card--facility">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">warning</span>
+              <span class="alert-card__time">۲ ساعت پیش</span>
+            </div>
+            <h4 class="alert-card__eq">کنسول بالای سر بیمار و سوکت وکیوم مرکزی <span class="alert-card__code">[BHU-ICU-03]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> بخش مراقبت‌های ویژه جراحی قلب باز</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> فرسودگی واشر اورینگ سوکت مکش ساکشن و افت وکیوم از منفی ۶۵۰ میلی‌بار به منفی ۲۵۰ میلی‌بار</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> نارسایی در تخلیه ترشحات راه هوایی بیمار اینتوبه و انتشار گاز بیهوشی نشت‌کرده در محوطه بستری</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> اعزام تکنسین تأسیسات گازهای طبی + تست نشت فشار بر اساس استاندارد HTM 02-01</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای مشهد | <strong>وضعیت:</strong> واشرها تعویض و آزمون نشت پاس شد</div>
+          </article>
+          <article class="alert-card alert-card--compliance">
+            <div class="alert-card__head">
+              <span class="alert-card__badge">info</span>
+              <span class="alert-card__time">۳ ساعت پیش</span>
+            </div>
+            <h4 class="alert-card__eq">۵ دستگاه الکتروشوک بای‌فازیک و ونتیلاتور پرتابل <span class="alert-card__code">[DEFIB-VENT-GRP]</span></h4>
+            <div class="alert-card__dept"><strong>بخش درگیر:</strong> بخش‌های اورژانس، CCU و آمبولانس‌های اعزامی</div>
+            <div class="alert-card__defect"><strong>شرح خطا:</strong> انقضای دوره آزمون دوره‌ای دشارژ ژول، ایمنی جریان نشت بدنه (Leakage Current) و کالیبراسیون حجم ونتیلاتور</div>
+            <div class="alert-card__risk"><strong>ارزیابی ریسک:</strong> مغایرت با سنجه‌های اعتباربخشی وزارت بهداشت و ریسک عملکرد ناقص دفیبریلاتور در احیای قلبی (CPR)</div>
+            <div class="alert-card__action"><strong>اقدام اصلاحی و دیسپچ:</strong> ثبت خودکار نوبت آزمون در آزمایشگاه کالیبراسیون همکار پلتفرم و اعزام تستر تخصصی Fluke</div>
+            <div class="alert-card__node"><strong>گره مسئول:</strong> گره منطقه‌ای اهواز | <strong>وضعیت:</strong> آزمون کالیبراسیون برنامه‌ریزی شد</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ۶. بازیگران اکوسیستم پلتفرم چندسویه ============ -->
+    <section class="section ecosystem-section" id="ecosystem" aria-labelledby="eco-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">مشارکت‌کنندگان و ذی‌نفعان پلتفرم</p>
+        <h2 class="h2" id="eco-title">بازیگران اکوسیستم پلتفرم چندسویه مدیکال‌نت</h2>
+        <p class="lead">تعریف دقیق نقش‌ها، منافع متقابل، ابزارهای تخصصی و جریان ارزش برای چهار گروه ذی‌نفع اصلی</p>
+      </header>
+
+      <div class="roles-grid" data-reveal>
+        <article class="role-card">
+          <div class="role-card__top">
+            <div class="role-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></div>
+            <span class="role-card__badge">تقاضاکننده خدمات و کالا</span>
+          </div>
+          <h3 class="role-card__title">مراکز درمانی و بیمارستان‌ها</h3>
+          <div class="role-card__aud"><strong>جامعه هدف:</strong> رؤسای مراکز، مدیران امور عمومی، مسئولان تجهیزات پزشکی، مترون‌ها و واحدهای مالی</div>
+          <div class="role-card__subtitle">نقاط درد حل‌شده در بیمارستان:</div>
+          <ul class="role-card__list">
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>پایان خواب ۲ ماهه تجهیزات حیاتی نظیر اکسیژن‌ساز به دلیل نبود تعمیرکار مقیم</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>حذف مکاتبات کاغذی و بلاتکلیفی پرونده‌های تعمیراتی در راهروهای مالی و بودجه</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>دسترسی به قطعات تضمین‌شده با قیمت‌های رقابتی حراج معکوس و حذف واسطه‌های سودجو</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>ارتقای نمرات سنجه‌های اعتباربخشی بیمارستانی در حوزه مدیریت فناوری سلامت</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">ابزارهای تخصصی در پلتفرم:</div>
+          <ul class="role-card__tools">
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>داشبورد CMMS با داشبورد وضعیت آنلاین تک‌تک دستگاه‌های دارای برچسب اموال</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>ماژول پیشنهاد جایگزینی در برابر تعمیر (Repair/Replace Decision Support)</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>پورتال تأیید الکترونیکی بودجه با جریان کاری قابل سفارشی‌سازی بر اساس سقف اختیارات مالی</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>امضای دیجیتال و تایید نهایی پذیرش کیفی تجهیز پس از تست بالینی در بخش</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">گردش کار ۵ مرحله‌ای:</div>
+          <div class="workflow-steps">
+            <span class="wf-step-pill">۱. ثبت دیجیتال خرابی در بخش درمانی با مشخصات بالینی و کد اموال</span>
+            <span class="wf-step-pill">۲. ارزیابی فنی مهندس پزشکی بیمارستان و انتخاب روش رفع عیب</span>
+            <span class="wf-step-pill">۳. تأیید سیستمی بودجه تنخواه‌گردان یا کارپردازی</span>
+            <span class="wf-step-pill">۴. ارجاع به نزدیک‌ترین متخصص گره منطقه‌ای یا خرید قطعه سازگار</span>
+            <span class="wf-step-pill">۵. آزمون بالینی، تأیید ترخیص به بخش و آزادسازی تسویه مالی</span>
+          </div>
+        </article>
+        <article class="role-card">
+          <div class="role-card__top">
+            <div class="role-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></div>
+            <span class="role-card__badge">ارائه‌دهنده خدمات تخصصی</span>
+          </div>
+          <h3 class="role-card__title">متخصصان و مهندسان بالینی</h3>
+          <div class="role-card__aud"><strong>جامعه هدف:</strong> فارغ‌التحصیلان بیوالکتریک، بیومکانیک، بالینی و شرکت‌های فنی‌مهندسی دارای پروانه فعالیت</div>
+          <div class="role-card__subtitle">نقاط درد حل‌شده در بیمارستان:</div>
+          <ul class="role-card__list">
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>خروج از انزوای حرفه‌ای متخصصان شهرستانی و دسترسی عادلانه به سفارش‌های تعمیراتی مراکز درمانی</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>دریافت به‌موقع و امن دستمزد بدون مطالبات معوق چندماهه از طریق حساب امانی پلتفرم</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>معافیت ۱۰۰ درصدی خدمات فنی و تعمیراتی از پرداخت کارمزد در فازهای توسعه پلتفرم</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>ساخت رزومه حرفه‌ای اعتبارسنجی‌شده و ارتقای رتبه تخصصی بر پایه رضایت مراکز درمانی</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">ابزارهای تخصصی در پلتفرم:</div>
+          <ul class="role-card__tools">
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>اپلیکیشن دیسپچینگ هوشمند با سیستم اعلام کار بر اساس محدوده جغرافیایی و نوع تخصص</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>دسترسی به کتابخانه دیجیتال دفترچه‌های راهنمای سرویس (Service Manuals) و کدهای خطای تجهیزات</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>ابزار استعلام فوری قطعات یدکی سازگار در حین انجام عملیات تعمیر در محل بیمارستان</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>صدور شناسنامه دیجیتال تعمیرات و گواهی فنی کارکرد ایمن دستگاه</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">گردش کار ۵ مرحله‌ای:</div>
+          <div class="workflow-steps">
+            <span class="wf-step-pill">۱. دریافت اعلان ارجاع کار منطقه‌ای بر اساس مهارت و فاصله مکانی</span>
+            <span class="wf-step-pill">۲. پذیرش درخواست در اپلیکیشن و مشاهده پرونده فنی تجهیز</span>
+            <span class="wf-step-pill">۳. مراجعه حضوری به بیمارستان، عیب‌یابی و ثبت نیاز به قطعه</span>
+            <span class="wf-step-pill">۴. انجام عملیات تعمیر و کالیبراسیون و اجرای تست‌های عملکردی</span>
+            <span class="wf-step-pill">۵. ثبت امضای مشترک با سرپرستار و واریز آنی دستمزد بدون کسر کارمزد</span>
+          </div>
+        </article>
+        <article class="role-card">
+          <div class="role-card__top">
+            <div class="role-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg></div>
+            <span class="role-card__badge">عرضه‌کننده کالا و ملزومات</span>
+          </div>
+          <h3 class="role-card__title">تأمین‌کنندگان و تولیدکنندگان کالا</h3>
+          <div class="role-card__aud"><strong>جامعه هدف:</strong> شرکت‌های واردکننده، تولیدکنندگان دانش‌بنیان، نمایندگی‌های رسمی و توزیع‌کنندگان مجاز IMED</div>
+          <div class="role-card__subtitle">نقاط درد حل‌شده در بیمارستان:</div>
+          <ul class="role-card__list">
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>حذف بدحسابی و دوره‌های وصول مطالبات طولانی بیمارستان‌ها با سیستم پرداخت امانی</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>دسترسی مستقیم به تقاضای بیش از ۱,۰۰۰ مرکز درمانی کشور بدون نیاز به شبکه‌های واسطه‌ای سنتی</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>امکان حضور منصفانه در حراج‌های معکوس و مناقصات تجمیعی استاندارد</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>مدیریت یکپارچه کاتالوگ و ثبت خودکار کدهای IRC و شناسنامه‌های فنی محصولات</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">ابزارهای تخصصی در پلتفرم:</div>
+          <ul class="role-card__tools">
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>پنل اختصاصی مدیریت موجودی انبار، انطباق کاتالوگ با کدهای ملی تجهیزات و قیمت‌گذاری برخط</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>موتور مناقصات و حراج معکوس آنلاین با سیستم اعتبارسنجی تضامین مالی خریداران</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>داشبورد هوش تجاری و پیش‌بینی تقاضای قطعات یدکی و ملزومات مصرفی در گره‌های مختلف</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>سیستم لجستیک یکپارچه سلامت با قابلیت ردیابی مرسوله تا انبار تجهیزات بیمارستان</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">گردش کار ۵ مرحله‌ای:</div>
+          <div class="workflow-steps">
+            <span class="wf-step-pill">۱. بارگذاری کاتالوگ کالاها و همگام‌سازی استعلام با سامانه IRC اداره کل</span>
+            <span class="wf-step-pill">۲. دریافت استعلام‌های تجمیعی و اعلام قیمت در حراج معکوس آنلاین</span>
+            <span class="wf-step-pill">۳. برنده شدن سفارش و دریافت ضمانت مسدودی وجه در حساب امانی پلتفرم</span>
+            <span class="wf-step-pill">۴. بسته‌بندی استاندارد و ارسال اکسپرس به انبار مرکز درمانی</span>
+            <span class="wf-step-pill">۵. تسویه ۲۴ ساعته وجه فاکتور پس از تأیید سلامت کالا با کسر ۲٪ کارمزد</span>
+          </div>
+        </article>
+        <article class="role-card">
+          <div class="role-card__top">
+            <div class="role-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-compass"/></svg></div>
+            <span class="role-card__badge">خدمات مکمل و اعتباربخشی</span>
+          </div>
+          <h3 class="role-card__title">شرکای کالیبراسیون، لجستیک و آموزش</h3>
+          <div class="role-card__aud"><strong>جامعه هدف:</strong> آزمایشگاه‌های کالیبراسیون تایید صلاحیت ISO 17025، حمل‌ونقل تخصصی و مراکز آموزش بالینی</div>
+          <div class="role-card__subtitle">نقاط درد حل‌شده در بیمارستان:</div>
+          <ul class="role-card__list">
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>اتصال مستقیم تقویم آزمون‌های دوره‌ای کالیبراسیون بیمارستان‌ها به ظرفیت‌های آزمایشگاهی گره‌ها</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>حمل ایمن، تخصصی و بیمه‌شده قطعات حساس هیدرولیک، بردهای حساس و ملزومات پزشکی</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>ارائه آموزش‌های حرفه‌ای کاربری تجهیزات به پرسنل بالینی جهت به حداقل رساندن خطاهای ناشی از کاربری نادرست</span></li>
+            <li><svg class="ic bullet-ic-check" aria-hidden="true"><use href="#i-check"/></svg><span>کاهش خرابی‌های فلومترها، پدال‌ها و قفل‌های تخت از طریق آموزش اصولی بهره‌برداری به کمک‌یاران و پرستاران</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">ابزارهای تخصصی در پلتفرم:</div>
+          <ul class="role-card__tools">
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>ماژول صدور خودکار برچسب‌های کالیبراسیون با کد QR و قابلیت استعلام اصالت آزمون</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>پلتفرم دوره‌های مجازی و چندرسانه‌ای آموزش کاربری تجهیزات متصل به پرونده شناسنامه‌ای دستگاه</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>شبکه ترابری اکسپرس قطعات با کنترل شوک فیزیکی و مانیتورینگ حرارتی قطعات حساس</span></li>
+            <li><svg class="ic bullet-ic-tool" aria-hidden="true"><use href="#i-tool"/></svg><span>داوری فنی در صورت بروز عدم انطباق کالیبراسیون یا نقص کیفی قطعه تحویلی</span></li>
+          </ul>
+          <div class="role-card__subtitle role-card__subtitle--mt">گردش کار ۵ مرحله‌ای:</div>
+          <div class="workflow-steps">
+            <span class="wf-step-pill">۱. اتصال به تقویم الزامات دوره‌ای اعتباربخشی تجهیزات بیمارستانی</span>
+            <span class="wf-step-pill">۲. برنامه‌ریزی نوبت‌های آزمون ایمنی الکتریکی و دپارتمان‌های کالیبراسیون</span>
+            <span class="wf-step-pill">۳. اعزام کارشناس کالیبراسیون با تجهیزات مرجع دارای گواهی ردیابی ملی</span>
+            <span class="wf-step-pill">۴. بارگذاری گواهی آزمون و صدور بارکد QR معتبر برای برچسب‌گذاری دستگاه</span>
+            <span class="wf-step-pill">۵. ثبت سابقه در شناسنامه سلامت دستگاه جهت ممیزی‌های وزارت بهداشت</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ۷. مدل کسب‌وکار و اقتصاد منصفانه ============ -->
+    <section class="section business-model-section" id="business-model" aria-labelledby="biz-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--pink">پایداری مالی، شفافیت و انطباق قانونی</p>
+        <h2 class="h2" id="biz-title">مدل درآمدی پایدار، شفاف و انطباق‌پذیر پلتفرم</h2>
+        <p class="lead">ساختار درآمدهای چهارگانه متکی بر ارزش‌آفرینی واقعی، کارمزد منصفانه و انطباق با قوانین مناقصات بخش عمومی</p>
+      </header>
+
+      <!-- Fairness Callout Banner -->
+      <div class="fairness-callout" data-reveal>
+        <div class="fairness-callout__icon"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <div class="fairness-callout__text">
+          <h3>معافیت ۱۰۰٪ کارمزد خدمات برای مهندسان بالینی و تکنسین‌های فنی</h3>
+          <p>بر مبنای نظریه پلتفرم‌های دو سویه (Rochet & Tirole 2003)، برای رفع کمبود نیروی فنی در مناطق محروم و تقویت سمت عرضه تخصصی، کلیه خدمات تعمیر، نصب، کالیبراسیون و آموزش از پرداخت هرگونه کارمزد به پلتفرم معاف بوده و دستمزد تخصصی مستقیماً به مهندس بالینی پرداخت می‌شود.</p>
+        </div>
+      </div>
+
+      <!-- 4 Revenue Streams Grid -->
+      <div class="streams-grid" data-reveal>
+        <article class="stream-card">
+          <div class="stream-card__top">
+            <span class="stream-card__rate">۲ درصد (2%) از ارزش ناخالص فاکتور کالا</span>
+            <div class="stream-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg></div>
+          </div>
+          <h3 class="stream-card__title">کارمزد ۲٪ فروشنده بر سفارش‌های کالایی تکمیل و پذیرفته‌شده</h3>
+          <div class="stream-card__charge"><strong>طرف پرداخت‌کننده:</strong> فروشندگان و تأمین‌کنندگان قطعات، ملزومات و تجهیزات</div>
+          <div class="stream-card__mech"><strong>مکانیزم محاسبه و دریافت:</strong> کارمزد تنها پس از تحویل موفق، تست کارکردی توسط مهندس بیمارستان و تأیید قطعی پذیرش محاسبه و از مبلغ قابل تسویه با فروشنده کسر می‌گردد. در صورت مرجوعی، رد کیفی یا لغو سفارش، هیچ‌گونه کارمزدی کسر نخواهد شد.</div>
+          <div class="stream-card__exemption">کلیه تراکنش‌های دستمزد خدمات مهندسی، تعمیرات، نگهداری و کالیبراسیون در فاز اجرایی اولیه از پرداخت کارمزد معاف هستند (کارمزد صفر درصد) تا مشارکت شبکه تخصصی مهندسان بالینی تقویت شود.</div>
+        </article>
+        <article class="stream-card">
+          <div class="stream-card__top">
+            <span class="stream-card__rate">پلن‌های اشتراکی نقره‌ای، طلایی و سازمانی (ماهانه / سالانه)</span>
+            <div class="stream-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg></div>
+          </div>
+          <h3 class="stream-card__title">اشتراک سالانه ابزارهای پیشرفته مدیریت کاتالوگ و انبار فروشندگان</h3>
+          <div class="stream-card__charge"><strong>طرف پرداخت‌کننده:</strong> تأمین‌کنندگان بزرگ، واردکنندگان و شرکت‌های تولیدی داوطلب</div>
+          <div class="stream-card__mech"><strong>مکانیزم محاسبه و دریافت:</strong> ارائه ابزارهای پیشرفته SaaS شامل اتصال وب‌سرویس به نرم‌افزارهای مالی/انبارداری (ERP API)، همگام‌سازی بلادرنگ موجودی، تحلیل داده‌های رفتار خرید بیمارستان‌ها و صدور نشان تأمین‌کننده ممیزی‌شده (Verified Supplier).</div>
+        </article>
+        <article class="stream-card">
+          <div class="stream-card__top">
+            <span class="stream-card__rate">تعرفه مصوب کارشناسی مدیریت فرآیند استعلام و تضامین</span>
+            <div class="stream-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-trending-down"/></svg></div>
+          </div>
+          <h3 class="stream-card__title">خدمات برگزاری استعلام‌های تجمیعی و حراج معکوس آنلاین</h3>
+          <div class="stream-card__charge"><strong>طرف پرداخت‌کننده:</strong> برگزارکنندگان مناقصات سازمانی و خریدهای کلان دانشگاهی</div>
+          <div class="stream-card__mech"><strong>مکانیزم محاسبه و دریافت:</strong> مدیریت فنی فرآیند اخذ پیشنهادهای قیمت رقابتی، تضمین اصالت پیشنهادات، اعتبارسنجی تضامین شرکت در استعلام و تولید ماتریس مقایسه قیمت و مشخصات فنی استاندارد.</div>
+        </article>
+        <article class="stream-card">
+          <div class="stream-card__top">
+            <span class="stream-card__rate">کارمزد ثابت پرونده داوری فنی بر اساس تعرفه کانون کارشناسان</span>
+            <div class="stream-card__icon"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          </div>
+          <h3 class="stream-card__title">کارشناسی فنی و داوری تخصصی اختلافات تجهیزاتی</h3>
+          <div class="stream-card__charge"><strong>طرف پرداخت‌کننده:</strong> طرف متخلف یا بر اساس توافق طرفین اختلاف</div>
+          <div class="stream-card__mech"><strong>مکانیزم محاسبه و دریافت:</strong> هنگام بروز اختلاف در تطابق مشخصات قطعه تحویل‌شده، عیوب پنهان یا عدم کارکرد دستگاه پس از تعمیر، هیئت داوری متشکل از مهندسان بالینی خبره و آزمایشگاه‌های مرجع ورود کرده و گزارش فنی الزام‌آور صادر می‌کند.</div>
+        </article>
+      </div>
+
+      <!-- 3-Step Escrow Workflow -->
+      <div class="escrow-wrapper" data-reveal>
+        <h3 class="escrow-title">پروتکل تسویه حساب امانی و تضمین سلامت معامله (۳ مرحله‌ای)</h3>
+        <p class="escrow-sub">حفاظت هم‌زمان از بودجه بیمارستان و وصول مطالبات تأمین‌کننده با احراز صلاحیت مهندسی بالینی</p>
+        <div class="escrow-steps-grid">
+          <div class="escrow-step-card">
+            <div class="escrow-step-num">گام 1</div>
+            <h4 class="escrow-step-title">مرحله ۱: مسدودی وجه سفارش در حساب واسط امانی</h4>
+            <p class="escrow-step-desc">پس از صدور سفارش خرید قطعه توسط بیمارستان، مبلغ فاکتور در حساب امانی معتبر مسدود شده و فروشنده از ضمانت پرداخت اطمینان حاصل می‌کند.</p>
+          </div>
+          <div class="escrow-step-card">
+            <div class="escrow-step-num">گام 2</div>
+            <h4 class="escrow-step-title">مرحله ۲: ارسال اکسپرس و آزمون عملکرد بالینی در محل</h4>
+            <p class="escrow-step-desc">قطعه به انبار بیمارستان تحویل داده شده و توسط مهندس بالینی روی دستگاه نصب و تست آزمون نشت/ایمنی الکتریکی انجام می‌شود.</p>
+          </div>
+          <div class="escrow-step-card">
+            <div class="escrow-step-num">گام 3</div>
+            <h4 class="escrow-step-title">مرحله ۳: ثبت امضای دیجیتال پذیرش و آزادسازی تسویه ظرف ۲۴ ساعت</h4>
+            <p class="escrow-step-desc">با درج صورتجلسه دیجیتال تحویل بدون مغایرت، ۹۸٪ مبلغ به حساب تأمین‌کننده واریز و ۲٪ کارمزد پلتفرم منظور می‌گردد.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ۸. تجارب بالینی و روایت‌های استقرار ============ -->
+    <section class="stories wall-section" id="case-studies" aria-labelledby="cases-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--orange">تجارب واقعی و سنجش در میدان</p>
+        <h2 class="h2" id="cases-title">روایت‌های موفق و تجربه استقرار در مراکز درمانی پیشرو</h2>
+        <p class="lead">بازتاب تأثیر عینی استقرار گره‌های منطقه‌ای و بازارگاه شفاف در مدیریت بحران و ارتقای سلامت بیماران</p>
+      </header>
+
+      <!-- Marquee Wall with Accessibility Controls -->
+      <div class="wall" data-reveal>
+        <button class="wall__toggle" id="wall-toggle" type="button" aria-pressed="false" aria-label="توقف یا پخش حرکت متحرک تجارب">
+          <svg class="ic" aria-hidden="true"><use href="#i-pause"/></svg>
+          <span>توقف حرکت</span>
+        </button>
+        <div class="wall__cols">
+          <div class="wall__col" data-marquee data-duration="42">
+            <div class="wall__track">
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس سید علیرضا شریفی</b>
+                    <small>رئیس اداره مهندسی پزشکی مجتمع — مجتمع بیمارستانی امام خمینی (ره) تهران</small>
+                  </div>
+                </figcaption>
+                <blockquote>بزرگ‌ترین چالش ما خواب چندماهه دستگاه‌های حیاتی مانند اکسیژن‌ساز و ونتیلاتور به خاطر پیچیدگی‌های استعلام و نبود تکنسین در دسترس بود. با اتصال به گره منطقه‌ای مدیکال‌نت، شاخص آماده‌به‌کاری تجهیزات ما از ۸۱٪ به ۹۸.۲٪ رسید و پدال‌های معیوب اتاق عمل در کمتر از ۶ ساعت به طور کامل اورهال شدند.</blockquote>
+                <div class="t-card__highlight">۹۸.۲٪ Uptime تجهیزات حیاتی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> تهران و البرز | <strong>تجهیز:</strong> اکسیژن‌ساز PSA و تخت‌های الکتروهیدرولیک جراحی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--mint">سر</div>
+                  <div>
+                    <b>سرکار خانم مهندس مریم صالحی</b>
+                    <small>سرپرست تجهیزات پزشکی بیمارستان — مرکز آموزشی درمانی نمازی شیراز</small>
+                  </div>
+                </figcaption>
+                <blockquote>در قطب جنوب کشور، ارسال قطعات پدال تخت‌های اتاق عمل یا بردهای الکترونیکی به تهران باعث فلج شدن اتاق‌های جراحی برای هفته‌ها می‌شد. با استقرار دیسپچینگ منطقه‌ای و اتصال مستقیم به مهندسان بالینی بومی استان‌های فارس و بوشهر، زمان بازگشت به خدمت تجهیزات از ۴۵ روز به زیر ۲ روز کاهش یافت.</blockquote>
+                <div class="t-card__highlight">کاهش ۹۵٪ زمان خواب تخت‌های جراحی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> فارس و جنوب کشور | <strong>تجهیز:</strong> پدال‌ها و بردهای فرمان تخت‌های اتاق عمل</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--lilac">مه</div>
+                  <div>
+                    <b>مهندس کامران نیک‌روش</b>
+                    <small>مدیرعامل و عضو انجمن تولیدکنندگان تجهیزات پزشکی — شرکت مهندسی پزشکی رازی طب (تأمین‌کننده)</small>
+                  </div>
+                </figcaption>
+                <blockquote>حراج معکوس مدیکال‌نت بازی را برای تولیدکنندگان و واردکنندگان منصف تغییر داد. مدل کارمزد ۲ درصدی بسیار عادلانه است چون فقط بعد از رضایت کامل بیمارستان کسر می‌شود. ما توانستیم بدون واسطه‌های سنتی بازار ناصرخسرو، قطعات یدکی سازگار را به بیش از ۸۰ مرکز درمانی در ۷ گره منطقه‌ای تحویل دهیم و مطالباتمان را ۲۴ ساعته تسویه کنیم.</blockquote>
+                <div class="t-card__highlight">تسویه ۲۴ ساعته و دسترسی به ۸۰ مرکز درمانی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> شبکه ملی تأمین‌کنندگان | <strong>تجهیز:</strong> قطعات یدکی استاندارد، میکروسوئیچ‌ها و شیرهای سلنوئیدی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس احسان داوودی</b>
+                    <small>مسئول تجهیزات پزشکی مرکز — مرکز آموزشی درمانی امام رضا (ع) تبریز</small>
+                  </div>
+                </figcaption>
+                <blockquote>خرابی چرخ ویلچرها، قفل بدساید تخت‌های بیماران تشنجی و نشتی کاف و پوآر فشارسنج‌ها در بیمارستان‌های بزرگ معمولاً به دلیل بوروکراسی طولانی تخصیص بودجه نادیده گرفته می‌شد. مدیکال‌نت این اقلام را در سبد ملزومات سریع قرار داد و با ایجاد سیستم تأیید الکترونیکی بودجه، زمان تأمین را از ۳۰ روز به ۲۴ ساعت رساند و ایمنی بیماران را ارتقا بخشید.</blockquote>
+                <div class="t-card__highlight">تأمین ۲۴ ساعته ملزومات مصرفی و قطعات ایمنی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> آذربایجان شرقی و شمال‌غرب | <strong>تجهیز:</strong> چرخ‌های ویلچر، قفل مکانیکی تخت‌های بستری، کاف و پوآر فشارسنج</div>
+              </figure>
+            </div>
+          </div>
+          <div class="wall__col" data-marquee data-duration="46">
+            <div class="wall__track">
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس سید علیرضا شریفی</b>
+                    <small>رئیس اداره مهندسی پزشکی مجتمع — مجتمع بیمارستانی امام خمینی (ره) تهران</small>
+                  </div>
+                </figcaption>
+                <blockquote>بزرگ‌ترین چالش ما خواب چندماهه دستگاه‌های حیاتی مانند اکسیژن‌ساز و ونتیلاتور به خاطر پیچیدگی‌های استعلام و نبود تکنسین در دسترس بود. با اتصال به گره منطقه‌ای مدیکال‌نت، شاخص آماده‌به‌کاری تجهیزات ما از ۸۱٪ به ۹۸.۲٪ رسید و پدال‌های معیوب اتاق عمل در کمتر از ۶ ساعت به طور کامل اورهال شدند.</blockquote>
+                <div class="t-card__highlight">۹۸.۲٪ Uptime تجهیزات حیاتی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> تهران و البرز | <strong>تجهیز:</strong> اکسیژن‌ساز PSA و تخت‌های الکتروهیدرولیک جراحی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--mint">سر</div>
+                  <div>
+                    <b>سرکار خانم مهندس مریم صالحی</b>
+                    <small>سرپرست تجهیزات پزشکی بیمارستان — مرکز آموزشی درمانی نمازی شیراز</small>
+                  </div>
+                </figcaption>
+                <blockquote>در قطب جنوب کشور، ارسال قطعات پدال تخت‌های اتاق عمل یا بردهای الکترونیکی به تهران باعث فلج شدن اتاق‌های جراحی برای هفته‌ها می‌شد. با استقرار دیسپچینگ منطقه‌ای و اتصال مستقیم به مهندسان بالینی بومی استان‌های فارس و بوشهر، زمان بازگشت به خدمت تجهیزات از ۴۵ روز به زیر ۲ روز کاهش یافت.</blockquote>
+                <div class="t-card__highlight">کاهش ۹۵٪ زمان خواب تخت‌های جراحی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> فارس و جنوب کشور | <strong>تجهیز:</strong> پدال‌ها و بردهای فرمان تخت‌های اتاق عمل</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--lilac">مه</div>
+                  <div>
+                    <b>مهندس کامران نیک‌روش</b>
+                    <small>مدیرعامل و عضو انجمن تولیدکنندگان تجهیزات پزشکی — شرکت مهندسی پزشکی رازی طب (تأمین‌کننده)</small>
+                  </div>
+                </figcaption>
+                <blockquote>حراج معکوس مدیکال‌نت بازی را برای تولیدکنندگان و واردکنندگان منصف تغییر داد. مدل کارمزد ۲ درصدی بسیار عادلانه است چون فقط بعد از رضایت کامل بیمارستان کسر می‌شود. ما توانستیم بدون واسطه‌های سنتی بازار ناصرخسرو، قطعات یدکی سازگار را به بیش از ۸۰ مرکز درمانی در ۷ گره منطقه‌ای تحویل دهیم و مطالباتمان را ۲۴ ساعته تسویه کنیم.</blockquote>
+                <div class="t-card__highlight">تسویه ۲۴ ساعته و دسترسی به ۸۰ مرکز درمانی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> شبکه ملی تأمین‌کنندگان | <strong>تجهیز:</strong> قطعات یدکی استاندارد، میکروسوئیچ‌ها و شیرهای سلنوئیدی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس احسان داوودی</b>
+                    <small>مسئول تجهیزات پزشکی مرکز — مرکز آموزشی درمانی امام رضا (ع) تبریز</small>
+                  </div>
+                </figcaption>
+                <blockquote>خرابی چرخ ویلچرها، قفل بدساید تخت‌های بیماران تشنجی و نشتی کاف و پوآر فشارسنج‌ها در بیمارستان‌های بزرگ معمولاً به دلیل بوروکراسی طولانی تخصیص بودجه نادیده گرفته می‌شد. مدیکال‌نت این اقلام را در سبد ملزومات سریع قرار داد و با ایجاد سیستم تأیید الکترونیکی بودجه، زمان تأمین را از ۳۰ روز به ۲۴ ساعت رساند و ایمنی بیماران را ارتقا بخشید.</blockquote>
+                <div class="t-card__highlight">تأمین ۲۴ ساعته ملزومات مصرفی و قطعات ایمنی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> آذربایجان شرقی و شمال‌غرب | <strong>تجهیز:</strong> چرخ‌های ویلچر، قفل مکانیکی تخت‌های بستری، کاف و پوآر فشارسنج</div>
+              </figure>
+            </div>
+          </div>
+          <div class="wall__col" data-marquee data-duration="50">
+            <div class="wall__track">
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس سید علیرضا شریفی</b>
+                    <small>رئیس اداره مهندسی پزشکی مجتمع — مجتمع بیمارستانی امام خمینی (ره) تهران</small>
+                  </div>
+                </figcaption>
+                <blockquote>بزرگ‌ترین چالش ما خواب چندماهه دستگاه‌های حیاتی مانند اکسیژن‌ساز و ونتیلاتور به خاطر پیچیدگی‌های استعلام و نبود تکنسین در دسترس بود. با اتصال به گره منطقه‌ای مدیکال‌نت، شاخص آماده‌به‌کاری تجهیزات ما از ۸۱٪ به ۹۸.۲٪ رسید و پدال‌های معیوب اتاق عمل در کمتر از ۶ ساعت به طور کامل اورهال شدند.</blockquote>
+                <div class="t-card__highlight">۹۸.۲٪ Uptime تجهیزات حیاتی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> تهران و البرز | <strong>تجهیز:</strong> اکسیژن‌ساز PSA و تخت‌های الکتروهیدرولیک جراحی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--mint">سر</div>
+                  <div>
+                    <b>سرکار خانم مهندس مریم صالحی</b>
+                    <small>سرپرست تجهیزات پزشکی بیمارستان — مرکز آموزشی درمانی نمازی شیراز</small>
+                  </div>
+                </figcaption>
+                <blockquote>در قطب جنوب کشور، ارسال قطعات پدال تخت‌های اتاق عمل یا بردهای الکترونیکی به تهران باعث فلج شدن اتاق‌های جراحی برای هفته‌ها می‌شد. با استقرار دیسپچینگ منطقه‌ای و اتصال مستقیم به مهندسان بالینی بومی استان‌های فارس و بوشهر، زمان بازگشت به خدمت تجهیزات از ۴۵ روز به زیر ۲ روز کاهش یافت.</blockquote>
+                <div class="t-card__highlight">کاهش ۹۵٪ زمان خواب تخت‌های جراحی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> فارس و جنوب کشور | <strong>تجهیز:</strong> پدال‌ها و بردهای فرمان تخت‌های اتاق عمل</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--lilac">مه</div>
+                  <div>
+                    <b>مهندس کامران نیک‌روش</b>
+                    <small>مدیرعامل و عضو انجمن تولیدکنندگان تجهیزات پزشکی — شرکت مهندسی پزشکی رازی طب (تأمین‌کننده)</small>
+                  </div>
+                </figcaption>
+                <blockquote>حراج معکوس مدیکال‌نت بازی را برای تولیدکنندگان و واردکنندگان منصف تغییر داد. مدل کارمزد ۲ درصدی بسیار عادلانه است چون فقط بعد از رضایت کامل بیمارستان کسر می‌شود. ما توانستیم بدون واسطه‌های سنتی بازار ناصرخسرو، قطعات یدکی سازگار را به بیش از ۸۰ مرکز درمانی در ۷ گره منطقه‌ای تحویل دهیم و مطالباتمان را ۲۴ ساعته تسویه کنیم.</blockquote>
+                <div class="t-card__highlight">تسویه ۲۴ ساعته و دسترسی به ۸۰ مرکز درمانی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> شبکه ملی تأمین‌کنندگان | <strong>تجهیز:</strong> قطعات یدکی استاندارد، میکروسوئیچ‌ها و شیرهای سلنوئیدی</div>
+              </figure>
+              <figure class="t-card">
+                <figcaption>
+                  <div class="mono mono--peach">مه</div>
+                  <div>
+                    <b>مهندس احسان داوودی</b>
+                    <small>مسئول تجهیزات پزشکی مرکز — مرکز آموزشی درمانی امام رضا (ع) تبریز</small>
+                  </div>
+                </figcaption>
+                <blockquote>خرابی چرخ ویلچرها، قفل بدساید تخت‌های بیماران تشنجی و نشتی کاف و پوآر فشارسنج‌ها در بیمارستان‌های بزرگ معمولاً به دلیل بوروکراسی طولانی تخصیص بودجه نادیده گرفته می‌شد. مدیکال‌نت این اقلام را در سبد ملزومات سریع قرار داد و با ایجاد سیستم تأیید الکترونیکی بودجه، زمان تأمین را از ۳۰ روز به ۲۴ ساعت رساند و ایمنی بیماران را ارتقا بخشید.</blockquote>
+                <div class="t-card__highlight">تأمین ۲۴ ساعته ملزومات مصرفی و قطعات ایمنی</div>
+                <div class="t-card__meta"><strong>گره دانشگاهی:</strong> آذربایجان شرقی و شمال‌غرب | <strong>تجهیز:</strong> چرخ‌های ویلچر، قفل مکانیکی تخت‌های بستری، کاف و پوآر فشارسنج</div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ۹. مبانی نظری، روش تدوین و سنتز پژوهش‌ها ============ -->
+    <section class="section academic-section" id="academic-foundation" aria-labelledby="acad-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--purple">مبانی نظری و استناد علمی</p>
+        <h2 class="h2" id="acad-title">مبانی نظری و سنتز هدفمند هفت مقاله داوری‌شده بین‌المللی</h2>
+        <p class="lead">پیوند عمیق مقاله مفهومی ـ طراحی با سیستم عملیاتی؛ چگونگی تبدیل تجارب کارآموزی و ادبیات مدیریت فناوری سلامت به معماری پلتفرم ملی</p>
+      </header>
+
+      <!-- Methodology Synthesis Card -->
+      <div class="methodology-box" data-reveal>
+        <div class="methodology-box__badge">مقالهٔ مفهومی ـ طراحی (Conceptual Design Paper)</div>
+        <p class="methodology-box__text">تدوین چارچوب مفهومی بر پایه سنتز هدفمند هفت مقاله معتبر ژورنالی داوری‌شده در حوزه اکوسیستم‌های سلامت، نگهداری غیرمتمرکز، پذیرش بازارگاه‌های B2B، قیمت‌گذاری بازارهای دوسویه، حدود حراج معکوس و تاب‌آوری مراکز درمانی.</p>
+        <div class="methodology-box__ethics"><strong>الزامات اخلاق پژوهش و روایت‌های میدانی:</strong> روایت‌های میدانی برآمده از دوره کارآموزی و تجارب ثبت‌شده دانشجویان مهندسی بالینی به عنوان سرنخ‌های طراحی به کار رفته‌اند و بر اساس الزامات اخلاق پژوهش، نام اشخاص و بیمارستان‌ها در متن پژوهش محافظت شده است.</div>
+      </div>
+
+      <!-- 7 Peer-Reviewed Papers Grid -->
+      <div class="academic-papers-title" data-reveal>
+        <svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>
+        <span>منابع و مراجع علمی داوری‌شده (پایه‌های نظری طراحی چارچوب مدیکال‌نت)</span>
+      </div>
+      <div class="papers-grid" data-reveal>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 1</div>
+          <p class="paper-card__citation">Beniacoub, F., Myszkowski, M., Worm, A., Ntwari, F., Arakaza, E. C., &amp; Van Bastelaere, S. (2023). Implementation of a decentralised maintenance model with a measurable impact on the functionality and availability of medical equipment in healthcare facilities in Burundi. Health and Technology, 13, 485–494.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1007/s12553-023-00755-1" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s12553-023-00755-1</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> اثبات ضرورت مدل نگهداری غیرمتمرکز بر پایه چهار محور: مدیریت نگهداری، نیروی انسانی، منابع مالی و منابع مادی. این مقاله مبنای معماری ۱۴ گره منطقه‌ای مدیکال‌نت قرار گرفت تا ثبت نرم‌افزاری جایگزین ابزار و تکنسین مقیم نشود.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 2</div>
+          <p class="paper-card__citation">Diaconu, K., Chen, Y.-F., Cummins, C., Jimenez Moyao, G., Manaseki-Holland, S., &amp; Lilford, R. (2017). Methods for medical device and equipment procurement and prioritization within low- and middle-income countries: findings of a systematic literature review. Globalization and Health, 13, 59.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1186/s12992-017-0280-2" target="_blank" rel="noopener noreferrer">https://doi.org/10.1186/s12992-017-0280-2</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> مرور نظام‌مند معیارهای خرید و اولویت‌بندی تجهیزات پزشکی در کشورهای با منابع محدود. تأکید این پژوهش بر تناسب تجهیز با توان نگهداری محلی، مبنای ماژول سنجش سازگاری فنی (Compatibility Check) در بازارگاه قرار گرفت.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 3</div>
+          <p class="paper-card__citation">Jap, S. D. (2007). The impact of online reverse auction design on buyer–supplier relationships. Journal of Marketing, 71(1), 146–159.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1509/jmkg.71.1.146" target="_blank" rel="noopener noreferrer">https://doi.org/10.1509/jmkg.71.1.146</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> بررسی اثر حراج معکوس آنلاین بر رابطه خریدار و فروشنده. بر اساس یافته‌های Jap، حراج معکوس مدیکال‌نت صرفاً برای اقلام استانداردپذیر به کار می‌رود و ارزیابی فنی و ضمانت در کنار قیمت لحاظ می‌شود تا روابط بلندمدت تأمین آسیب نبیند.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 4</div>
+          <p class="paper-card__citation">Khalil, M., Ravaghi, H., Samhouri, D., Abo, J., Ali, A., Sakr, H., &amp; Camacho, A. (2022). What is “hospital resilience”? A scoping review on conceptualization, operationalization, and evaluation. Frontiers in Public Health, 10, 1009400.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.3389/fpubh.2022.1009400" target="_blank" rel="noopener noreferrer">https://doi.org/10.3389/fpubh.2022.1009400</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> مرور دامنه‌ای مفهوم تاب‌آوری بیمارستان در پیوند میان تجهیزات، نیروی انسانی، سامانه‌ها و خدمات. شاخص تاب‌آوری تجهیزات در مدیکال‌نت مستقیماً بر مبنای این چارچوب برای بقای عملکردی مراکز در حوادث بحرانی فرموله شده است.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 5</div>
+          <p class="paper-card__citation">Rochet, J.-C., &amp; Tirole, J. (2003). Platform competition in two-sided markets. Journal of the European Economic Association, 1(4), 990–1029.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1162/154247603322493212" target="_blank" rel="noopener noreferrer">https://doi.org/10.1162/154247603322493212</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> نظریه کلاسیک رقابت و قیمت‌گذاری در بازارهای دوسویه. نشان داد قیمت‌گذاری یک سوی پلتفرم بر مشارکت سوی دیگر اثر دارد. بر این اساس، کارمزد ۲٪ صرفاً از فروشنده کالا کسر شده و خدمات مهندسان و خریداران بیمارستانی معاف از کارمزد هستند.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 6</div>
+          <p class="paper-card__citation">Viswanadham, N. (2021). Ecosystem model for healthcare platform. Sādhanā, 46, 188.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1007/s12046-021-01708-y" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s12046-021-01708-y</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> مدل اکوسیستمی پلتفرم‌های سلامت شامل بازیگران اصلی و مکمل. تعیین مسئولیت‌های ۴ نقش کلیدی پلتفرم مدیکال‌نت (مراکز درمانی، مهندسان، تأمین‌کنندگان و کالیبراسیون/لجستیک) بر مبنای این الگوی ساختاری استخراج گردید.</div>
+        </article>
+        <article class="paper-card">
+          <div class="paper-card__num">مرجع علمی شماره 7</div>
+          <p class="paper-card__citation">White, A., Daniel, E., Ward, J., &amp; Wilson, H. (2007). The adoption of consortium B2B e-marketplaces: An exploratory study. The Journal of Strategic Information Systems, 16(1), 71–103.</p>
+          <div class="paper-card__doi">
+            <strong>شناسه دیجیتال (DOI):</strong>
+            <a href="https://doi.org/10.1016/j.jsis.2007.01.004" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jsis.2007.01.004</a>
+          </div>
+          <div class="paper-card__contrib"><strong>کاربرد مستقیم در طراحی پلتفرم:</strong> شناسایی ۲۶ عامل پذیرش بازارگاه‌های B2B در سازمان‌ها. این مقاله نیاز به اعتماد، شفافیت اطلاعات، انطباق با رویه‌های بودجه‌ریزی و یکپارچگی با سامانه‌های موجود را به عنوان الزامات حیاتی پلتفرم مدیکال‌نت اثبات نمود.</div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ ۱۰. مرکز عملیات اضطراری و پانویس جامع (Footer) ============ -->
+  <footer class="footer multi-tier-footer" id="footer" aria-labelledby="foot-title">
+    <h2 class="sr-only" id="foot-title">اطلاعات تماس، فوریت‌ها و حاکمیت پلتفرم مدیکال‌نت</h2>
+
+    <!-- Emergency Operations Hotline Bar -->
+    <div class="emergency-bar">
+      <div class="emergency-bar__info">
+        <div class="emergency-bar__badge">مرکز ملی پاسخگویی ۲۴/۷</div>
+        <h3 class="emergency-bar__title">مرکز ملی فوریت‌های مهندسی بالینی و حوادث تجهیزات ویژه (پاسخگویی ۲۴/۷)</h3>
+        <p class="emergency-bar__sla">حداکثر زمان اعزام و حضور مهندس در بخش‌های ICU و اتاق عمل کمتر از ۲ ساعت</p>
+      </div>
+      <div class="emergency-bar__actions">
+        <a href="tel:02188220044" class="emergency-btn">
+          <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>خط مستقیم فوریت: ۰۲۱-۸۸۲۲۰۰۴۴</span>
+        </a>
+        <span class="emergency-email">emergency@medicalnet-platform.ir</span>
+      </div>
+    </div>
+
+    <!-- Footer Multi-Column Grid -->
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="footer__logo" href="#top">
+          <svg viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="footer__brand-title">مدیکال‌نت</span>
+        </a>
+        <p class="footer__brand-desc">پلتفرم چندسویه با معماری گره‌های منطقه‌ای جهت یکپارچه‌سازی فرآیندهای نگهداری و تعمیرات (CMMS)، زنجیره تأمین قطعات و ملزومات مصرفی، حراج معکوس شفاف و دیسپچینگ مهندسان بالینی در سراسر کشور.</p>
+        <div class="footer__meta-box">
+          <div><strong>نوع پژوهش:</strong> مقالهٔ مفهومی ـ طراحی پلتفرم چندسویه سلامت</div>
+          <div><strong>انطباق قانونی:</strong> ضوابط IMED و استاندارد ISO 13485:2016</div>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="ارکان و قابلیت‌های پلتفرم">
+        <h3 class="footer__title">ارکان و ماژول‌ها</h3>
+        <ul>
+          <li><a href="#dashboard">پیشخوان مدیریت CMMS بیمارستان</a></li>
+          <li><a href="#capabilities">ارکان سه‌گانه و شناسنامه دیجیتال</a></li>
+          <li><a href="#regional-nodes">شبکه ۱۴ گره منطقه‌ای دانشگاهی</a></li>
+          <li><a href="#monitoring">موتور عیب‌یابی و پایش خطاهای بالینی</a></li>
+          <li><a href="#business-model">مدل اقتصادی ۲٪ و پروتکل امانی</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="بازیگران و مراجع علمی">
+        <h3 class="footer__title">بازیگران و مراجع علمی</h3>
+        <ul>
+          <li><a href="#ecosystem">پورتال مراکز درمانی و بیمارستان‌ها</a></li>
+          <li><a href="#ecosystem">پورتال مهندسان و تکنسین‌های بالینی</a></li>
+          <li><a href="#ecosystem">پورتال تأمین‌کنندگان و تولیدکنندگان</a></li>
+          <li><a href="#case-studies">تجارب بالینی و داستان‌های استقرار</a></li>
+          <li><a href="#academic-foundation">سنتز ۷ مقاله ژورنالی داوری‌شده</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__col footer__col--offices">
+        <h3 class="footer__title">شعب و قطب‌های منطقه‌ای</h3>
+        <ul class="regional-contacts-list">
+          <li>
+            <strong>تهران (ستاد مرکزی کشوری):</strong>
+            <span>خیابان کارگر شمالی، پردیس فناوری سلامت دانشگاه علوم پزشکی تهران — تلفن: ۰۲۱-۸۸۲۲۰۰۰۰</span>
+          </li>
+          <li>
+            <strong>شیراز (قطب دانشگاهی جنوب):</strong>
+            <span>میدان نمازی، مرکز توسعه فناوری سلامت دانشگاه علوم پزشکی شیراز — تلفن: ۰۷۱-۳۶۴۷۰۰۰۰</span>
+          </li>
+          <li>
+            <strong>اصفهان (قطب دانشگاهی مرکز):</strong>
+            <span>خیابان هزارجریب، دانشگاه علوم پزشکی اصفهان، دانشکده مهندسی پزشکی — تلفن: ۰۳۱-۳۷۹۲۰۰۰۰</span>
+          </li>
+          <li>
+            <strong>مشهد (قطب دانشگاهی شرق):</strong>
+            <span>بلوار دانشگاه، مجتمع بیمارستانی امام رضا (ع) — تلفن: ۰۵۱-۳۸۰۲۰۰۰۰</span>
+          </li>
+          <li>
+            <strong>تبریز (قطب دانشگاهی شمال‌غرب):</strong>
+            <span>خیابان دانشگاه، دانشگاه علوم پزشکی تبریز — تلفن: ۰۴۱-۳۳۳۵۰۰۰۰</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Regulatory Seals -->
+    <div class="compliance-seals-section">
+      <div class="compliance-seals-title">تأییدیه‌ها، استانداردها و الزامات حاکمیتی سامانه:</div>
+      <div class="compliance-seals-grid">
+        <div class="seal-card">
+          <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+          <div class="seal-card__info">
+            <div class="seal-card__auth">اداره کل تجهیزات و ملزومات پزشکی (IMED)</div>
+            <div class="seal-card__label">تأییدیه استعلام اصالت IRC</div>
+          </div>
+        </div>
+        <div class="seal-card">
+          <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+          <div class="seal-card__info">
+            <div class="seal-card__auth">سازمان ملی استاندارد و ISO 13485:2016</div>
+            <div class="seal-card__label">مدیریت کیفیت تجهیزات پزشکی</div>
+          </div>
+        </div>
+        <div class="seal-card">
+          <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+          <div class="seal-card__info">
+            <div class="seal-card__auth">پدافند غیرعامل و مرکز افتا</div>
+            <div class="seal-card__label">امنیت داده‌های زیرساخت درمان</div>
+          </div>
+        </div>
+        <div class="seal-card">
+          <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+          <div class="seal-card__info">
+            <div class="seal-card__auth">شبکه ملی تاب‌آوری زیرساخت‌های سلامت</div>
+            <div class="seal-card__label">پایداری تجهیزات در بحران</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> مدیکال‌نت (MedicalNet). تمامی حقوق برای پژوهشگر، مهندسان بالینی و مراکز درمانی محفوظ است.</p>
+      <p>طراحی چارچوب مفهومی یک پلتفرم چندسویهٔ ملی با گره‌های منطقه‌ای برای خدمات مهندسی بالینی و بازارگاه B2B تجهیزات و ملزومات پزشکی</p>
+    </div>
+  </footer>
+</body>
+</html>

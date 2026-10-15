@@ -1,0 +1,301 @@
+/* =========================================================
+   Open Web Analytics — RTL (Persian / Farsi) Override Stylesheet
+   Direction-aware CSS adaptations for right-to-left layout
+   ========================================================= */
+
+/* ---------- 1. Persian Typography & Fonts ---------- */
+
+html[dir=rtl] {
+  --font-display: 'Vazirmatn', 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Vazirmatn', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Vazirmatn', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir=rtl] body {
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Persian typography best practices:
+   - Prevent glyph disconnection caused by Latin letter-spacing
+   - Reset uppercase transforms (Persian has no letter casing)
+   - Ensure proper heading line-heights for Persian ascenders/descenders */
+html[dir=rtl] .hero__title {
+  letter-spacing: normal;
+  line-height: 1.25;
+}
+
+html[dir=rtl] .h2,
+html[dir=rtl] .h2--xl {
+  letter-spacing: normal;
+  line-height: 1.3;
+}
+
+html[dir=rtl] .nav__link,
+html[dir=rtl] .mobile-menu a,
+html[dir=rtl] .logos__title,
+html[dir=rtl] .eyebrow,
+html[dir=rtl] .footer__title {
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+html[dir=rtl] .btn,
+html[dir=rtl] .btn-outline,
+html[dir=rtl] .card__title,
+html[dir=rtl] .ai-card__title,
+html[dir=rtl] .alerts__title,
+html[dir=rtl] .cap-card h3 {
+  letter-spacing: normal;
+}
+
+/* ---------- 2. Base & Utility Overrides ---------- */
+html[dir=rtl] .skip-link {
+  left: auto;
+  right: 16px;
+}
+
+/* ---------- 3. Direction-aware Transforms & Buttons ---------- */
+/* Button arrow rotation and hover translation */
+html[dir=rtl] .btn .ic {
+  transform: scaleX(-1);
+}
+
+html[dir=rtl] .btn:hover .ic {
+  transform: scaleX(-1) translateX(3px);
+}
+
+/* Rotating directional arrow icons in general */
+html[dir=rtl] svg:has(use[href="#i-arrow-right"]) {
+  transform: scaleX(-1);
+}
+
+/* Capabilities card icon rotation mirrored */
+html[dir=rtl] .cap-card:hover .cap-card__icon {
+  transform: translateY(-6px) rotate(4deg) scale(1.06);
+}
+
+/* ---------- 4. Animations ---------- */
+@keyframes hero-drift-rtl {
+  to {
+    transform: scale(1.12) translate3d(1.5%, 1%, 0);
+  }
+}
+
+html[dir=rtl] .hero__bg {
+  animation-name: hero-drift-rtl;
+}
+
+@keyframes bob-rtl {
+  to {
+    transform: translate3d(0, -8px, 0) rotate(-1.2deg);
+  }
+}
+
+html[dir=rtl] .tile > * {
+  animation-name: bob-rtl;
+}
+
+/* ---------- 5. Hero & Social Proof Avatars ---------- */
+html[dir=rtl] .avatar-stack img {
+  margin-left: 0;
+  margin-right: -10px;
+}
+
+html[dir=rtl] .avatar-stack img:first-child {
+  margin-right: 0;
+}
+
+/* ---------- 6. Dashboard Preview Frame & Mock UI ---------- */
+html[dir=rtl] .dash-fit {
+  text-align: right;
+}
+
+/* Scale origin must be top-right so downscaled 1072px mock aligns to the right edge */
+html[dir=rtl] .dash {
+  transform-origin: 100% 0;
+}
+
+/* Top search & bar */
+html[dir=rtl] .dash__top {
+  padding: 0 26px 0 22px;
+}
+
+html[dir=rtl] .dash__search input {
+  text-align: right;
+}
+
+/* Dashboard Sidebar */
+html[dir=rtl] .dash__side {
+  padding: 16px 14px 24px 12px;
+  border-right: none;
+  border-left: 1px solid #f0f0f3;
+}
+
+html[dir=rtl] .side-item {
+  text-align: right;
+  padding: 9px 22px 9px 10px;
+}
+
+html[dir=rtl] .side-item--group {
+  padding-left: 10px;
+  padding-right: 4px;
+}
+
+/* Submenu chevron: points left when closed, rotates to point down when open */
+html[dir=rtl] .side-item .chev {
+  margin-right: 0;
+  margin-left: -2px;
+  transform: rotate(180deg);
+}
+
+html[dir=rtl] .side-item[aria-expanded="true"] .chev {
+  transform: rotate(90deg);
+}
+
+html[dir=rtl] .side-sub .side-item {
+  padding-left: 10px;
+  padding-right: 42px;
+}
+
+html[dir=rtl] .side-label {
+  margin: 18px 10px 6px 0;
+}
+
+html[dir=rtl] .side-item--fav {
+  padding-left: 10px;
+  padding-right: 14px;
+}
+
+/* Metric dropdown menu positioning */
+html[dir=rtl] .metric-menu {
+  left: auto;
+  right: -6px;
+}
+
+html[dir=rtl] .metric-menu button {
+  text-align: right;
+}
+
+/* Auto-margins in dashboard lists (push value to opposite side in RTL) */
+html[dir=rtl] .types-legend b,
+html[dir=rtl] .device-list b {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Progress bar gradients grow from right to left */
+html[dir=rtl] .bar-list i {
+  background: linear-gradient(-90deg, #8b5cf6, #d946ef);
+}
+
+html[dir=rtl] .source-list i {
+  background: linear-gradient(-90deg, #17171a, #4a4a52);
+}
+
+/* Traffic chart container preserves LTR coordinates for SVG rendering & JS tooltip hit-testing */
+html[dir=rtl] .chart {
+  direction: ltr;
+}
+
+html[dir=rtl] .chart__tip {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ---------- 7. Feature Sections ---------- */
+html[dir=rtl] .ai-card__list {
+  padding-left: 0;
+  padding-right: 26px;
+}
+
+/* ---------- 8. Testimonials Wall ---------- */
+html[dir=rtl] .wall__toggle {
+  right: auto;
+  left: 18px;
+}
+
+/* ---------- 9. Customer Stories Parallax Tiles ---------- */
+/* Mirror positions of floating avatar tiles across horizontal axis */
+html[dir=rtl] .tile--1 { left: auto; right: 3.5%; }
+html[dir=rtl] .tile--2 { left: auto; right: 12%; }
+html[dir=rtl] .tile--3 { left: auto; right: 1%; }
+html[dir=rtl] .tile--4 { left: auto; right: 5%; }
+html[dir=rtl] .tile--5 { right: auto; left: 15%; }
+html[dir=rtl] .tile--6 { right: auto; left: 4%; }
+html[dir=rtl] .tile--7 { right: auto; left: 1%; }
+html[dir=rtl] .tile--8 { right: auto; left: 6%; }
+html[dir=rtl] .tile--9 { right: auto; left: 27%; }
+
+/* Mobile Menu alignment */
+html[dir=rtl] .mobile-menu a:not(.btn) {
+  text-align: right;
+}
+
+/* ---------- 10. Responsive Overrides ---------- */
+@media (max-width: 900px) {
+  html[dir=rtl] .tile--1 { left: auto; right: 2%; }
+  html[dir=rtl] .tile--6 { right: auto; left: 3%; }
+  html[dir=rtl] .tile--3 { left: auto; right: 3%; }
+  html[dir=rtl] .tile--8 { right: auto; left: 4%; }
+}
+
+
+/* ---------- 11. MedicalNet Component RTL Adaptations ---------- */
+html[dir=rtl] .brand__text-group {
+  margin-left: 0;
+  margin-right: 10px;
+  text-align: right;
+}
+
+html[dir=rtl] .hero__badge {
+  direction: rtl;
+}
+
+html[dir=rtl] .stat-card {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir=rtl] .side-item__text {
+  text-align: right;
+}
+
+html[dir=rtl] .side-badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir=rtl] .wo-card,
+html[dir=rtl] .pillar-card,
+html[dir=rtl] .node-card,
+html[dir=rtl] .ai-rec-card,
+html[dir=rtl] .alert-card,
+html[dir=rtl] .role-card,
+html[dir=rtl] .stream-card,
+html[dir=rtl] .escrow-step-card,
+html[dir=rtl] .fairness-callout {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir=rtl] .paper-card__citation,
+html[dir=rtl] .paper-card__doi {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir=rtl] .emergency-bar__actions {
+  align-items: flex-start;
+}
+
+html[dir=rtl] .emergency-btn .ic {
+  transform: none; /* Phone icon does not need mirroring */
+}
+
+html[dir=rtl] .footer__brand-title {
+  margin-left: 0;
+  margin-right: 8px;
+}
