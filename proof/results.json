@@ -1,0 +1,700 @@
+{
+  "meta": {
+    "date": "2026-10-15T09:44:33.319Z",
+    "url": "http://127.0.0.1:8090/",
+    "node": "v20.20.2",
+    "os": "Debian GNU/Linux 13 (trixie)",
+    "tools": {
+      "playwright": "1.48.2",
+      "axe-core": "4.13.0",
+      "html-validate": "10.17.0",
+      "eslint": "8.57.1",
+      "csstree-validator": "4.0.1",
+      "lighthouse": "12.8.2",
+      "vnu-jar": "26.10.12"
+    },
+    "browser": "Chromium 155.0.8059.39",
+    "durationSec": 81
+  },
+  "static": {
+    "w3c": {
+      "ran": true,
+      "java": "openjdk version \"21.0.12.1\" 2026-08-18",
+      "validator": "26.10.12 (973e40b)",
+      "files": [
+        "index.html",
+        "assets/css/style.css",
+        "assets/img/world-map.svg",
+        "assets/img/favicon.svg"
+      ],
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "htmlValidate": {
+      "valid": true,
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "css": {
+      "bytes": 34982,
+      "problems": 0,
+      "messages": []
+    },
+    "eslint": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "references": {
+      "total": 23,
+      "missing": []
+    },
+    "nodeSyntax": "ok"
+  },
+  "security": {
+    "patterns": [
+      {
+        "name": "eval()",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "new Function()",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "string-based timers",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "document.write",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "innerHTML / outerHTML / insertAdjacentHTML",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "javascript: URLs",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "inline event handlers (onclick=…)",
+        "files": 1,
+        "hits": []
+      },
+      {
+        "name": "inline <script> code",
+        "files": 1,
+        "hits": []
+      },
+      {
+        "name": "inline <style> / style=\"\"",
+        "files": 1,
+        "hits": []
+      },
+      {
+        "name": "iframe / object / embed",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "network APIs (fetch/XHR/WebSocket/beacon)",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "cookies / storage",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "obfuscation (atob, \\x escapes, fromCharCode)",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "crypto-miner signatures",
+        "files": 3,
+        "hits": []
+      },
+      {
+        "name": "external scripts/styles/images/fonts",
+        "files": 1,
+        "hits": []
+      },
+      {
+        "name": "external CSS url()/@import",
+        "files": 1,
+        "hits": []
+      },
+      {
+        "name": "base64 blobs > 200 chars",
+        "files": 1,
+        "hits": []
+      }
+    ],
+    "urls": [
+      {
+        "url": "http://localhost:8080",
+        "file": "README.md",
+        "kind": "documentation text"
+      },
+      {
+        "url": "http://127.0.0.1:8090/",
+        "file": "README.md",
+        "kind": "documentation text"
+      },
+      {
+        "url": "https://github.com/googlefonts/dm-fonts",
+        "file": "assets/fonts/OFL-DMSans.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "http://scripts.sil.org/OFL",
+        "file": "assets/fonts/OFL-DMSans.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "https://github.com/rsms/inter",
+        "file": "assets/fonts/OFL-Inter.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "http://scripts.sil.org/OFL",
+        "file": "assets/fonts/OFL-Inter.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "https://github.com/Outfitio/Outfit-Fonts",
+        "file": "assets/fonts/OFL-Outfit.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "http://scripts.sil.org/OFL",
+        "file": "assets/fonts/OFL-Outfit.txt",
+        "kind": "font licence text"
+      },
+      {
+        "url": "http://www.w3.org/2000/svg",
+        "file": "assets/img/favicon.svg",
+        "kind": "XML namespace identifier (never fetched)"
+      },
+      {
+        "url": "http://www.w3.org/2000/svg",
+        "file": "assets/img/world-map.svg",
+        "kind": "XML namespace identifier (never fetched)"
+      },
+      {
+        "url": "http://www.w3.org/2000/svg",
+        "file": "assets/js/main.js",
+        "kind": "XML namespace identifier (never fetched)"
+      },
+      {
+        "url": "http://www.w3.org/2000/svg",
+        "file": "index.html",
+        "kind": "XML namespace identifier (never fetched)"
+      },
+      {
+        "url": "https://www.linkedin.com/",
+        "file": "index.html",
+        "kind": "outbound link (opens only on user click, rel=noopener noreferrer)"
+      },
+      {
+        "url": "https://x.com/",
+        "file": "index.html",
+        "kind": "outbound link (opens only on user click, rel=noopener noreferrer)"
+      }
+    ],
+    "inventory": [
+      {
+        "file": "README.md",
+        "bytes": 2974,
+        "type": "text",
+        "sha256": "eb526c2ac284e7d3a54fd9aaee08004008cb2f95ba30cbd5151e152df6022ca1"
+      },
+      {
+        "file": "_headers",
+        "bytes": 603,
+        "type": "text",
+        "sha256": "3bad54af897239eaf2822e999d8289a9d32667be18f0f4d4d04684ba53f474de"
+      },
+      {
+        "file": "assets/css/style.css",
+        "bytes": 34984,
+        "type": "text",
+        "sha256": "5e240a4f99fc86a11b514a5dc938fb617297e4529181542fc875f30489a6c095"
+      },
+      {
+        "file": "assets/fonts/OFL-DMSans.txt",
+        "bytes": 4502,
+        "type": "text",
+        "sha256": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"
+      },
+      {
+        "file": "assets/fonts/OFL-Inter.txt",
+        "bytes": 4477,
+        "type": "text",
+        "sha256": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345"
+      },
+      {
+        "file": "assets/fonts/OFL-Outfit.txt",
+        "bytes": 4387,
+        "type": "text",
+        "sha256": "0e5fcef5d93bfcae273c11c00f0bb453d3b5491860e1ac8b658767b7577c938f"
+      },
+      {
+        "file": "assets/fonts/dm-sans-var.woff2",
+        "bytes": 36932,
+        "type": "font/woff2",
+        "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+      },
+      {
+        "file": "assets/fonts/inter-var.woff2",
+        "bytes": 48256,
+        "type": "font/woff2",
+        "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62"
+      },
+      {
+        "file": "assets/fonts/outfit-var.woff2",
+        "bytes": 32292,
+        "type": "font/woff2",
+        "sha256": "6c18d579fd87c3776be068b762cbc83fde3acb543d49eabd3ade842eb987e887"
+      },
+      {
+        "file": "assets/img/avatars/daniel-sm.webp",
+        "bytes": 2598,
+        "type": "image/webp",
+        "sha256": "8840c600be7ebfbabbff60b81460e6941b340275e5be3077564a0ad6e4cd9a09"
+      },
+      {
+        "file": "assets/img/avatars/daniel.webp",
+        "bytes": 8252,
+        "type": "image/webp",
+        "sha256": "d6c466ec67846b32d6368e64ced85cd98560737b222c1a628245a123e3060668"
+      },
+      {
+        "file": "assets/img/avatars/david-sm.webp",
+        "bytes": 1390,
+        "type": "image/webp",
+        "sha256": "f2ac5ef690c47d77c957d4def1a740670723a3cd01a096f2a40c456abcba9249"
+      },
+      {
+        "file": "assets/img/avatars/david.webp",
+        "bytes": 5408,
+        "type": "image/webp",
+        "sha256": "1ae817536724631630d8c6033eda567c0553aaba88fc62c661b3d62344f6335e"
+      },
+      {
+        "file": "assets/img/avatars/emily-sm.webp",
+        "bytes": 1478,
+        "type": "image/webp",
+        "sha256": "76cb304efe04007920c71f20a8c43d9e9ea6248162c37686143b172d60ff2a14"
+      },
+      {
+        "file": "assets/img/avatars/emily.webp",
+        "bytes": 4652,
+        "type": "image/webp",
+        "sha256": "e906a68cbfd37ee3122154342a36bd5203a99a6dead8923ba1b23ee719af84d7"
+      },
+      {
+        "file": "assets/img/avatars/marcus-sm.webp",
+        "bytes": 1306,
+        "type": "image/webp",
+        "sha256": "89f2d827935df905a49e16c8745457f2661ad09122e5377dbee8cb47c3ff3bcd"
+      },
+      {
+        "file": "assets/img/avatars/marcus.webp",
+        "bytes": 3826,
+        "type": "image/webp",
+        "sha256": "bf63b02bd9c248c70c097cb492c780eff7c1cbb4f06d8c7abb331fa1719bafa9"
+      },
+      {
+        "file": "assets/img/avatars/olivia-sm.webp",
+        "bytes": 2324,
+        "type": "image/webp",
+        "sha256": "b43f5624326a66b9c7872cc71bfac035eefdd521ec1510f616016f994d3df921"
+      },
+      {
+        "file": "assets/img/avatars/olivia.webp",
+        "bytes": 8050,
+        "type": "image/webp",
+        "sha256": "fe1560aca86a974716a48653008d73a3fcc48deaf0fef54756df1003138ae9f9"
+      },
+      {
+        "file": "assets/img/avatars/sarah-sm.webp",
+        "bytes": 1516,
+        "type": "image/webp",
+        "sha256": "93b58f333a9b34578a7986fbb8f17644aca3e198e64723303858304644f095df"
+      },
+      {
+        "file": "assets/img/avatars/sarah.webp",
+        "bytes": 5234,
+        "type": "image/webp",
+        "sha256": "1905a4c0bac1dd01b8a3676cfc4cc7cbf8d42389a64658d71fe06b95d14d57e6"
+      },
+      {
+        "file": "assets/img/favicon.svg",
+        "bytes": 292,
+        "type": "image/svg+xml (text)",
+        "sha256": "cf1c64ec199a60ae1835fd6cef48874e5440b1489ab838d065a704f6fb06bed4"
+      },
+      {
+        "file": "assets/img/hero-bg.webp",
+        "bytes": 38358,
+        "type": "image/webp",
+        "sha256": "2f49b3ab0ec3a362d06c4c734a795293dd1208f1d693862f2e7ec3293b9ad8a3"
+      },
+      {
+        "file": "assets/img/icons/cloud-192.webp",
+        "bytes": 9138,
+        "type": "image/webp",
+        "sha256": "8cf9ce10d822dee48ae45f648fa7c368d10d986a8346b7546fe24653e8b1f335"
+      },
+      {
+        "file": "assets/img/icons/cloud-96.webp",
+        "bytes": 3710,
+        "type": "image/webp",
+        "sha256": "82d6765fc99df7f6d49959fdccc0a5b9677f7e8c8f63d0ef1166ea724896dcce"
+      },
+      {
+        "file": "assets/img/icons/rocket-192.webp",
+        "bytes": 8222,
+        "type": "image/webp",
+        "sha256": "2687388dc2659452665144ac24003d8a5061b5a7e555a0011b720154789ce788"
+      },
+      {
+        "file": "assets/img/icons/rocket-96.webp",
+        "bytes": 3350,
+        "type": "image/webp",
+        "sha256": "6d86ee4c82b841ac6b4cd0e689529b39e5d84c2eb20a6ccb970e33ca3dc1127d"
+      },
+      {
+        "file": "assets/img/icons/shield-192.webp",
+        "bytes": 8204,
+        "type": "image/webp",
+        "sha256": "6e4c37d9749bde697687d6f952b2942f745e5d0f8514b3c60dc2bfed9a43196f"
+      },
+      {
+        "file": "assets/img/icons/shield-96.webp",
+        "bytes": 3460,
+        "type": "image/webp",
+        "sha256": "ed94ac15658281d79a682310c1ebb8de2009793b738aa156f3d52fa8ecfa4d6a"
+      },
+      {
+        "file": "assets/img/world-map.svg",
+        "bytes": 86874,
+        "type": "image/svg+xml (text)",
+        "sha256": "d73a92c5ee31b1d10c387b32dc43862fcd90f6f297a1943b2e8733181791ea14"
+      },
+      {
+        "file": "assets/js/main.js",
+        "bytes": 24927,
+        "type": "text",
+        "sha256": "e907cb6c689c76f256c31b51df0dd68cc0270bb7b6537b76c76fb6f61885c333"
+      },
+      {
+        "file": "index.html",
+        "bytes": 40868,
+        "type": "text/html",
+        "sha256": "732ac0dbc5e884020b13ecea680abf18ca45f64a94b0ff6bd10d4fef77227a32"
+      },
+      {
+        "file": "robots.txt",
+        "bytes": 23,
+        "type": "text",
+        "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+      }
+    ],
+    "thirdPartyRuntimeDependencies": 0
+  },
+  "runtime": {
+    "desktop": {
+      "domContentLoadedMs": 260,
+      "loadMs": 369,
+      "transferredBytes": 270537,
+      "decodedBytes": 400337,
+      "requests": 24,
+      "lcpMs": 464,
+      "cls": 0.001,
+      "horizontalOverflowPx": 0,
+      "fonts": [
+        "Outfit: loaded",
+        "DM Sans: loaded",
+        "Inter: loaded"
+      ],
+      "cookies": "",
+      "storageItems": 0,
+      "cspViolations": [],
+      "externalRequests": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "brokenImages": [],
+      "imageCount": 27,
+      "lazyDeferredHiddenImages": 0
+    },
+    "tablet": {
+      "domContentLoadedMs": 219,
+      "loadMs": 291,
+      "transferredBytes": 256653,
+      "decodedBytes": 387053,
+      "requests": 22,
+      "lcpMs": 348,
+      "cls": 0.0272,
+      "horizontalOverflowPx": 0,
+      "fonts": [
+        "Outfit: loaded",
+        "DM Sans: loaded",
+        "Inter: loaded"
+      ],
+      "cookies": "",
+      "storageItems": 0,
+      "cspViolations": [],
+      "externalRequests": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "brokenImages": [],
+      "imageCount": 25,
+      "lazyDeferredHiddenImages": 2
+    },
+    "mobile": {
+      "domContentLoadedMs": 324,
+      "loadMs": 364,
+      "transferredBytes": 256653,
+      "decodedBytes": 387053,
+      "requests": 22,
+      "lcpMs": 304,
+      "cls": 0.0002,
+      "horizontalOverflowPx": 0,
+      "fonts": [
+        "Outfit: loaded",
+        "DM Sans: loaded",
+        "Inter: loaded"
+      ],
+      "cookies": "",
+      "storageItems": 0,
+      "cspViolations": [],
+      "externalRequests": [],
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "httpErrors": [],
+      "brokenImages": [],
+      "imageCount": 19,
+      "lazyDeferredHiddenImages": 8
+    }
+  },
+  "interactions": [
+    {
+      "name": "Header turns into floating glass bar on scroll",
+      "pass": true,
+      "detail": "is-scrolled added at 400px, removed at 0px"
+    },
+    {
+      "name": "Nav link \"Testimonials\" smooth-scrolls to its section",
+      "pass": true,
+      "detail": "section top at 84px"
+    },
+    {
+      "name": "Active-section highlight in navigation",
+      "pass": true,
+      "detail": "TESTIMONIALS link marked active"
+    },
+    {
+      "name": "Sparkle particles injected into CTA buttons",
+      "pass": true,
+      "detail": "16 particles in header CTA"
+    },
+    {
+      "name": "Every in-page link points to an existing element",
+      "pass": true,
+      "detail": "36 anchors checked, 0 broken"
+    },
+    {
+      "name": "Dashboard tabs (mouse): Countries → Browsers",
+      "pass": true,
+      "detail": "panel switched, card title = Browsers"
+    },
+    {
+      "name": "Dashboard tabs (keyboard): ArrowRight / Home",
+      "pass": true,
+      "detail": "roving tabindex + aria-selected work"
+    },
+    {
+      "name": "Traffic Sources ↔ Top Referrers tab with animated bars",
+      "pass": true,
+      "detail": "first bar 196px wide"
+    },
+    {
+      "name": "Sidebar group expand / collapse",
+      "pass": true,
+      "detail": "aria-expanded toggles, submenu shows/hides"
+    },
+    {
+      "name": "Traffic chart rendered (19-point smooth Bézier curves)",
+      "pass": true,
+      "detail": "18 cubic segments, area + dashed comparison line"
+    },
+    {
+      "name": "Chart tooltip follows the pointer",
+      "pass": true,
+      "detail": "tooltip: May 4Current: 26.2KPrevious: 18.4K"
+    },
+    {
+      "name": "Legend toggles hide / show a series",
+      "pass": true,
+      "detail": "previous-period line hidden and restored"
+    },
+    {
+      "name": "Metric switch → Pageviews (axis rescales)",
+      "pass": true,
+      "detail": "y-axis: 0 / 20K / 40K / 60K"
+    },
+    {
+      "name": "Refresh button generates new data",
+      "pass": true,
+      "detail": "curve re-drawn with new values"
+    },
+    {
+      "name": "Live mode streams new points",
+      "pass": true,
+      "detail": "data updated while live, stops on second click"
+    },
+    {
+      "name": "Donut animates to 66.2 %",
+      "pass": true,
+      "detail": "stroke-dasharray = 183px, 276.5px"
+    },
+    {
+      "name": "Search box accepts input",
+      "pass": true,
+      "detail": "typed text kept"
+    },
+    {
+      "name": "Count-up metrics reach their exact targets",
+      "pass": true,
+      "detail": "0.14 · 11.2 · 0.82 · 2.3 · 9.7 · 1.1"
+    },
+    {
+      "name": "Testimonials marquee loops seamlessly (clones hidden from screen readers)",
+      "pass": true,
+      "detail": "3 columns × (3 cards + 3 aria-hidden clones), animation running"
+    },
+    {
+      "name": "Pause / Play control for moving content (WCAG 2.2.2)",
+      "pass": true,
+      "detail": "paused → resumed"
+    },
+    {
+      "name": "Parallax avatars move with scroll",
+      "pass": true,
+      "detail": "--py -5.6px → 24.4px"
+    },
+    {
+      "name": "Keyboard: \"Skip to content\" is the first focusable element",
+      "pass": true,
+      "detail": "skip link receives first Tab"
+    },
+    {
+      "name": "Mobile: hamburger opens the menu",
+      "pass": true,
+      "detail": "menu visible, aria-expanded=true"
+    },
+    {
+      "name": "Mobile: Escape closes the menu and restores focus",
+      "pass": true,
+      "detail": "closed, focus back on toggle"
+    },
+    {
+      "name": "Mobile: menu link navigates and closes the menu",
+      "pass": true,
+      "detail": "stories section at 84px"
+    },
+    {
+      "name": "Mobile: dashboard scales to fit, no horizontal overflow",
+      "pass": true,
+      "detail": "scale 0.285, overflow 0px"
+    },
+    {
+      "name": "Mobile: scaled dashboard exposed as a labelled static preview",
+      "pass": true,
+      "detail": "inert + role=img + aria-label (no undersized touch targets)"
+    },
+    {
+      "name": "prefers-reduced-motion: animations disabled, content fully visible",
+      "pass": true,
+      "detail": "no sparkles, no marquee, no hidden reveal elements"
+    },
+    {
+      "name": "JavaScript disabled: page still complete and readable",
+      "pass": true,
+      "detail": "all 9 testimonials + every section visible"
+    }
+  ],
+  "a11y": {
+    "desktop": {
+      "violations": [],
+      "passes": 51,
+      "incomplete": 1,
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "nodes": 91,
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ],
+      "rulesRun": 91,
+      "axeVersion": "4.13.0"
+    },
+    "tablet": {
+      "violations": [],
+      "passes": 44,
+      "incomplete": 1,
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "nodes": 58,
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ],
+      "rulesRun": 91,
+      "axeVersion": "4.13.0"
+    },
+    "mobile": {
+      "violations": [],
+      "passes": 44,
+      "incomplete": 1,
+      "incompleteRules": [
+        {
+          "id": "color-contrast",
+          "nodes": 49,
+          "help": "Elements must meet minimum color contrast ratio thresholds"
+        }
+      ],
+      "rulesRun": 91,
+      "axeVersion": "4.13.0"
+    }
+  },
+  "summary": {
+    "interactionsPassed": 29,
+    "interactionsTotal": 29,
+    "consoleErrors": 0,
+    "externalRequests": 0,
+    "axeViolations": 0,
+    "securityHits": 0
+  }
+}
