@@ -84,6 +84,17 @@
 
   <!-- ============ Header & Navigation ============ -->
   <header class="site-header" id="site-header">
+    <div class="role-bar">
+      <div class="role-bar__inner">
+        <span class="role-bar__label">ورود به عنوان:</span>
+        <nav class="role-switch" aria-label="انتخاب نقش کاربری و ورود به پیشخوان متناظر">
+          <a class="role-switch__btn" href="hospital.html#dashboard-demo">بیمارستان</a>
+          <a class="role-switch__btn" href="technicians.html">تکنسین</a>
+          <a class="role-switch__btn" href="marketplace.html">شرکت تأمین‌کننده</a>
+          <a class="role-switch__btn" href="students.html">دانشجوی کارآموز</a>
+        </nav>
+      </div>
+    </div>
     <div class="site-header__inner">
       <a class="brand" href="#top" aria-label="مدیکال‌نت — صفحه اصلی پلتفرم ملی مهندسی بالینی">
         <svg class="brand__mark" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
@@ -646,6 +657,96 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- ============ ۲/ب. چارچوب ۶‌گانه اکوسیستم HTM — از نظریه تا پیاده‌سازی ============ -->
+    <section class="fw-section" id="framework" aria-labelledby="fw-title" role="region">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">از نظریه تا اجرا — متدولوژی مبتنی بر شواهد</p>
+        <h2 class="h2" id="fw-title">چارچوب ۶‌گانه اکوسیستم HTM مدیکال‌نت</h2>
+        <p class="lead">مدیکال‌نت بر ۷ پژوهش داوری‌شده بنا شده است؛ این چارچوب مسیر «بستر نظری ← چارچوب مفهومی ← پیاده‌سازی عملیاتی» را شفاف و قابل دفاع نشان می‌دهد</p>
+      </header>
+      <div class="fw-wrap">
+        <div class="fw-layer fw-layer--theory" data-reveal>
+          <div class="fw-layer__head">
+            <span class="fw-layer__tag">لایه ۱ — بستر نظری</span>
+            <h3 class="fw-layer__t">۷ پژوهش داوری‌شده مرجع</h3>
+          </div>
+          <p class="fw-layer__d">اسکوپ‌ریویوها و مقالات بنیادین اقتصاد پلتفرم، حراج معکوس و مدیریت تجهیزات پزشکی — شرح کامل در بخش «مبانی نظری» پایین صفحه.</p>
+          <div class="fw-papers">
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Diaconu و همکاران <span>(۲۰۱۷)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Rochet &amp; Tirole <span>(۲۰۰۳)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Jap <span>(۲۰۰۷)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>White و همکاران <span>(۲۰۰۷)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Khalil و همکاران <span>(۲۰۲۲)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Viswanadham <span>(۲۰۲۱)</span></span>
+            <span class="fw-paper"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg>Beniacoub و همکاران <span>(۲۰۲۳)</span></span>
+          </div>
+        </div>
+        <div class="fw-arrow" aria-hidden="true"><span class="fw-arrow__lbl">سنتز و ترکیب یافته‌ها</span></div>
+        <div class="fw-layer fw-layer--frame" data-reveal>
+          <div class="fw-layer__head">
+            <span class="fw-layer__tag">لایه ۲ — چارچوب مفهومی</span>
+            <h3 class="fw-layer__t">چارچوب ۶‌گانه اکوسیستم HTM (مدیریت فناوری سلامت)</h3>
+          </div>
+          <p class="fw-layer__d">هر ستون، مستقیماً به یکی از پژوهش‌های لایه ۱ متصل است و با یک شاخص سنجش‌پذیر (KPI) قابل ارزیابی است.</p>
+          <div class="fw-pillars">
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۱</span>
+              <h4 class="fw-pillar__t">نگهداشت مکانیزه بالینی (CMMS)</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Diaconu و همکاران (۲۰۱۷) — روش‌شناسی مدیریت تجهیزات پزشکی</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: تفکیک زمان تعمیر از انتظار اداری — <b>MTBR: ۵۸ ← ۳.۲ روز</b></p>
+            </div>
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۲</span>
+              <h4 class="fw-pillar__t">شبکه تکنسین احرازصلاحیت منطقه‌ای</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Khalil و همکاران (۲۰۲۲) — تاب‌آوری بیمارستان در بحران</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: <b>زمان پاسخ ۱.۸ تا ۴ ساعته</b> در ۱۴ گره منطقه‌ای</p>
+            </div>
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۳</span>
+              <h4 class="fw-pillar__t">بازارگاه B2B و حراج معکوس خرید</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Jap (۲۰۰۷) و White و همکاران (۲۰۰۷) — طراحی حراج و بازارگاه کنسرسیومی</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: کاهش پایدار قیمت خرید <b>بدون تخریب رابطه خریدار–تأمین‌کننده</b></p>
+            </div>
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۴</span>
+              <h4 class="fw-pillar__t">اقتصاد پلتفرم چندسویه</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Rochet &amp; Tirole (۲۰۰۳) — رقابت پلتفرم در بازارهای دوطرفه</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: <b>۱۰۰٪ معافیت خدمات فنی بیمارستان</b>؛ کارمزد منصفانه ۲٪ تأمین‌کننده</p>
+            </div>
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۵</span>
+              <h4 class="fw-pillar__t">حاکمیت اعتماد و داوری آنلاین (ODR)</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Beniacoub و همکاران (۲۰۲۳) — پیاده‌سازی پلتفرم غیرمتمرکز سلامت</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: بلوکه وجه تا تأیید فنی + <b>رای قطعی ۴۸ ساعته</b></p>
+            </div>
+            <div class="fw-pillar">
+              <span class="fw-pillar__no">ستون ۶</span>
+              <h4 class="fw-pillar__t">توسعه سرمایه انسانی و دانش</h4>
+              <p class="fw-pillar__ref"><svg class="ic" aria-hidden="true"><use href="#i-file-chart"/></svg><span>Viswanadham (۲۰۲۱) — مدل اکوسیستم پلتفرم سلامت</span></p>
+              <p class="fw-pillar__kpi">خروجی سنجش‌پذیر: <b>گواهینامه مهارت بالینی</b> و چرخه دانش ← کارآموزی ← اشتغال</p>
+            </div>
+          </div>
+        </div>
+        <div class="fw-arrow" aria-hidden="true"><span class="fw-arrow__lbl">پیاده‌سازی در ۶ ماژول عملیاتی</span></div>
+        <div class="fw-layer fw-layer--impl" data-reveal>
+          <div class="fw-layer__head">
+            <span class="fw-layer__tag">لایه ۳ — پیاده‌سازی</span>
+            <h3 class="fw-layer__t">پلتفرم مدیکال‌نت — ۶ ماژول عملیاتی زنده</h3>
+          </div>
+          <p class="fw-layer__d">هر ستون چارچوب، در یک ماژول قابل کلیک و قابل نمایش پیاده شده است.</p>
+          <div class="fw-impl-grid">
+            <div class="fw-impl-item"><a href="hospital.html#dashboard-demo">M1 — پنل بیمارستان</a><small>پیشخوان CMMS، SOS، مناقصه معکوس و حساب امانی</small></div>
+            <div class="fw-impl-item"><a href="technicians.html">M2 — پنل تکنسین</a><small>احراز صلاحیت، تیک آبی و رادار خرابی منطقه‌ای</small></div>
+            <div class="fw-impl-item"><a href="marketplace.html">M3 — بازارگاه B2B</a><small>تالار حراج معکوس، توکن‌ها و غرفه تأمین‌کننده</small></div>
+            <div class="fw-impl-item"><a href="students.html">M4 — هاب دانشجویی</a><small>پروفایل مهارت‌محور و تطبیق کارآموزی بالینی</small></div>
+            <div class="fw-impl-item"><a href="odr.html">M5 — داوری آنلاین</a><small>هیئت ۳ نفره، بلوکه وجه و رای ۴۸ ساعته</small></div>
+            <div class="fw-impl-item"><a href="academy.html">M6 — آکادمی</a><small>پایگاه دانش PM و رسانه تخصصی صنعت</small></div>
+          </div>
+        </div>
+      </div>
+      <p class="dash-demo__note" style="max-width:1160px;margin:18px auto 0;">ترتیب ارجاع پژوهش‌ها مطابق بخش «مبانی نظری، روش تدوین و سنتز پژوهش‌ها» در همین صفحه است.</p>
     </section>
 
     <!-- ============ ۳. ارکان سه‌گانه و قابلیت‌های بنیادین ============ -->

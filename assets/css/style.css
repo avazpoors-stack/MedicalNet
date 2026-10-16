@@ -46,7 +46,7 @@ input { font: inherit; }
 ul, ol { margin: 0; padding: 0; }
 p, h1, h2, h3, figure, blockquote { margin: 0; }
 [hidden] { display: none !important; }
-section[id], div[id="features"] { scroll-margin-top: 84px; }
+section[id], div[id="features"] { scroll-margin-top: calc(var(--header-h) + var(--rolebar-h) + 16px); }
 
 .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
@@ -61,7 +61,8 @@ section[id], div[id="features"] { scroll-margin-top: 84px; }
 }
 .skip-link:focus { top: 12px; }
 
-.page { padding-top: var(--header-h); overflow-x: clip; }
+:root { --rolebar-h: 40px; }
+.page { padding-top: calc(var(--header-h) + var(--rolebar-h)); overflow-x: clip; }
 
 /* ---------- Buttons ---------- */
 .btn {
