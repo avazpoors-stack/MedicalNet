@@ -62,7 +62,8 @@ section[id], div[id="features"] { scroll-margin-top: calc(var(--header-h) + var(
 .skip-link:focus { top: 12px; }
 
 :root { --rolebar-h: 40px; }
-.page { padding-top: calc(var(--header-h) + var(--rolebar-h)); overflow-x: clip; }
+.page { padding-top: calc(var(--header-h) + var(--rolebar-h)); overflow-x: clip; transition: padding-top .35s ease; }
+@media (prefers-reduced-motion: reduce) { .page { transition: none; } }
 
 /* ---------- Buttons ---------- */
 .btn {
