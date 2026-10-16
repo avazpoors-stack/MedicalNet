@@ -50,7 +50,7 @@ def ic(name):
 
 
 ROLES = [
-    ('hospital.html#dashboard-demo', 'بیمارستان', 'hospital.html'),
+    ('hospital.html', 'بیمارستان', 'hospital.html'),
     ('technicians.html', 'تکنسین', 'technicians.html'),
     ('marketplace.html', 'تأمین‌کننده', 'marketplace.html'),
     ('students.html', 'دانشجوی کارآموز', 'students.html'),
@@ -63,14 +63,21 @@ def render_role_bar(current_file):
         active = page == current_file
         cls = 'role-switch__btn is-active' if active else 'role-switch__btn'
         btns.append(f'        <a class="{cls}" href="{href}">{label}</a>')
-    return f'''    <div class="role-bar">
+    return f'''    <div class="role-bar" id="role-bar">
       <div class="role-bar__inner">
         <span class="role-bar__label">ورود به عنوان:</span>
         <nav class="role-switch" aria-label="انتخاب نقش کاربری و ورود به پیشخوان متناظر">
 {chr(10).join(btns)}
         </nav>
       </div>
+      <button class="role-bar__toggle" type="button" aria-controls="role-bar" aria-expanded="true" aria-label="بستن نوار انتخاب نقش">
+        <svg class="ic" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
     </div>
+    <button class="role-bar__reopen" type="button" aria-controls="role-bar" aria-expanded="false" aria-label="باز کردن نوار انتخاب نقش">
+      ورود به عنوان
+      <svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+    </button>
 '''
 
 
@@ -86,7 +93,7 @@ def render_header(current_file):
         mlinks.append(f'      <a href="{href}">{label}</a>')
     return f'''  <!-- ============ Header & Navigation ============ -->
   <header class="site-header" id="site-header">
-{render_role_bar(current_file)}    <div class="site-header__inner">
+    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="مدیکال‌نت — صفحه اصلی پلتفرم ملی مهندسی بالینی">
         <svg class="brand__mark" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
         <div class="brand__text-group">
@@ -109,7 +116,7 @@ def render_header(current_file):
         </button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobile-menu" hidden>
+{render_role_bar(current_file)}    <div class="mobile-menu" id="mobile-menu" hidden>
 {chr(10).join(mlinks)}
       <div class="mobile-menu__actions">
         <a href="index.html#modules" class="btn btn--dark btn--sm mobile-menu-btn">انتخاب پیشخوان نقش شما</a>
@@ -154,6 +161,7 @@ def render_head(p):
   <link rel="stylesheet" href="assets/css/medicalnet-components.css">
   <link rel="stylesheet" href="assets/css/rtl-override.css">
   <link rel="stylesheet" href="assets/css/module-pages.css">
+  <script src="assets/js/rolebar-state.js"></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body id="top">

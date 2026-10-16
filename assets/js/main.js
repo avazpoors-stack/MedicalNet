@@ -1080,3 +1080,26 @@
     init();
   }
 })();
+
+/* ============================================================
+   Collapsible role switcher bar (bottom of the fixed header)
+   close: .role-bar__toggle   reopen: .role-bar__reopen
+   state persisted in localStorage, pre-painted by rolebar-state.js
+   ============================================================ */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var toggle = document.querySelector('.role-bar__toggle');
+  var reopen = document.querySelector('.role-bar__reopen');
+  if (!toggle || !reopen) { return; }
+
+  function apply(closed) {
+    root.classList.toggle('rolebar-closed', closed);
+    toggle.setAttribute('aria-expanded', String(!closed));
+    reopen.setAttribute('aria-expanded', String(closed));
+    try { window.localStorage.setItem('mn-rolebar', closed ? 'closed' : 'open'); } catch (err) { /* ignore */ }
+  }
+
+  toggle.addEventListener('click', function () { apply(true); });
+  reopen.addEventListener('click', function () { apply(false); });
+})();
