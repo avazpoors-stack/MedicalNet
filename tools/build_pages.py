@@ -49,6 +49,31 @@ def ic(name):
     return f'<svg class="ic" aria-hidden="true"><use href="#{name}"/></svg>'
 
 
+ROLES = [
+    ('hospital.html#dashboard-demo', 'بیمارستان', 'hospital.html'),
+    ('technicians.html', 'تکنسین', 'technicians.html'),
+    ('marketplace.html', 'تأمین‌کننده', 'marketplace.html'),
+    ('students.html', 'دانشجوی کارآموز', 'students.html'),
+]
+
+
+def render_role_bar(current_file):
+    btns = []
+    for href, label, page in ROLES:
+        active = page == current_file
+        cls = 'role-switch__btn is-active' if active else 'role-switch__btn'
+        btns.append(f'        <a class="{cls}" href="{href}">{label}</a>')
+    return f'''    <div class="role-bar">
+      <div class="role-bar__inner">
+        <span class="role-bar__label">ورود به عنوان:</span>
+        <nav class="role-switch" aria-label="انتخاب نقش کاربری و ورود به پیشخوان متناظر">
+{chr(10).join(btns)}
+        </nav>
+      </div>
+    </div>
+'''
+
+
 def render_header(current_file):
     links = []
     for href, label in NAV:
@@ -61,7 +86,7 @@ def render_header(current_file):
         mlinks.append(f'      <a href="{href}">{label}</a>')
     return f'''  <!-- ============ Header & Navigation ============ -->
   <header class="site-header" id="site-header">
-    <div class="site-header__inner">
+{render_role_bar(current_file)}    <div class="site-header__inner">
       <a class="brand" href="index.html" aria-label="مدیکال‌نت — صفحه اصلی پلتفرم ملی مهندسی بالینی">
         <svg class="brand__mark" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
         <div class="brand__text-group">
@@ -140,13 +165,14 @@ def render_head(p):
 
 def render_feature(f, idx):
     rev = ' feature-block--reverse' if idx % 2 else ''
+    fid = f' id="{f["id"]}"' if f.get('id') else ''
     checks = ''.join(
         f'        <li>{ic("i-check")}<span>{c}</span></li>' for c in f['checks'])
     note = ''
     if f.get('note'):
         n_icon, n_text = f['note']
         note = f'      <p class="feature-note">{ic(n_icon)}<span>{n_text}</span></p>'
-    return f'''    <article class="feature-block{rev}" data-reveal>
+    return f'''    <article class="feature-block{rev}"{fid} data-reveal>
       <div class="feature-block__copy">
         <span class="feature-block__kicker">{ic(f['kicker_icon'])}{f['kicker']}</span>
         <h2 class="feature-block__title">{f['title']}</h2>
@@ -261,7 +287,7 @@ def render_page(p):
         </div>
       </div>
     </section>
-
+{p.get('custom_top', '')}
     <!-- ============ Module features ============ -->
 {features}
 {tg}{render_strip(p['file'])}{render_cta(p['cta'])}  </main>

@@ -19,12 +19,90 @@ PAGES = [
    ('i-shield', '۱۰۰٪', 'تسویه مشروط به تأیید فنی'),
  ],
  'ctas': [
-   ('#f-sos', 'btn btn--dark btn--lg', 'i-zap', 'ثبت خرابی اضطراری'),
-   ('marketplace.html', 'btn btn--light btn--lg', 'i-cart', 'مشاهده بازارگاه B2B'),
+   ('#dashboard-demo', 'btn btn--dark btn--lg', 'i-zap', 'ثبت خرابی اضطراری'),
  ],
+ # Mock dashboard shell — rendered right after the hero (step 2 of platform template)
+ 'custom_top': r'''    <!-- ============ Dashboard demo (mock app shell) ============ -->
+    <section class="dash-demo" id="dashboard-demo" aria-labelledby="dashdemo-title">
+      <div class="dash-demo__head">
+        <span class="module-badge"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg>پیش‌نمایش زنده — قالب پلتفرمی مدیکال‌نت</span>
+        <h2 class="dash-demo__title" id="dashdemo-title">پیشخوان بیمارستان از نگاه کاربر (Mock Dashboard)</h2>
+        <p class="dash-demo__lead">همان چیزی که مدیر تجهیزات بیمارستان پس از «ورود به عنوان: بیمارستان» می‌بیند: منوی کنار، ثبت خرابی اضطراری، مناقصات باز خرید و کیف پول سپرده امن — همه در یک قالب واحد.</p>
+      </div>
+      <div class="dashdemo-shell">
+        <aside class="dashdemo-side">
+          <div class="dashdemo-side__brand">
+            <svg class="brand__mark" viewBox="0 0 112 48" aria-hidden="true"><use href="#logo-mark"/></svg>
+            <span>مدیکال‌نت<small>پیشخوان بیمارستان</small></span>
+          </div>
+          <nav aria-label="منوی پیشخوان بیمارستان">
+            <p class="dashdemo-side__t">عملیات روزانه</p>
+            <a class="is-active" href="#dashboard-demo">پیشخوان</a>
+            <a href="#f-sos">تیکت‌های خرابی <span class="dashdemo-side__badge">۳</span></a>
+            <a href="#f-auction">مناقصات خرید</a>
+            <a href="#f-escrow">کیف پول امانی</a>
+            <a href="#f-asset">شناسنامه تجهیزات</a>
+            <p class="dashdemo-side__t">مدیریت</p>
+            <a href="odr.html">کارتابل داوری ODR</a>
+            <a href="index.html#framework">چارچوب و گزارش‌ها</a>
+          </nav>
+          <div class="dashdemo-side__user">
+            <b>مهندس رضایی</b>
+            مسئول تجهیزات پزشکی — بیمارستان امام حسن (ع) بجنورد
+          </div>
+        </aside>
+        <div class="dashdemo-main">
+          <div class="dashdemo-topbar">
+            <div class="dashdemo-greet">صبح بخیر، مهندس رضایی 👋<small>آخرین ورود: امروز ۰۷:۴۲ — نوبت کاری صبح</small></div>
+            <div class="dashdemo-topbar-actions">
+              <span class="dashdemo-search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>جستجوی تجهیز، تیکت یا مناقصه…</span>
+              <span class="dashdemo-bell" title="۲ اعلان فوری"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg></span>
+            </div>
+          </div>
+          <div class="dashdemo-stats">
+            <div class="dstat"><span class="dstat__lbl"><svg class="ic" aria-hidden="true"><use href="#i-activity"/></svg>دستگاه‌های تحت پایش</span><span class="dstat__val">۱٬۵۳۰</span><span class="dstat__chg">۱۲ دستگاه در سرویس دوره‌ای</span></div>
+            <div class="dstat"><span class="dstat__lbl"><svg class="ic" aria-hidden="true"><use href="#i-alert-triangle"/></svg>تیکت‌های باز</span><span class="dstat__val">۷ <small style="font-size:11px;color:#dc2626;">(۲ فوری)</small></span><span class="dstat__chg">۳ تیکت در انتظار تکنسین</span></div>
+            <div class="dstat"><span class="dstat__lbl"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg>موجودی حساب امانی</span><span class="dstat__val">۴۸٬۵۰۰٬۰۰۰ ت</span><span class="dstat__chg">۲ تسویه در جریان</span></div>
+          </div>
+          <div class="dashdemo-grid">
+            <article class="dd-card dd-card--sos dd-card--span">
+              <div class="dd-card__head">
+                <h3 class="dd-card__t"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>۱ — ثبت خرابی اضطراری (SOS)</h3>
+                <span class="dd-card__hint">میان‌بر فرم ساده برای پرسنل غیرفنی — بدون نیاز به آموزش خاص</span>
+              </div>
+              <div class="dd-sos-row">
+                <div class="dd-field"><span class="dd-field__lbl">واحد درمانی</span><span class="dd-field__val">ICU — اتاق ۳</span></div>
+                <div class="dd-field"><span class="dd-field__lbl">کد تجهیز (اختیاری)</span><span class="dd-field__val">VT-۲۲۰۱ — ونتیلاتور</span></div>
+                <a class="dd-sos-btn" href="#f-sos"><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg>ثبت فوری خرابی — فقط ۳۰ ثانیه</a>
+              </div>
+            </article>
+            <article class="dd-card">
+              <div class="dd-card__head">
+                <h3 class="dd-card__t"><svg class="ic" aria-hidden="true"><use href="#i-trending-down"/></svg>۲ — مناقصات معکوس باز خرید</h3>
+                <a class="dd-card__hint" href="#f-auction">مشاهده همه ←</a>
+              </div>
+              <div class="dd-tx"><span><b>باتری UPS ونتیلاتور</b> (۲ عدد) · ۲ پیشنهاد · بهترین: ۴٬۸۵۰٬۰۰۰ ت</span><span class="dd-tx__state dd-tx__state--hold">۴۵:۱۲ مانده</span></div>
+              <div class="dd-tx"><span><b>فیلتر ضدعفونی اتوکلاو</b> (بسته ۱۰ عددی) · ۴ پیشنهاد · بهترین: ۱٬۲۰۰٬۰۰۰ ت</span><span class="dd-tx__state dd-tx__state--hold">۱:۴۵:۰۰ مانده</span></div>
+              <div class="dd-tx"><span><b>لامپ هندی جراحی</b> (۲ عدد) · ۱ پیشنهاد · ۷٬۸۰۰٬۰۰۰ ت</span><span class="dd-tx__state dd-tx__state--hold">۶:۲۰:۴۰ مانده</span></div>
+            </article>
+            <article class="dd-card">
+              <div class="dd-card__head">
+                <h3 class="dd-card__t"><svg class="ic" aria-hidden="true"><use href="#i-wallet"/></svg>۳ — کیف پول سپرده امن (Escrow)</h3>
+                <a class="dd-card__hint" href="#f-escrow">گردش حساب ←</a>
+              </div>
+              <div class="dd-balance"><span class="dd-balance__lbl">موجودی در امانت</span><span class="dd-balance__val">۴۸٬۵۰۰٬۰۰۰ تومان</span></div>
+              <div class="dd-tx"><span><b>تکنسین محمودی</b> — سرویس ونتیلاتور ICU · ۲٬۴۰۰٬۰۰۰ ت</span><span class="dd-tx__state dd-tx__state--hold">در امانت تا تأیید فنی</span></div>
+              <div class="dd-tx"><span><b>شرکت آریا تک</b> — قطعات پمپ انفوزیون · ۶٬۳۰۰٬۰۰۰ ت</span><span class="dd-tx__state dd-tx__state--ok">تسویه شد</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <p class="dash-demo__note">داده‌های این پیش‌نمایش نمایشی است؛ نسخه عملیاتی به پایگاه داده هر بیمارستان متصل می‌شود. برای شرح کامل هر بخش از منوی کنار یا ادامهٔ صفحه استفاده کنید.</p>
+    </section>''',
  'features': [
   {
    'kicker': 'تیکت اضطراری / SOS', 'kicker_icon': 'i-alert-triangle',
+   'id': 'f-sos',
    'title': 'دکمه ثبت فوری خرابی (SOS) — فرم بسیار ساده و سریع',
    'desc': 'پرسنل بخش نیازی به فرم‌های طولانی و اصطلاحات فنی ندارند. انتخاب نوع دستگاه، کد اموال و یک عکس یا وویس کوتاه؛ سیستم بقیه را انجام می‌دهد.',
    'checks': [
@@ -59,6 +137,7 @@ PAGES = [
   },
   {
    'kicker': 'کارتابل خرید', 'kicker_icon': 'i-trending-down',
+   'id': 'f-auction',
    'title': 'کارتابل مناقصه معکوس خرید ملزومات و قطعات',
    'desc': 'به‌جای تماس‌های تلفنی و استعلام‌های قیمتی چندروزه، استعلام حجمی خود را ثبت کنید و تماشا کنید که شرکت‌ها در جدول رقابتی قیمت‌هایشان را لحظه‌به‌لحظه پایین می‌آورند.',
    'checks': [
@@ -86,6 +165,7 @@ PAGES = [
   },
   {
    'kicker': 'تسویه امن', 'kicker_icon': 'i-wallet',
+   'id': 'f-escrow',
    'title': 'کیف پول سپرده امن (Escrow Wallet)',
    'desc': 'وجه قرارداد تعمیر یا خرید قطعه به حساب امانی مدیکال‌نت واریز و بلوکه می‌شود — تا زمانی که بیمارستان سلامت دستگاه را تست و تأیید نکند، حتی یک ریال به حساب تکنسین یا فروشنده واریز نمی‌شود.',
    'checks': [
@@ -108,6 +188,7 @@ PAGES = [
   },
   {
    'kicker': 'حافظه فنی بیمارستان', 'kicker_icon': 'i-file-chart',
+   'id': 'f-asset',
    'title': 'شناسنامه دیجیتال تجهیزات (Asset Log)',
    'desc': 'هر دستگاه بیمارستان یک پرونده زنده دارد: از روز نصب تا آخرین خرابی. دیگر هیچ دانش فنی با رفتن یک کارمند از بیمارستان خارج نمی‌شود.',
    'checks': [
@@ -161,6 +242,7 @@ PAGES = [
  'features': [
   {
    'kicker': 'اعتمادسازی', 'kicker_icon': 'i-shield',
+   'id': 'f-verify',
    'title': 'میز کار احراز صلاحیت و نشان اصالت (تیک آبی)',
    'desc': 'مشکل اصلی بازار پراکنده تعمیرات، نبود معیار اعتماد است. مدیکال‌نت با راستی‌آزمایی دانشگاه آزاد، تکنسین‌های واقعی را از مدعیان جدا می‌کند.',
    'checks': [
@@ -180,6 +262,7 @@ PAGES = [
   },
   {
    'kicker': 'دریافت سفارش', 'kicker_icon': 'i-map-pin',
+   'id': 'f-radar',
    'title': 'رادار و نقشه اعلان خرابی‌ها',
    'desc': 'تیکت‌های ثبت‌شده توسط بیمارستان‌های اطراف، به‌صورت زنده روی نقشه رادار شما ظاهر می‌شوند؛ قیمت و زمان حضور پیشنهادی‌تان را ثبت کنید و منتظر انتخاب بیمارستان بمانید.',
    'checks': [
@@ -199,6 +282,7 @@ PAGES = [
   },
   {
    'kicker': 'مزیت دوطرفه', 'kicker_icon': 'i-users',
+   'id': 'f-apprentice',
    'title': 'بخش مدیریت کارآموز',
    'desc': 'در هر مأموریت بیمارستانی می‌توانید یک دانشجوی کارآموز مهندسی پزشکی را با خود همراه ببرید: شما امتیاز کاربری و تخفیف آبونمان می‌گیرید، دانشجو تجربه عملیاتی واقعی.',
    'checks': [
@@ -251,6 +335,7 @@ PAGES = [
  'features': [
   {
    'kicker': 'حراج معکوس', 'kicker_icon': 'i-trending-down',
+   'id': 'f-auction',
    'title': 'تالار مناقصات معکوس زنده',
    'desc': 'لیست درخواست‌های خرید عمده بیمارستان‌ها را مشاهده کنید و تا پایان مهلت، قیمت‌های کاهشی خود را ثبت کنید — رقابت شفاف، برنده واقعی.',
    'checks': [
@@ -269,6 +354,7 @@ PAGES = [
   },
   {
    'kicker': 'فیلتر کیفیت', 'kicker_icon': 'i-star',
+   'id': 'f-tokens',
    'title': 'مدیریت توکن‌های مناقصه',
    'desc': 'برای باز کردن هر مناقصه و ثبت نرخ، یک توکن اعتباری مصرف می‌شود؛ همین مکانیزم ساده، دلالان و قیمت‌های فیک را از تالار بیرون می‌کند و وقت بیمارستان و فروشنده واقعی را آزاد می‌کند.',
    'checks': [
@@ -288,6 +374,7 @@ PAGES = [
   },
   {
    'kicker': 'غرفه اختصاصی', 'kicker_icon': 'i-grid',
+   'id': 'f-shop',
    'title': 'فروشگاه قطعات و ملزومات',
    'desc': 'غرفه اختصاصی خود را راه بیندازید و قطعات یدکی نو یا استوک تست‌شده را با قیمت شفاف به بیمارستان‌ها و تکنسین‌های سراسر کشور بفروشید.',
    'checks': [
@@ -342,6 +429,7 @@ PAGES = [
  'features': [
   {
    'kicker': 'جایگزین رزومه سنتی', 'kicker_icon': 'i-star',
+   'id': 'f-profile',
    'title': 'پروفایل مهارت‌محور (بدون نیاز به سابقه کار)',
    'desc': 'به‌جای فهرست مشاغل خالی، مهارت‌های ملموس آزمایشگاهی‌تان را ثبت کنید؛ همین مهارت‌ها شما را در سیستم تطبیق کارآموزی به تکنسین‌های مناسب وصل می‌کند.',
    'checks': [
@@ -364,6 +452,7 @@ PAGES = [
   },
   {
    'kicker': 'پل تجربه', 'kicker_icon': 'i-compass',
+   'id': 'f-mentor',
    'title': 'سامانه تطبیق کارآموزی بالینی (Mentor Matching)',
    'desc': 'سیستم بر اساس مهارت‌ها، شهر و حوزه علاقه، شما را به تکنسین‌های تیک‌آبی همان منطقه وصل می‌کند تا در محیط واقعی بیمارستان تجربه عملیاتی جمع کنید.',
    'checks': [
@@ -383,6 +472,7 @@ PAGES = [
   },
   {
    'kicker': 'خروجی قابل ارائه', 'kicker_icon': 'i-file-chart',
+   'id': 'f-cert',
    'title': 'گواهینامه مهارت بالینی',
    'desc': 'پس از گذراندن موفق مأموریت‌های تعمیراتی، گواهینامه مهارت بالینی با امضای تکنسین ناظر و تأیید دانشگاه آزاد صادر می‌شود — سندی که کارفرما واقعی می‌فهمد.',
    'checks': [
@@ -433,6 +523,7 @@ PAGES = [
  'features': [
   {
    'kicker': 'شروع پرونده', 'kicker_icon': 'i-alert-triangle',
+   'id': 'f-dispute',
    'title': 'ثبت پرونده اختلاف فنی',
    'desc': 'بیمارستان دکمه «گزارش عیب / توقیف وجه» را می‌زند؛ وجه باقی‌مانده قرارداد همان لحظه در حساب امانی مسدود می‌شود و پرونده با تمام مدارک فنی تشکیل می‌گردد.',
    'checks': [
@@ -452,6 +543,7 @@ PAGES = [
   },
   {
    'kicker': 'ترکیب داوری', 'kicker_icon': 'i-users',
+   'id': 'f-panel',
    'title': 'کارتابل هیئت داوری ۳ نفره',
    'desc': 'هر پرونده توسط سه داور متخصص بررسی می‌شود: نماینده دانشگاه، کارشناس تجهیزات بیمارستان و متخصص نظام مهندسی — نه قاضی عمومی، بلکه افرادی که مدار را می‌فهمند.',
    'checks': [
@@ -471,6 +563,7 @@ PAGES = [
   },
   {
    'kicker': 'نتیجه نهایی', 'kicker_icon': 'i-clock',
+   'id': 'f-ruling',
    'title': 'صدور رای قطعی ظرف ۴۸ ساعت',
    'desc': 'رای داوری قطعی است و همان‌لحظه اجرا می‌شود: وجه آزاد شده به نفع تعمیرکار واریز می‌شود یا به حساب بیمارستان برمی‌گردد — بدون پرونده قضایی، بدون تأخیر چندماهه.',
    'checks': [
@@ -520,6 +613,7 @@ PAGES = [
  'features': [
   {
    'kicker': 'پایگاه دانش', 'kicker_icon': 'i-file-chart',
+   'id': 'f-kb',
    'title': 'پایگاه مقالات و راهنماهای نگهداری پیشگیرانه (PM)',
    'desc': 'مقالات کاربردی و چک‌لیست‌های گام‌به‌گام که مهندس بالینی می‌تواند فردا صبح در بازرسی واقعی از آن‌ها استفاده کند — نه مقاله‌های ترجمه‌شده‌ی کلیشه‌ای.',
    'checks': [
@@ -538,6 +632,7 @@ PAGES = [
   },
   {
    'kicker': 'رسانه تخصصی', 'kicker_icon': 'i-zap',
+   'id': 'f-promo',
    'title': 'ترویج شأن صنفی مهندسی پزشکی',
    'desc': 'مهندسی بالینی در کشور هنوز در سایه است. آکادمی مدیکال‌نت روایت این حرفه را می‌سازد: فناوری‌ها، افراد و استانداردهایی که سلامت میلیون‌ها بیمار را نامرئی نگه می‌دارند.',
    'checks': [
