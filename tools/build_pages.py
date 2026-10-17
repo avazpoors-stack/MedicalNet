@@ -15,6 +15,8 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from pages_content import PAGES  # noqa: E402
+from console_content import CONSOLE, WORKLIST, LEGEND, TABS, FLOW  # noqa: E402
+from console_content import ROLES as UC_ROLES, CTA as UC_CTA  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE_URL = 'https://avazpoors-stack.github.io/MedicalNet/'
@@ -36,6 +38,7 @@ NAV = [
 ]
 NAV_MOBILE = [
     ('index.html', 'خانه'),
+    ('console.html', 'پیشخوان یکپارچه (سفارشات، توکن‌ها، مناقصات، تعمیرات)'),
     ('hospital.html', 'پنل بیمارستان و مراکز درمانی'),
     ('technicians.html', 'پنل تکنسین‌ها و تعمیرکاران'),
     ('marketplace.html', 'بازارگاه B2B تأمین‌کنندگان'),
@@ -106,8 +109,8 @@ def render_header(current_file):
 {chr(10).join(links)}
       </nav>
       <div class="site-header__actions">
-        <span class="badge-version" title="نسخه عملیاتی منطبق بر مقاله پژوهشی">نسخه عملیاتی ۳.۴.۰</span>
-        <a href="index.html#modules" class="btn btn--dark btn--sm" data-sparkle>
+        <span class="badge-version" title="نسخه عملیاتی منطبق بر مقاله پژوهشی">نسخه عملیاتی ۳.۵.۰</span>
+        <a href="console.html" class="btn btn--dark btn--sm" data-sparkle>
           <span>ورود به پورتال</span>
           {ic('i-arrow-right')}
         </a>
@@ -306,11 +309,214 @@ def render_page(p):
 ''')
 
 
+def render_uc_stats(stats):
+    return ''.join(
+        f'        <div class="dstat"><span class="dstat__lbl">{ic(icon)}{label}</span>'
+        f'<span class="dstat__val">{val}</span></div>'
+        for icon, val, label in stats)
+
+
+def render_uc_table(tab, idx):
+    stats = render_uc_stats(tab['stats'])
+    balance = ''
+    if tab.get('balance'):
+        b1, b2 = tab['balance']
+        balance = (f'      <div class="uc-balance-row">\n'
+                   f'        <div class="dd-balance"><span class="dd-balance__lbl">{b1[0]}</span>'
+                   f'<span class="dd-balance__val">{b1[1]}</span></div>\n'
+                   f'        <div class="dd-balance"><span class="dd-balance__lbl">{b2[0]}</span>'
+                   f'<span class="dd-balance__val">{b2[1]}</span></div>\n'
+                   f'      </div>\n')
+    head = ''.join(f'<th>{h}</th>' for h in tab['head'])
+    has_action = tab['head'][-1] == 'اقدام'
+    body = []
+    for r in tab['rows']:
+        chip = next(x for x in r if isinstance(x, tuple))
+        pos = r.index(chip)
+        rid = r[0]
+        cells = [c for c in r[1:] if not isinstance(c, tuple)]
+        action = r[pos + 1] if (has_action and pos + 1 < len(r)) else None
+        tds = [f'<td><span class="uc-id">{rid}</span></td>']
+        tds += [f'<td>{c}</td>' for c in cells]
+        tds.append(f'<td><span class="{chip[0]}">{chip[1]}</span></td>')
+        if action is not None:
+            tds.append(f'<td><a class="uc-act" data-goto-tab="#{tab["id"]}" href="#{tab["id"]}">{action}</a></td>')
+        else:
+            tds.append('<td><span class="uc-act uc-act--ghost">—</span></td>')
+        body.append('          <tr>' + ''.join(tds) + '</tr>')
+    note = f'      <p class="uc-note">{tab["note"]}</p>' if tab.get('note') else ''
+    hidden = '' if idx == 0 else ' hidden'
+    return f'''    <div class="uc-panel" id="{tab['id']}" role="tabpanel"{hidden}>
+      <div class="uc-panel__stats">
+{stats}
+      </div>
+{balance}      <div class="uc-tablewrap">
+        <div class="uc-tablewrap__bar"><span>{tab['title']}</span><span class="uc-tablewrap__count">{tab['count']}</span></div>
+        <div class="uc-scroll">
+          <table class="uc-table">
+            <thead>
+              <tr>{head}</tr>
+            </thead>
+            <tbody>
+{chr(10).join(body)}
+            </tbody>
+          </table>
+        </div>
+      </div>
+{note}    </div>
+'''
+
+
+def render_console():
+    c = CONSOLE
+    stats = ''.join(
+        f'        <div class="mini-stat">{ic(icon)}<span><b>{b}</b> {label}</span></div>'
+        for icon, b, label in c['stats'])
+
+    CHIP_LABELS = {'uc-chip--urgent': 'فوری', 'uc-chip--wait': 'در انتظار شما',
+                   'uc-chip--run': 'در جریان', 'uc-chip--done': 'تازه', 'uc-chip--arch': 'بایگانی'}
+    worklist = ''.join(
+        f'''      <div class="uc-worklist__item">
+        <span class="{chip}">{CHIP_LABELS[chip]}</span>
+        <span class="uc-worklist__id">{rid}</span>
+        <span class="uc-worklist__desc">{desc}</span>
+        <a class="uc-act" data-goto-tab="#{panel}" href="#{panel}">{action}</a>
+      </div>
+''' for chip, rid, desc, action, panel in WORKLIST)
+
+    legend = ''.join(
+        f'        <span class="{cls}">{label}</span>' for cls, label in LEGEND)
+
+    tab_btns = ''.join(
+        f'''        <button class="uc-tab" role="tab" id="uc-btn-{t['id'][4:]}" aria-selected="{'true' if i == 0 else 'false'}" aria-controls="{t['id']}"{' tabindex="-1"' if i else ''} type="button">{ic(t['icon'])}{t['label']} <small style="opacity:.65;font-size:10px;direction:ltr;">{t['badge']}</small></button>
+''' for i, t in enumerate(TABS))
+    tab_panels = ''.join(render_uc_table(t, i) for i, t in enumerate(TABS))
+
+    flow = []
+    for i, (no, t, d) in enumerate(FLOW):
+        flow.append(f'''        <div class="uc-step">
+          <span class="uc-step__no">{no}</span>
+          <span class="uc-step__t">{t}</span>
+          <span class="uc-step__d">{d}</span>
+        </div>''')
+    flow_html = (f'        {ic("i-arrow-right")}\n').join(f'{s}\n' for s in flow).rstrip()
+    flow_html = flow_html.replace(f'        {ic("i-arrow-right")}', f'        <span class="uc-arrowlink">{ic("i-arrow-right")}</span>')
+
+    roles = ''.join(
+        f'''        <a class="uc-role" href="{href}">{ic(icon)}<span class="uc-role__t">{name}</span><span class="uc-role__d">{desc}</span></a>
+''' for href, icon, name, desc in UC_ROLES)
+
+    cta_btns = ''.join(
+        f'          <a href="{h}" class="{cls}" data-sparkle>{ic(icon)}<span>{t}</span></a>'
+        for h, cls, icon, t in UC_CTA['btns'])
+
+    footer = (FOOTER
+              .replace('href="#case-studies"', 'href="index.html#case-studies"')
+              .replace('href="#academic-foundation"', 'href="index.html#academic-foundation"')
+              .replace('href="#top"', 'href="index.html"'))
+
+    return (render_head(c) + '\n' + render_header('console.html') + f'''
+  <main id="main" class="page">
+
+    <!-- ============ Unified console hero ============ -->
+    <section class="uc-hero" aria-labelledby="uc-hero-title">
+      <div class="uc-hero__inner">
+        <div class="uc-hero__badges">
+          <span class="module-badge">{ic('i-grid')}سامانه یکپارچه — نسخه نمایشی ۳.۵.۰</span>
+          <span class="role-chip">{ic('i-map-pin')}نمای نمایشی: گره منطقه‌ای ۹ — خراسان شمالی</span>
+        </div>
+        <h1 class="uc-hero__title" id="uc-hero-title">{c['hero_title']}</h1>
+        <p class="uc-hero__lead">{c['hero_lead']}</p>
+        <div class="uc-hero__actions">
+          <a href="#uc-worklist" class="btn btn--dark btn--lg" data-sparkle>{ic('i-zap')}<span>شروع از کارتابل من</span></a>
+          <a href="index.html#framework" class="btn btn--light btn--lg" data-sparkle>{ic('i-file-chart')}<span>چارچوب علمی سامانه</span></a>
+        </div>
+        <div class="uc-hero__stats">
+{stats}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ کارتابل من — single inbox across all sections ============ -->
+    <section class="uc-worklist" id="uc-worklist" aria-labelledby="uc-worklist-title">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">یک صندوق ورودی برای همه بخش‌ها</p>
+        <h2 class="h2" id="uc-worklist-title">کارتابل من — در انتظار شما</h2>
+      </header>
+      <div class="uc-worklist__wrap">
+        <div class="uc-worklist__head">
+          <span class="uc-worklist__t">{ic('i-alert-triangle')}اقدام‌های نیازمند توجه شما<span class="uc-worklist__count">{len(WORKLIST)} مورد</span></span>
+          <span class="uc-worklist__hint">از چهارسوی سامانه یکپارچه — تعمیرات، سفارشات، مناقصات و نیازمندی‌ها</span>
+        </div>
+{worklist}      </div>
+    </section>
+
+    <!-- ============ unified status vocabulary ============ -->
+    <div class="uc-legend">
+      <div class="uc-legend__wrap">
+        <p class="uc-legend__t">لغت‌نامه واحد وضعیت‌ها — یک رنگ و یک واژه در کل سامانه:</p>
+{legend}
+      </div>
+    </div>
+
+    <!-- ============ five sections in one shell ============ -->
+    <section class="uc-tabs" aria-labelledby="uc-tabs-title">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">پنج بخش، یک پوسته</p>
+        <h2 class="h2" id="uc-tabs-title">بخش‌های سامانه یکپارچه</h2>
+        <p class="lead">هر موجودیت یک شناسه یکتای ردیابی دارد: ORD سفارش، TOK توکن، AUC مناقصه، TK تعمیر و REQ نیازمندی استانی</p>
+      </header>
+      <div class="uc-tabs__wrap">
+        <div class="uc-tablist" role="tablist" data-tabs aria-label="بخش‌های سامانه یکپارچه">
+{tab_btns}        </div>
+{tab_panels}      </div>
+    </section>
+
+    <!-- ============ یک رخداد، پنج بخش ============ -->
+    <section class="uc-flow" aria-labelledby="uc-flow-title">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">چرا «یکپارچه»؟</p>
+        <h2 class="h2" id="uc-flow-title">یک رخداد، پنج بخش</h2>
+        <p class="lead">یک خرابی ونتیلاتور ICU، همه بخش‌های سامانه را همزمان به‌روز می‌کند — همان زنجیره‌ای که در جدول‌های بالا با این شناسه‌ها قابل ردیابی است</p>
+      </header>
+      <div class="uc-flow__wrap">
+{flow_html}
+      </div>
+    </section>
+
+    <!-- ============ same shell for every role ============ -->
+    <section class="uc-roles" aria-labelledby="uc-roles-title">
+      <header class="section__head" data-reveal>
+        <p class="eyebrow eyebrow--blue">یک پوسته برای همه نقش‌ها</p>
+        <h2 class="h2" id="uc-roles-title">هر نقش، همین سامانه را با داده‌های خودش می‌بیند</h2>
+      </header>
+      <div class="uc-roles__grid">
+{roles}      </div>
+    </section>
+
+{render_strip('console.html')}    <section class="module-cta" aria-labelledby="pcta-title">
+      <h2 class="module-cta__t" id="pcta-title">{UC_CTA['title']}</h2>
+      <p class="module-cta__d">{UC_CTA['desc']}</p>
+      <div class="module-hero__actions">
+{cta_btns}
+      </div>
+    </section>
+  </main>
+
+  {footer}
+</body>
+</html>
+''')
+
+
 def main():
     for p in PAGES:
         out = ROOT / p['file']
         out.write_text(render_page(p), encoding='utf-8')
         print(f'built {p["file"]:18s} {out.stat().st_size:>8,} bytes')
+    out = ROOT / CONSOLE['file']
+    out.write_text(render_console(), encoding='utf-8')
+    print(f'built {CONSOLE["file"]:18s} {out.stat().st_size:>8,} bytes')
 
 
 if __name__ == '__main__':
