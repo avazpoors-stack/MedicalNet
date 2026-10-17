@@ -1103,3 +1103,21 @@
   toggle.addEventListener('click', function () { apply(true); });
   reopen.addEventListener('click', function () { apply(false); });
 })();
+
+/* ============================================================
+   Unified console — jump-to-tab actions (worklist & table rows)
+   <a data-goto-tab="#tab-x"> activates that tab and scrolls to it
+   ============================================================ */
+(function () {
+  'use strict';
+  document.addEventListener('click', function (e) {
+    var link = e.target && e.target.closest ? e.target.closest('[data-goto-tab]') : null;
+    if (!link) { return; }
+    var panelId = (link.getAttribute('data-goto-tab') || '').replace('#', '');
+    var tab = document.querySelector('[role="tab"][aria-controls="' + panelId + '"]');
+    if (!tab) { return; }
+    e.preventDefault();
+    tab.click();
+    tab.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();

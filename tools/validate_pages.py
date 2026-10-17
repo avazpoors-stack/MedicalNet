@@ -16,8 +16,8 @@ import urllib.parse
 from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PAGES = ['index.html', 'hospital.html', 'technicians.html', 'marketplace.html',
-         'students.html', 'odr.html', 'academy.html']
+PAGES = ['index.html', 'console.html', 'hospital.html', 'technicians.html',
+         'marketplace.html', 'students.html', 'odr.html', 'academy.html']
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link',
         'meta', 'source', 'track', 'wbr',
