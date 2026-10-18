@@ -1121,3 +1121,23 @@
     tab.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 })();
+
+/* ============================================================
+   L02 figure-ground — scrim behind the open mobile menu.
+   Stays decoupled: mirrors the menu's `hidden` attribute via
+   MutationObserver, so the existing toggle logic is untouched.
+   ============================================================ */
+(function () {
+  'use strict';
+  var menu = document.getElementById('mobile-menu');
+  if (!menu || !('MutationObserver' in window)) { return; }
+  var scrim = document.createElement('div');
+  scrim.className = 'menu-scrim';
+  scrim.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(scrim);
+  var sync = function () {
+    scrim.classList.toggle('is-open', !menu.hidden);
+  };
+  new MutationObserver(sync).observe(menu, { attributes: true, attributeFilter: ['hidden'] });
+  sync();
+})();

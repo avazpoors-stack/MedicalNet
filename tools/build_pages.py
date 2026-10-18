@@ -344,13 +344,17 @@ def render_uc_table(tab, idx):
         else:
             tds.append('<td><span class="uc-act uc-act--ghost">—</span></td>')
         body.append('          <tr>' + ''.join(tds) + '</tr>')
+    cycle = ''
+    if tab.get('cycle'):
+        chips = ''.join(f'<span class="cycle-chip">{c}</span>' for c in tab['cycle'])
+        cycle = f'      <div class="uc-cycle" role="img" aria-label="چرخه {tab["title"]}">{chips}</div>\n'
     note = f'      <p class="uc-note">{tab["note"]}</p>' if tab.get('note') else ''
     hidden = '' if idx == 0 else ' hidden'
     return f'''    <div class="uc-panel" id="{tab['id']}" role="tabpanel"{hidden}>
       <div class="uc-panel__stats">
 {stats}
       </div>
-{balance}      <div class="uc-tablewrap">
+{balance}{cycle}      <div class="uc-tablewrap">
         <div class="uc-tablewrap__bar"><span>{tab['title']}</span><span class="uc-tablewrap__count">{tab['count']}</span></div>
         <div class="uc-scroll">
           <table class="uc-table">
@@ -392,15 +396,18 @@ def render_console():
 ''' for i, t in enumerate(TABS))
     tab_panels = ''.join(render_uc_table(t, i) for i, t in enumerate(TABS))
 
+    fa_digits = '۱۲۳۴۵۶۷۸۹'
     flow = []
     for i, (no, t, d) in enumerate(FLOW):
         flow.append(f'''        <div class="uc-step">
-          <span class="uc-step__no">{no}</span>
-          <span class="uc-step__t">{t}</span>
-          <span class="uc-step__d">{d}</span>
+          <span class="uc-step__dot" aria-hidden="true">{fa_digits[i]}</span>
+          <div class="uc-step__card">
+            <span class="uc-step__no">{no}</span>
+            <span class="uc-step__t">{t}</span>
+            <span class="uc-step__d">{d}</span>
+          </div>
         </div>''')
-    flow_html = (f'        {ic("i-arrow-right")}\n').join(f'{s}\n' for s in flow).rstrip()
-    flow_html = flow_html.replace(f'        {ic("i-arrow-right")}', f'        <span class="uc-arrowlink">{ic("i-arrow-right")}</span>')
+    flow_html = '\n'.join(flow)
 
     roles = ''.join(
         f'''        <a class="uc-role" href="{href}">{ic(icon)}<span class="uc-role__t">{name}</span><span class="uc-role__d">{desc}</span></a>
