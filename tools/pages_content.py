@@ -44,7 +44,7 @@ PAGES = [
             <a href="#f-asset">شناسنامه تجهیزات</a>
             <p class="dashdemo-side__t">مدیریت</p>
             <a href="odr.html">کارتابل داوری ODR</a>
-            <a href="index.html#framework">چارچوب و گزارش‌ها</a>
+            <a href="about.html#framework">چارچوب و گزارش‌ها</a>
           </nav>
           <div class="dashdemo-side__user">
             <b>مهندس رضایی</b>
@@ -216,7 +216,7 @@ PAGES = [
    'title': 'آماده‌اید پیشخوان بیمارستان خود را راه‌اندازی کنید؟',
    'desc': 'از بیمارستان امام حسن (ع) بجنورد تا بزرگ‌ترین مراکز دانشگاهی کشور — مدیکال‌نت در ۱۴ گره منطقه‌ای مستقر است و اعزام تکنسین بومی از همان شهر شما انجام می‌شود.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('technicians.html', 'btn btn--dark btn--lg', 'i-tool', 'تکنسین‌های تیک‌آبی کدامند؟'),
    ],
  },
@@ -309,7 +309,7 @@ PAGES = [
    'title': 'تکنسین بومی هستید؟ جای شما در شبکه مدیکال‌نت خالی است',
    'desc': 'ثبت‌نام و احراز صلاحیت رایگان است؛ کارمزدی از خدمات فنی شما گرفته نمی‌شود — کارمزد ۲٪ فقط از فروشندگان کالاست.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('hospital.html', 'btn btn--dark btn--lg', 'i-activity', 'پیشخوان بیمارستان‌ها'),
    ],
  },
@@ -403,7 +403,7 @@ PAGES = [
    'title': 'شرکت شما، بدون واسطه در کنار بیمارستان‌های کشور',
    'desc': 'احراز هویت رسمی، توکن اعتباری و تسویه امانی — سه لایه اطمینانی که معامله B2B پزشکی را از تماس‌های تلفنی به قرارداد شفاف تبدیل می‌کند.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('hospital.html', 'btn btn--dark btn--lg', 'i-activity', 'پیشخوان بیمارستان‌ها'),
    ],
  },
@@ -497,7 +497,7 @@ PAGES = [
    'title': 'از آزمایشگاه دانشگاه تا اتاق ICU — مسیرتان را امروز شروع کنید',
    'desc': 'هاب دانشجویی مدیکال‌نت زیر نظارت دانشگاه آزاد اداره می‌شود؛ تجربه‌ای که در هیچ کلاس درسی به دست نمی‌آید.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('technicians.html', 'btn btn--dark btn--lg', 'i-tool', 'استادان کارآموزی (تکنسین‌ها)'),
    ],
  },
@@ -587,7 +587,7 @@ PAGES = [
    'title': 'معامله‌ای که هرگز طرفش ضرر نمی‌کند',
    'desc': 'حساب امانی + داوری تخصصی ۴۸ ساعته = بودجه عمومی بیمارستان دیگر در میانه جدل‌های فنی بلوکه نمی‌شود.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('hospital.html', 'btn btn--dark btn--lg', 'i-activity', 'پیشخوان بیمارستان‌ها'),
    ],
  },
@@ -656,7 +656,7 @@ PAGES = [
    'title': 'دانش فنی، پایتخت نامرئی هر بیمارستان است',
    'desc': 'آکادمی مدیکال‌نت با نظارت دانشگاه و شبکه تیک‌آبی تولید محتوا می‌کند؛ مقاله یا چک‌لیست موردنیازتان را از تیم فنی درخواست دهید.',
    'btns': [
-     ('index.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
+     ('about.html#modules', 'btn btn--light btn--lg', 'i-grid', 'مشاهده سایر ماژول‌ها'),
      ('index.html', 'btn btn--dark btn--lg', 'i-arrow-right', 'بازگشت به صفحه اصلی'),
    ],
  },
