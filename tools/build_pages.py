@@ -4,8 +4,10 @@ MedicalNet — Module Pages Generator
 Builds the 6 dedicated module pages (hospital, technicians, marketplace,
 students, odr, academy) from a single shared template.
 
-Shared chrome (SVG sprite, footer) is extracted from index.html so there is
-exactly one source of truth. Page content lives in tools/pages_content.py.
+Shared chrome (SVG sprite, footer) is extracted from about.html (the
+hand-maintained marketing page) so there is exactly one source of truth.
+Page content lives in tools/pages_content.py; the unified console
+(tools/console_content.py) is rendered to index.html — the site's front door.
 
 Usage:  python3 tools/build_pages.py
 """
@@ -22,7 +24,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE_URL = 'https://avazpoors-stack.github.io/MedicalNet/'
 OG_IMAGE = BASE_URL + 'assets/img/og-image.jpg'
 
-index_html = (ROOT / 'index.html').read_text(encoding='utf-8')
+index_html = (ROOT / 'about.html').read_text(encoding='utf-8')
 SPRITE = re.search(r'<svg class="sprite".*?</svg>', index_html, re.S).group(0)
 FOOTER = re.search(r'<footer class="footer.*?</footer>', index_html, re.S).group(0)
 
@@ -37,8 +39,8 @@ NAV = [
     ('academy.html', 'آکادمی'),
 ]
 NAV_MOBILE = [
-    ('index.html', 'خانه'),
-    ('console.html', 'پیشخوان یکپارچه (سفارشات، توکن‌ها، مناقصات، تعمیرات)'),
+    ('index.html', 'خانه — پیشخوان یکپارچه'),
+    ('about.html', 'معرفی پلتفرم و چارچوب علمی'),
     ('hospital.html', 'پنل بیمارستان و مراکز درمانی'),
     ('technicians.html', 'پنل تکنسین‌ها و تعمیرکاران'),
     ('marketplace.html', 'بازارگاه B2B تأمین‌کنندگان'),
@@ -110,7 +112,7 @@ def render_header(current_file):
       </nav>
       <div class="site-header__actions">
         <span class="badge-version" title="نسخه عملیاتی منطبق بر مقاله پژوهشی">نسخه عملیاتی ۳.۵.۰</span>
-        <a href="console.html" class="btn btn--dark btn--sm" data-sparkle>
+        <a href="index.html" class="btn btn--dark btn--sm" data-sparkle>
           <span>ورود به پورتال</span>
           {ic('i-arrow-right')}
         </a>
@@ -122,7 +124,7 @@ def render_header(current_file):
 {render_role_bar(current_file)}    <div class="mobile-menu" id="mobile-menu" hidden>
 {chr(10).join(mlinks)}
       <div class="mobile-menu__actions">
-        <a href="index.html#modules" class="btn btn--dark btn--sm mobile-menu-btn">انتخاب پیشخوان نقش شما</a>
+        <a href="about.html#modules" class="btn btn--dark btn--sm mobile-menu-btn">انتخاب پیشخوان نقش شما</a>
       </div>
     </div>
   </header>
@@ -130,7 +132,8 @@ def render_header(current_file):
 
 
 def render_head(p):
-    url = BASE_URL + p['file']
+    # The unified console is the site root — canonical/og:url without the filename.
+    url = BASE_URL if p['file'] == 'index.html' else BASE_URL + p['file']
     return f'''<!doctype html>
 <html lang="fa" dir="rtl" class="no-js">
 <head>
@@ -274,8 +277,8 @@ def render_page(p):
             s2b=p['tg_stats'][1][0], s2l=p['tg_stats'][1][1])
 
     footer = (FOOTER
-              .replace('href="#case-studies"', 'href="index.html#case-studies"')
-              .replace('href="#academic-foundation"', 'href="index.html#academic-foundation"')
+              .replace('href="#case-studies"', 'href="about.html#case-studies"')
+              .replace('href="#academic-foundation"', 'href="about.html#academic-foundation"')
               .replace('href="#top"', 'href="index.html"'))
 
     return (render_head(p) + '\n' + render_header(p['file']) + f'''
@@ -418,8 +421,8 @@ def render_console():
         for h, cls, icon, t in UC_CTA['btns'])
 
     footer = (FOOTER
-              .replace('href="#case-studies"', 'href="index.html#case-studies"')
-              .replace('href="#academic-foundation"', 'href="index.html#academic-foundation"')
+              .replace('href="#case-studies"', 'href="about.html#case-studies"')
+              .replace('href="#academic-foundation"', 'href="about.html#academic-foundation"')
               .replace('href="#top"', 'href="index.html"'))
 
     return (render_head(c) + '\n' + render_header('console.html') + f'''
@@ -436,7 +439,7 @@ def render_console():
         <p class="uc-hero__lead">{c['hero_lead']}</p>
         <div class="uc-hero__actions">
           <a href="#uc-worklist" class="btn btn--dark btn--lg" data-sparkle>{ic('i-zap')}<span>شروع از کارتابل من</span></a>
-          <a href="index.html#framework" class="btn btn--light btn--lg" data-sparkle>{ic('i-file-chart')}<span>چارچوب علمی سامانه</span></a>
+          <a href="about.html#framework" class="btn btn--light btn--lg" data-sparkle>{ic('i-compass')}<span>معرفی پلتفرم و چارچوب علمی</span></a>
         </div>
         <div class="uc-hero__stats">
 {stats}
@@ -501,7 +504,7 @@ def render_console():
 {roles}      </div>
     </section>
 
-{render_strip('console.html')}    <section class="module-cta" aria-labelledby="pcta-title">
+{render_strip('index.html')}    <section class="module-cta" aria-labelledby="pcta-title">
       <h2 class="module-cta__t" id="pcta-title">{UC_CTA['title']}</h2>
       <p class="module-cta__d">{UC_CTA['desc']}</p>
       <div class="module-hero__actions">

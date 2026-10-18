@@ -4,7 +4,7 @@
 """
 import sys
 
-P = 'index.html'
+P = 'about.html'
 s = open(P, encoding='utf-8').read()
 orig = s
 
